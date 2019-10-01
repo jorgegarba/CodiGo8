@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <header>
+        <h1>Formularios</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="">Link 1</a></li>
+            <li><a href="">Link 2</a></li>
+            <li><a href="">Link 3</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Elementos de los Formularios</h2>
+            <article>
+                <h3>Lista de Elementos</h3>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Nro</th>
+                            <th>Nombre del Elemento</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>input</strong></td>
+                            <td>Es un campo de entrada de muchos tipos de datos</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>textarea</strong></td>
+                            <td>
+                                Es un campo de entrada de tipo texto, puede tener más
+                                de una fila
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>select</strong></td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        Es un elemento con una lista de opciones para elegir
+                                    </li>
+                                    <li>
+                                        Cada opción, es un elemento <strong>option</strong>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><strong>button</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Es un elemento que representa a un botón</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>label</strong></td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        Es un elemento que crea una etiqueta asociada a un
+                                        campo de entrada
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><strong>fieldset</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Es un elemento que agrupa los campos de un formulario</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><strong>legend</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Representa al título de algunas etiquetas</li>
+                                    <li>Por lo general, acompaña al <strong>fieldset</strong></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <hr />
+        <section>
+            <h2>Tipos de <code>input</code></h2>
+            <article>
+                <h3>Lista de tipos de input</h3>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Número</th>
+                            <th>Tipo</th>
+                            <th>Descripción</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>text</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Input para ingresar texto plano</li>
+                                    <li>Por ejemplo, nombres, apellidos, direcciones, etc.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>email</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Input para ingresar correos electrónicos</li>
+                                    <li>
+                                        A pesar de ser texto plano, se coloca tipo <strong>email</strong>
+                                        para que el formulario valide el ingreso de un correcto email,
+                                        es decir, con símbolo de @ y un .
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>number</td>
+                            <td>
+                                <ul>
+                                    <li>Input para ingresar números enteros y/o decimales</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>date</td>
+                            <td>
+                                <ul>
+                                    <li>Input para ingresar fechas</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>password</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Input para ingresar contraseñas</li>
+                                    <li>
+                                        El navegador, automáticamente, cambia el texto ingresado,
+                                        por simbolos.
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><strong>time</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Input para ingresar horas y minutos</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><strong>color</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Input para seleccionar un color de una paleta de
+                                        colores
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><strong>checkbox</strong></td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        Input para selccionar o desseleccionar elementos de mas
+                                        de un grupo de checkboxes
+                                    </li>
+                                    <li>
+                                        Es posible seleccionar mas de un checkbox a la vez
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><strong>radio</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Input para seleccionar un elemento de un grupo de radio buttons</li>
+                                    <li>Solo se puede seleccionar uno a la vez</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><strong>file</strong></td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        Input para seleccionar un archivo local y mandarlo al servidor
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td><strong>reset</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Input en forma de un botón.</li>
+                                    <li>Sirve para limpiar todos los campos del formulario
+                                        en el que se encuentre
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td><strong>submit</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Input en forma de un boton</li>
+                                    <li>Sirve para enviar TODOS los datos del formulario
+                                        al servidor
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+
+</body>
+
+</html>
