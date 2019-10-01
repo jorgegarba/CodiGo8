@@ -16,16 +16,55 @@
             <form>
                 <fieldset>
                     <legend>Datos Personales</legend>
-                    <table>
+                    <table border="1">
                         <tr>
                             <td><label>Nombres:</label></td>
-                            <td><input type="text"></td>
-
+                            <td><input type="text" required minlength="3" maxlength="20" tabindex="1"
+                                    placeholder="Ejm: Juan" /></td>
+                            <!-- atributo 'hidden' sirve para ocultar un elemento -->
+                            <!-- atributo 'value' sirve para dar un valor inicial al elemento -->
                             <td><label>Apellidos:</label></td>
-                            <td><input type="text"></td>
+                            <td><input type="text" required tabindex="3" placeholder="Ejm: Ramirez" /></td>
 
                             <td><label>Email:</label></td>
-                            <td><input type="email"></td>
+                            <td><input type="email" required tabindex="5" placeholder="Ejm: jramirez@gmail.com" /></td>
+                        </tr>
+                        <tr>
+                            <td><label>Contraseña:</label></td>
+                            <td><input type="password" required tabindex="2" minlength="6"
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                                    title="Mínimo 1 MAYÚSCULA, 1 minúscula, 1 número, y extensión de 6 caracteres o más." />
+                            </td>
+
+                            <td><label>Edad:</label></td>
+                            <td><input type="number" required tabindex="4" min="18" max="110" step="2" /></td>
+
+                            <td><label>Nacimiento:</label></td>
+                            <td><input type="date" required tabindex="6" /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Enviar Gatos">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <fieldset>
+                    <legend>Datos de la entrevista</legend>
+                    <table>
+                        <tr>
+                            <td><label>Hora de Entrevista:</label></td>
+                            <td><input type="time"></td>
+
+                            <td><label>Color Favorito:</label></td>
+                            <td><input type="color" value="#ff0000"></td>
+
+                            <td><label>Seleccionar CV</label></td>
+                            <td><input type="file"></td>
+
+                        </tr>
+                        <tr>
+
                         </tr>
                     </table>
                 </fieldset>
