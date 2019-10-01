@@ -60,11 +60,45 @@
                             <td><input type="color" value="#ff0000"></td>
 
                             <td><label>Seleccionar CV</label></td>
-                            <td><input type="file"></td>
-
+                            <td><input type="file" accept="image/gif"></td>
                         </tr>
                         <tr>
-
+                            <td><label>Describenos quien eres:</label></td>
+                            <td><textarea cols="10" rows="10"></textarea> </td>
+                        </tr>
+                        <tr>
+                            <td><label>Indicanos tu sexo:</label></td>
+                            <td><input type="radio" name="sexo" value="M">Masculino</td>
+                            <td><input type="radio" name="sexo" value="F">Femenino</td>
+                            <td><input type="radio" name="sexo" value="O">Otro</td>
+                        </tr>
+                        <tr>
+                            <td><label >Que dias puedes asistir:</label></td>
+                            <td><input type="checkbox" checked disabled>Lunes</td>
+                            <td><input type="checkbox">Martes</td>
+                            <td><input type="checkbox">Miercoles</td>
+                            <td><input type="checkbox">Jueves</td>
+                            <td><input type="checkbox">Viernes</td>
+                            <td><input type="checkbox">Sabado</td>
+                            <td><input type="checkbox">Domingo</td>
+                        </tr>
+                        <tr>
+                            <td><label >En que distrito resides:</label></td>
+                            <td><select>
+                                <option value="1">Cercado</option>
+                                <option value="2">Jose Luis</option>
+                                <option value="3">Cerro Colorado</option>
+                                <option value="4">Hunter</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td><label >Edad:</label></td>
+                            <td><input type="range" min="18" max="35"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <progress value="80" max="100"></progress>
+                            </td>
                         </tr>
                     </table>
                 </fieldset>

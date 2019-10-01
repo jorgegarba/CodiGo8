@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td><label>Nombre</label></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td><label>Apellido Paterno</label></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td><label>Apellido Materno</label></td>
+            <td><input type="text" required></td>
+        </tr>
+        <tr>
+            <td><label>DNI:</label></td>
+            <td><input type="number" maxlength="8" 
+                minlength="8" required></td>
+        </tr>
+        <tr>
+            <td><label>Correo electronico:</label></td>
+            <td><input type="email" required></td>
+        </tr>
+        <tr>
+            <td><label>Telefono</label></td>
+            <td><input type="number" required></td>
+        </tr>
+        <tr>
+            <td><label>Ciudad:</label></td>
+            <td>
+                <select>
+                    <option value="AQP">Arequipa</option>
+                    <option value="PUN">Puno</option>
+                    <option value="LIM">Lima</option>
+                    <option value="MOQ">Moquegua</option>
+                    <option value="TAC">Tacna</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td> <label>Estado Civil:</label></td>
+            <td><input type="radio" name="estado_civil"> Soltero
+                <input type="radio" name="estado_civil"> Casado
+                <input type="radio" name="estado_civil"> Divorciado
+                <input type="radio" name="otro_dato">otro button
+            </td>
+        </tr>
+        <tr>
+            <td><label>Mensaje:</label></td>
+            <td><textarea cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <td><label >Edad:</label></td>
+            <td><input type="range" min="18" max="60"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Enviar"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
