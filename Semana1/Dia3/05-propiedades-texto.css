@@ -1,5 +1,5 @@
 code {
-    color: brown;
+    color: purple;
 }
 
 .c-font-family {
@@ -20,4 +20,53 @@ code {
 
 .c-font {
     font: oblique bold 20px Verdana, Geneva, Tahoma, sans-serif;
+}
+.c-text-align {
+    text-align: center
+}
+.c-text-align-last {
+    text-align-last: center
+}
+.c-letter-spacing {
+    letter-spacing: 10px;
+}
+.c-word-spacing {
+    word-spacing: 20px;
+}
+.c-line-height {
+    line-height: 100%;
+}
+
+img{
+    vertical-align: bottom
+}
+
+.c-parrafo{
+    border: 1px dashed;
+    /* dashed => linea punteada
+        solid => linea entera
+        none => sin linea
+     */
+    border-color: #000000;
+    width: 50%;
+    height: 40px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.c-pborder{
+    border: 1px solid #000000;
+}
+.c-width{
+    width: 50%;
+}
+.c-height{
+    height: 20px;
+}
+
+.c-overflow{
+    overflow: auto;
+}
+
+.c-overflow-x{
+    overflow-x: hidden;
 }
