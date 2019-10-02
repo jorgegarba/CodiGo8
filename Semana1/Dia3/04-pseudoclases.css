@@ -1,0 +1,30 @@
+/* numero de posicion de hijo */
+
+p:nth-child(3) {
+    color: blue;
+}
+
+p:first-child {
+    color: red;
+}
+
+p:last-child {
+    color: green;
+}
+
+/* todos los elementos impares 
+de una lista de tr's hermanos */
+
+tr:nth-child(odd) {
+    background-color: #cccccc;
+}
+
+/* los pares */
+
+tr:nth-child(even) {
+    background-color: #777777;
+}
+
+thead tr:nth-child(1) {
+    background-color: #777777;
+}

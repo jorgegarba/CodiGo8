@@ -24,8 +24,12 @@ article {
 /* todos los elementos que tengan
 la clase 'mapa' */
 
-.mapa {
+.aguamarina {
     color: aquamarine;
 }
 
 /* Selectores de Id */
+
+#contacto {
+    background-color: brown;
+}

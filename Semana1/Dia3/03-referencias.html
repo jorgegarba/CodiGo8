@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./02-selectores.css">
+    <link rel="stylesheet" href="./03-referencias.css">
     <title>Document</title>
 </head>
 
 <body>
 
     <header>
-        <h1>Selectores de elementos</h1>
+        <h1 class="texto-grande">Selectores de elementos</h1>
     </header>
     <nav>
         <ul>
@@ -21,10 +21,10 @@
     </nav>
     <main>
         <section>
-            <h2>Titulo de la sección 1</h2>
+            <h2 class="texto-grande">Titulo de la sección 1</h2>
             <article>
                 <h3>Titulo del Articulo 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti natus alias perferendis praesentium
+                <p name="parrafo1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti natus alias perferendis praesentium
                     dicta? Sunt, harum ipsam adipisci explicabo quas repellat error ab possimus, natus a eius eos
                     recusandae ipsum.</p>
             </article>
@@ -33,13 +33,14 @@
             <h2>Titulo de la sección 2</h2>
             <article>
                 <h3 class="aguamarina">Titulo del Articulo 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eveniet, nemo enim delectus sed
+                <p name="parrafo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eveniet, nemo enim delectus sed
                     expedita nobis maiores harum quam obcaecati laudantium at illo laboriosam non aliquid,
                     exercitationem eaque culpa aspernatur.</p>
             </article>
         </section>
     </main>
     <footer>
+        <h2>Titulo del Footer</h2>
         <section class="aguamarina">
             <ul>
                 <li>Link 1</li>
@@ -49,7 +50,7 @@
         </section>
         <section id="contacto">
             <form>
-
+                <h2>Titulo del Formulario</h2>
 
                 <label>Nombre:</label>
                 <input type="text">
@@ -63,7 +64,21 @@
             </form>
         </section>
         <section>
+            <form id="form2">
+                <h2>Titulo del Formulario</h2>
 
+                <label>Nombre:</label>
+                <input type="text">
+                <br />
+                <label>Correo:</label>
+                <input type="email">
+                <br />
+                <label>
+                    <span> Mensaje:</span>
+                </label>
+                <textarea cols="30" rows="10"></textarea>
+
+            </form>
         </section>
     </footer>
 
