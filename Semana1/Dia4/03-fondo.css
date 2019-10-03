@@ -1,0 +1,47 @@
+/* configuración inicial o funciones de reset */
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* configuración inicial o funciones de reset */
+
+body {
+    background-color: #cccccc;
+}
+
+header {
+    background-color: blueviolet;
+}
+
+.section1 {
+    height: 400px;
+    background-color: #000;
+    background-image: url('./imagenes/angular.png');
+    /* background-repeat: repeat-y; => la imagen se repite verticalmente */
+    /* background-repeat: repeat-x; => la imagen se repite horizontalmente */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.section2 {
+    background-image: url('./imagenes/textura.png');
+    height: 400px;
+}
+
+.section3 {
+    height: 500px;
+    /* https://via.placeholder.com/1920x1000/ff0000/0000ff?text=textocustomizado */
+    background-image: url('./imagenes/wp.png');
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.section4{
+    height: 1000px;
+}

@@ -1,0 +1,18 @@
+html, body {
+    height: 100%;
+    background-color: #777
+}
+
+* {
+    margin: 0;
+}
+
+.container {
+    height: 700px;
+    background-color: #ddd;
+    width: 500px;
+}
+.superior{
+    height: 350px;
+    background-image: url('https://via.placeholder.com/500/350')
+}

@@ -1,0 +1,24 @@
+header {
+    border: 1px solid #cccccc;
+    width: 50%;
+}
+
+section {
+    font-size: 70px;
+}
+
+div {
+    border: 1px solid brown;
+    width: 50%;
+}
+
+/* 1em es el tamaño de fuente
+del directo tamaño de fuente del 
+elemento padre */
+
+section p {
+    font-size: 1rem;
+}
+
+/* 1rem es el tamaño de fuente
+del body sin respetar a los elementos padres */

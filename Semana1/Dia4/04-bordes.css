@@ -1,0 +1,46 @@
+body, html {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+}
+
+div {
+    width: 400px;
+    border-width: 1px;
+    /* border-style:
+    solid, dashed, groove, double,
+    dotted, ridge */
+    border-style: solid;
+    border-color: red;
+    margin: auto;
+}
+
+.section1 {
+    height: 300px;
+    border-top: 1px solid blue;
+    border-bottom: 1px solid blue;
+}
+
+.section2 {
+    height: 300px;
+    border: 2px solid orangered;
+    border-radius: 20px;
+}
+
+.section3 {
+    height: 300px;
+    width: 300px;
+    border: 1px solid green;
+    border-radius: 50%;
+}
+
+.section4 {
+    height: 200px;
+    width: 200px;
+    border: 1px solid red;
+    margin: auto;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
