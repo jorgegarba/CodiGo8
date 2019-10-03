@@ -1,0 +1,34 @@
+*{
+    margin:0;
+}
+header{
+    margin-top: 3px;
+    padding: 15px;
+    border: 1px solid blue;
+    text-align: center;
+}
+#lineal{    
+    background: -webkit-linear-gradient(top right, #34f523, #6756ab, red);
+}
+.circular{
+    background: -webkit-radial-gradient(center, black,white);
+}
+p{
+    filter: blur(1px);
+}
+img{
+    filter: grayscale(0.1); /*0.1 - 1*/
+    filter: sepia(1);
+    /* filter: brightness(10); 0.1 - 10 */
+    filter: contrast(5);
+    filter: invert(1);
+    transform: scale(1,1);
+    transform: rotate(90deg);
+    transform: skew(-45deg);
+}
+div>p{
+    transform:  translate(100px,100px) rotate(90deg);
+}
+img:hover{
+    transform: translate(100px,10px) rotate(90deg);
+}

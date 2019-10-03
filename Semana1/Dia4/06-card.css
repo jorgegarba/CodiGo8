@@ -1,6 +1,6 @@
 html, body {
     height: 100%;
-    background-color: #777
+    background-color: rgb(168, 168, 168);
 }
 
 * {
@@ -8,6 +8,9 @@ html, body {
 }
 
 .container {
+    box-shadow: #000000 0px 0px 50px;
+    margin: auto;
+    margin-top: 50px;
     height: 700px;
     background-color: #ddd;
     width: 500px;
@@ -15,4 +18,51 @@ html, body {
 .superior{
     height: 350px;
     background-image: url('https://via.placeholder.com/500/350')
+}
+h4{
+    color: rgb(168, 168, 168);
+}
+.descripcion{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 40px;
+}
+
+.size{
+    margin-top: 50px;
+}
+
+.colors{
+    margin-top: 40px;
+}
+.rojo{
+    border: 1px solid red;
+    background-color: red;
+    border-radius: 50%;
+    color: red;
+    width: 10px;
+    height: 10px;
+}
+.verde{
+    border: 1px solid green;
+    background-color: green;
+    border-radius: 50%;
+    color: green;
+    width: 10px;
+    height: 10px;
+}
+.blanco{
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 50%;
+    color: white;
+    width: 10px;
+    height: 10px;
+}
+.azul{
+    border: 1px solid blue;
+    background-color: blue;
+    border-radius: 50%;
+    color: blue;
+    width: 10px;
+    height: 10px;
 }
