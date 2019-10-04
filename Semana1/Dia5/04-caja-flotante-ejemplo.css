@@ -1,0 +1,27 @@
+#cajapadre{
+    position: relative;
+    width: 365px;
+    height: 274px;
+    overflow: hidden;
+}
+#contenedor{
+    position: absolute;
+    top: 0px;
+    width: 365px;
+    height: 324px;
+    transition: top 0.5s ease-in-out 0s;
+}
+#contenedorsuperior{
+    width: 365px;
+    height: 274px;
+}
+#contenedorinferior{
+    width: 365px;
+    height: 35px;
+    padding-top: 15px;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+#contenedor:hover{
+    top: -50px;
+}

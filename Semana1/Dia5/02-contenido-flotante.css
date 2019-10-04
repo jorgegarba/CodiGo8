@@ -1,0 +1,10 @@
+section{
+    background-color: beige;
+}
+section img{
+    float: right;
+    margin: 0px 10px;
+}
+.clearfloat{
+    clear: both;
+}
