@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'brandom-grotesque';
+    src: url('./fonts/brandon-grotesque-light-58a8a4b38001d.otf');
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'brandom-grotesque';
+}
+
+header {
+    height: 500px;
+    background-image: url("http://placehold.it/1920x500/444444/c5c5c5&text=.");
+    color: white;
+}
+
+.logo {
+    float: left;
+    margin-top: 25px;
+    margin-left: 100px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.logo span {
+    font-weight: 100;
+}
+
+.navegacion {
+    float: right;
+    margin-top: 25px;
+    margin-right: 80px;
+}
+
+.links li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.links li a {
+    text-decoration: none;
+    color: white;
+}
+
+.boton {
+    padding: 3px 20px;
+    background-color: rgba(50, 50, 50, 0.5);
+    border-radius: 20px;
+}
+
+.header-contenedor {}
+
+h1 {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 3rem;
+}
+
+.clear {
+    clear: both;
+}
+
+.descripcion {
+    text-align: center;
+    font-size: 1.2rem;
+    width: 30%;
+    margin: 20px auto;
+    line-height: 2.5rem;
+}
+
+.contenedor-botones {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.boton-info {
+    border: 0;
+    color: white;
+    padding: 10px 40px;
+}
+button.boton-info:nth-child(1){
+    margin-right: 20px;
+    background-color: rgba(122, 240, 131, 0.5)
+}

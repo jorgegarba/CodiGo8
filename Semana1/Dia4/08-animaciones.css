@@ -1,3 +1,14 @@
+/* Definiendo una  fuente */
+
+@font-face {
+    font-family: 'harry';
+    src: url('./fonts/HARRYP__.TTF');
+}
+
+.custom-font {
+    font-family: 'harry';
+}
+
 * {
     margin: 0;
 }
@@ -45,17 +56,15 @@ html, body {
     20% {
         transform: translate(200px, 0px);
     }
-    30%{
+    30% {
         transform: translate(200px, 0px) rotate(90deg);
     }
-    40%{
+    40% {
         transform: translate(200px, 200px) rotate(90deg);
     }
-    50%{
+    50% {
         transform: translate(200px, 200px) rotate(180deg);
     }
-
-
     100% {}
 }
 

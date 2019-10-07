@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+span {
+    width: 30px;
+    height: 30px;
+    border: 1px solid brown;
+    display: inline-block;
+}
+
+.seccion1 {
+    border: 1px solid red;
+    height: 2000px;
+    position: relative;
+    top: 100px;
+}
+
+.articulo1 {
+    border: 1px solid blue;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    /* left: calc(50% - 50px); */
+    /* se desplaza desde la izquierda, el 50%
+    del ancho DEL CONTENEDOR */
+    left: 50%;
+    top: 50%;
+    /* se desplaza -50% del ancho DEL ELEMENTO
+    en el eje X*/
+    transform: translate(-50%, -50%);
+}
+
+.articulo2 {
+    border: 1px solid green;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.articulo3 {
+    border: 1px solid violet;
+    height: 100px;
+    width: 100px;
+}
+
+.articulo4 {
+    border: 1px solid orangered;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
