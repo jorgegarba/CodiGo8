@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+}
+
+body, html {
+    height: 100%;
+    background: #eeeeee;
+}
+
+.container {
+    display: flex;
+    border: 1px solid blue;
+    height: 500px;
+    width: 40%;
+}
+.container div {
+    height: 50px;
+    /* background-color: crimson; */
+}
+.item-1 {
+    flex: 1 1 100px;
+    background-color: red;
+}
+
+.item-2 {
+    flex: 2 2 100px;
+    background-color: blueviolet;
+ 
+}
+
+.item-3 {
+    flex: 1 1 100px;
+    background-color: chocolate;
+}
