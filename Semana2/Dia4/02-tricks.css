@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+header {
+    height: 13%;
+    display: flex;
+    background-color: #100E17;
+}
+
+.naranja {
+    color: orangered;
+}
+
+.logo {
+    flex: 2;
+    display: flex;
+    padding: 0 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo i{
+    margin-right: 10px;
+}
+.title{
+    color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+
+.navegador {
+    flex: 13;
+    display: flex;
+}
+.navegador ul{
+    display: flex;
+    /* background-color: aliceblue; */
+    list-style: none;
+    flex: 1;
+}
+.navegador ul li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buscador{
+    flex: 3;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+
+}
+.blanco{
+    color: #ddd;
+}
+.texto-nav{
+    margin-top: 10px;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.formulario-buscar{
+    display: flex;
+}
+
+.formulario-buscar button{
+    background: linear-gradient(to right, #f12711, #f5af19); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-left: 0;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    color: #ddd;
+    outline: none;
+}
+
+.formulario-buscar input{
+    background-color: #201C29;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 0;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    color: #ddd;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 0px 20px;
+}
