@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
     <style>
         * {
             margin: 0;
+            box-sizing: border-box;
         }
 
         body,
@@ -16,56 +18,95 @@
             height: 100%;
         }
 
-        #cajapadre {
+        header {
+            background-color: antiquewhite;
+            height: 10%;
+        }
+
+        main {
+            height: 80%;
+            padding: 1em 2em;
+
+            background-color: aquamarine;
             display: flex;
-            width: 1920px;
-            height: 100px;
-            border: 1px solid red;
-            justify-content: center;
-            /* align-items: center; */
         }
 
-        #cajapadre>div {
-            /* height: 145px; */
-            /* margin: 5px; */
-            background-color: #CCCCCC;
+        footer {
+            height: 10%;
+            background-color: brown;
         }
 
-        #caja-1 {
+        section {
+            display: flex;
+            padding: 1em 2em;
+            flex: 2;
+            background-color: cadetblue;
+        }
+
+        aside {
             flex: 1;
-            height: 50px;
-            max-width: 200px;
-            align-self: flex-end;
+            background-color: chocolate;
         }
 
-        #caja-2 {
+        .art1 {
+            background-color: dodgerblue;
             flex: 1;
-            height: 50px;
-            max-width: 200px;
+            margin: 0 1em;
         }
 
-        #caja-3 {
+        .art2 {
+            background-color: dodgerblue;
             flex: 1;
-            height: 50px;
-            max-width: 200px;
+            margin: 0 1em;
         }
 
-        #caja-4 {
-            flex: 1;
-            height: 50px;
-            max-width: 200px;
+        @media (max-width: 1024px) {
+            main {
+                flex-direction: column;
+            }
         }
+
+        @media (max-width: 768px) {
+            section {
+                flex-direction: column;
+            }
+
+            .art1,
+            .art2 {
+                margin: 1em 0;
+            }
+        }
+
+        @media (max-width: 500px) {
+            section {
+                flex: 3;
+            }
+
+            aside {
+                flex: 1;
+            }
+        }
+
+        /* @media (orientation: landscape){
+            footer {
+                display: none;
+            }
+        } */
     </style>
 </head>
 
-<body>
 
-    <section id="cajapadre">
-        <div id="caja-1">Caja 1</div>
-        <div id="caja-2">Caja 2</div>
-        <div id="caja-3">Caja 3</div>
-        <div id="caja-4">Caja 4</div>
-    </section>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <article class="art1"></article>
+            <article class="art2"></article>
+        </section>
+        <aside></aside>
+    </main>
+
+    <footer></footer>
 
 </body>
 
