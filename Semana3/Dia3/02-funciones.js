@@ -85,10 +85,18 @@ getCursos('Ximena');
  * Función que modifica el nombre de un alumno
  * Al final, la función imprime la nueva lista de 
  * alumnos
- * @param {*} nombreAntiguo El nombre alntiguo del alumno
- * @param {*} nuevoNombre El nuevo nombre del alumno
+ * @param {String} nombreAntiguo El nombre alntiguo del alumno
+ * @param {String} nuevoNombre El nuevo nombre del alumno
  */
 function modificarNombre(nombreAntiguo, nuevoNombre) {
 
+  for (let i = 0; i < alumnos.length; i++) {
+    if (alumnos[i] == nombreAntiguo) {
+      alumnos[i] = nuevoNombre;
+      break;
+    }
+  }
+  console.log("Arreglo de alumnos");
+  console.log(alumnos);
 }
 
