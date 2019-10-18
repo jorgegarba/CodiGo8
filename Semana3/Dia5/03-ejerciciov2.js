@@ -19,7 +19,24 @@ class Restaurant {
     this.direccion = dir;
     this.platos = [];
   }
+
+  agregarPlato() {
+    let platoTmp = {
+      nombre: '',
+      calorias: 0,
+      precio: 0,
+    }
+
+    platoTmp.nombre = prompt("Ingrese el nombre del plato");
+    platoTmp.calorias = +prompt("Ingrese las calorias del plato");
+    platoTmp.precio = +prompt("Ingrese el precio del plato");
+
+    this.platos.push(platoTmp);
+  }
 }
+
+
+
 
 let opcion = 0;
 let n = prompt('Ingrese el nombre del restaurant');
@@ -36,19 +53,7 @@ do {
                     =================`);
   switch (opcion) {
     case 1:
-
-      let platoTmp = {
-        nombre: '',
-        calorias: 0,
-        precio: 0,
-      }
-
-      platoTmp.nombre = prompt("Ingrese el nombre del plato");
-      platoTmp.calorias = +prompt("Ingrese las calorias del plato");
-      platoTmp.precio = +prompt("Ingrese el precio del plato");
-
-      rest1.platos.push(platoTmp);
-
+      rest1.agregarPlato();
       break;
     case 2:
       console.log(rest1.platos);
