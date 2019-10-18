@@ -140,4 +140,3 @@ let objFactura = {
 console.log(objFactura);
 objFactura.agregarDetalle();
 console.log(objFactura);
-
