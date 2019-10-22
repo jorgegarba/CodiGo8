@@ -39,5 +39,55 @@ let searchCommentById = (id) => {
     return rpta;
   }
 }
-
 console.log(searchCommentById(6));
+
+/**
+ * Función que retorna un arreglo
+ * con todos los elementos cuyo correo(email)
+ * termina en '.biz'
+ * @returns arreglo de objetos que terminan en '.biz'
+ */
+let getAllBiz = () => {
+  let resultado = comentarios.filter((comment) => {
+    return comment.email.endsWith(".biz");
+  });
+
+  return resultado;
+}
+
+console.log(getAllBiz());
+
+
+
+/**
+ * Función que retorna un arreglo de objectos 
+ * con el 'email' y el 'name'
+ * de los registros cuyo 'body' contenga la palabra buscada
+ * en la variable word 
+ * @param {string} word la palabra buscada dentro del campo body
+ */
+let getNameEmailByWordInBody = (word) => {
+  // creando un arrelgo vacio de resultados
+  let resultado = [];
+  // iterando el arreglo de comentarios
+  comentarios.forEach((elemento) => {
+    // preguntar si el texto de la variable 'word', existe 
+    // en alguna posición del campo 'body'
+    if (elemento.body.indexOf(word) != -1) {
+      // si el elemento contiene la palabra buscada/
+      // creo un objecto temporal con la copia de los 2 campos
+      // requeridos solamente
+      let objTmp = {
+        email: elemento.email,
+        name: elemento.name
+      };
+      // agrego ese objeto temporal al arreglo resultado
+      resultado.push(objTmp);
+    }
+  });
+  // terminado el ciclo foreach retorno el arreglo resultado
+  return resultado;
+}
+
+
+console.log(getNameEmailByWordInBody('libero'));
