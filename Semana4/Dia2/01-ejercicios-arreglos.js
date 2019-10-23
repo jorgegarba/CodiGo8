@@ -91,3 +91,32 @@ let getNameEmailByWordInBody = (word) => {
 
 
 console.log(getNameEmailByWordInBody('libero'));
+
+
+
+/**
+ * Función que retorna un arreglo de objetos de tipo album
+ * dado el id del usuario al que le pertenecen, además deberá
+ * imprimirse los datos personales del usuario antes de retornar
+ * el arreglo
+ * HINT: Deberán usar el arreglo de users y el arreglo de albumes
+ * @param {number} userId id del usuario
+ * 
+ */
+let getAlbumesByUsuarioId = (userId) => {
+
+}
+
+/**
+ * Funcion que devuelve un arreglo de las tareas completadas de un 
+ * usuario dado el id del usuario
+ * Las tareas completadas son las tareas que en el campo 'completed'
+ * tengan valor 'TRUE',  además deberá
+ * imprimirse los datos personales del usuario antes de retornar
+ * el arreglo
+ * HINT: Deberán usar el arreglo de users y el arreglo de tareas
+ * @param {number} userId id del usuario
+ */
+let getCompletedTasksByUserId = (userId) => { 
+
+}
