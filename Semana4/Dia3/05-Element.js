@@ -59,3 +59,13 @@ tabla.appendChild(cabecera);
 // Insertamos la tabla a la seccion
 seccion.appendChild(tabla);
 tabla.border=1;
+
+var pfinal = 50;
+var parrafo = document.createElement("p");
+
+if(pfinal<50){
+    parrafo.innerHTML="SOLO PUEDE PAGAR EN EFECTIVO"
+}else{
+    parrafo.innerHTML="PUEDE PAGAR EN EFECTIVO O CON TARJETA"
+}
+seccion.appendChild(parrafo)
