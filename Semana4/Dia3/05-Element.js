@@ -34,25 +34,39 @@ var n = +prompt("Ingrese la cantidad de elementos");
 // Creamos la tabla
 var tabla = document.createElement("table");
 // Creamos la cabecera
+var cabeceraTexto = ["Nro","Cantidad","Descripcion","P. Unitario","Total"]
 var cabecera = document.createElement("tr")
+
+// MODO PRO
+for (let index = 0; index < cabeceraTexto.length; index++) {
+    // Crear las columnas para la cabecera
+    var th = document.createElement("th");
+    // Asignamos el texto a esa cabecera
+    th.innerHTML=cabeceraTexto[index];
+    // Inserta las columas a la cabecera
+    cabecera.appendChild(th);
+}
+console.log(cabecera);
+
+// MODO BEGINNER
 // Crear las columnas para la cabecera
-var thNro = document.createElement("th");
-thNro.innerHTML="Nro."
-var thCant = document.createElement("th");
-thCant.innerHTML="Cantidad"
-var thDesc = document.createElement("th");
-thDesc.innerHTML="Descripcion"
-var thPreUni = document.createElement("th");
-thPreUni.innerHTML="P. Unitario"
-var thTotal = document.createElement("th");
-thTotal.innerHTML="Total"
+// var thNro = document.createElement("th");
+// thNro.innerHTML="Nro."
+// var thCant = document.createElement("th");
+// thCant.innerHTML="Cantidad"
+// var thDesc = document.createElement("th");
+// thDesc.innerHTML="Descripcion"
+// var thPreUni = document.createElement("th");
+// thPreUni.innerHTML="P. Unitario"
+// var thTotal = document.createElement("th");
+// thTotal.innerHTML="Total"
 
 // Inserta las columas a la cabecera
-cabecera.appendChild(thNro);
-cabecera.appendChild(thCant);
-cabecera.appendChild(thDesc);
-cabecera.appendChild(thPreUni);
-cabecera.appendChild(thTotal);
+// cabecera.appendChild(thNro);
+// cabecera.appendChild(thCant);
+// cabecera.appendChild(thDesc);
+// cabecera.appendChild(thPreUni);
+// cabecera.appendChild(thTotal);
 
 // Insertar la cabecera a la tabla
 tabla.appendChild(cabecera);
