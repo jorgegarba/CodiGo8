@@ -25,6 +25,7 @@ tabla.innerHTML = `<thead>
 
 let tbody = document.createElement("tbody");
 let contenido = "";
+let sumatoria = 0;
 for (let i = 0; i < nroElementos; i++) {
   let cantTmp = +prompt(`Ingresa la cantidad del producto ${i + 1}`);
   let descTmp = prompt(`Ingresa la descripción del producto ${i + 1}`);
@@ -38,8 +39,27 @@ for (let i = 0; i < nroElementos; i++) {
                               <td>${puniTmp}</td> 
                               <td>${total}</td> 
                             </tr>`;
+  sumatoria = sumatoria + total;
 }
+
+contenido = contenido + `<tr>
+                            <td colspan="4">TOTAL</td>
+                            <td>S/. ${sumatoria}</>
+                        </tr>
+                        <tr>
+                            <td colspan="4">IGV</td>
+                            <td>S/. ${sumatoria * 0.18}</>
+                        </tr>`;
+
+
+
+
 tbody.innerHTML = contenido;
+
+
+
+
+
 tabla.appendChild(tbody);
 
 tabla.border = "1";
