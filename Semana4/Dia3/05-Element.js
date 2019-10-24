@@ -5,8 +5,15 @@ parrafo.innerHTML ="Soy un elemento creado en JavaScript";
 parrafo.style.color = "Blue";
 // Para agregarlo a nuestro documento HTML, primero debemos indicar donde lo vamos a poner
 // una vez que tengamos donde lo queremos usamos el metodo principal.appendChild(parrafo)
-// agregar a su nuevo hijo al final de todos sus hijos
+// agregar a su nuevo hijo al FINAL de todos sus hijos
 principal.appendChild(parrafo);
+
+// NOTA:
+// También existe la función prepend(),
+// analoga a appendChild, inserta un nodo hijo, pero al incio
+// de todos sus hijos
+
+
 
 // Forma de agregar recursivamente elementos al HTML
 for(let i=0;i<5;i++){

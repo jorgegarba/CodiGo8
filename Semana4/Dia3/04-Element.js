@@ -1,8 +1,8 @@
 var div1 = document.getElementById("div1")
 // modificar los estilos de ese elemento
 // elemento.style.[estilo] => para alterar o añadir estilos por medio del JS
-div1.style.color= "#FF8421";
-div1.style.padding= "10px";
+div1.style.color = "#FF8421";
+div1.style.padding = "10px";
 div1.style.border = "1px dotted red";
 div1.style.opacity = "0.5"
 // como vemos le podemos dar todos los estilos a nuestro html
@@ -45,4 +45,7 @@ setInterval(() => {
 // innerHTML => Declara o devuelve el contenido de un elemento 
 // <elemento>SOY SU CONTENIDO</elemento>
 console.log(div1.innerHTML);
-div1.innerHTML="<p>Ahora yo soy el texto</p>"
+div1.innerHTML = "<p>Ahora yo soy el texto</p>";
+// innerText => Declara o devuelve el contenido literal de un 
+// elemento
+div1.innerText = "<p>Ahora yo soy el texto</p>";
