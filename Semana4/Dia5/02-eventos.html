@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #3C5780;
+        }
+
+        form {
+            flex: 1;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            flex-direction: column;
+        }
+
+        input {
+            background-color: #73ABFF;
+            width: 50%;
+            height: 100px;
+            color: #4F6482;
+            font-size: 3.2rem;
+            padding: 0 1rem;
+            border: 0;
+            outline: none;
+        }
+
+        .input-focus {
+            border-bottom-style: solid;
+            border-bottom-color: #C9E7FF;
+            border-bottom-width: 7px;
+        }
+        #aviso{
+            color: #C9E7FF;
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- autocomplete=off, cancela el autocompletado de chrome -->
+    <form autocomplete="off">
+        <input type="text" 
+            placeholder="Ingrese su nombre" 
+            id="inputNombre"
+            maxlength="20">
+        <span id="aviso">Le quedan 20 caracteres</span>
+    </form>
+
+    <script src="./02-eventos.js"></script>
+</body>
+
+</html>
