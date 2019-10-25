@@ -69,7 +69,11 @@ let divMenu = document.createElement("div");
 let ul = document.createElement("ul");
 let li1 = document.createElement("li");
 let li2 = document.createElement("li");
-li1.innerHTML = "OPCIÓN 1";
+li1.innerHTML = "Imprimir";
+li1.onclick = () => {
+  window.print();
+}
+
 li2.innerHTML = "OPCIÓN 2";
 ul.appendChild(li1);
 ul.appendChild(li2);
