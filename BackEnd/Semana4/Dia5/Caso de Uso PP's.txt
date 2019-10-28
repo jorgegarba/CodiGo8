@@ -1,0 +1,23 @@
+La clinica Sanitas almacena los datos de contacto de sus pacientes como son: Sus nombres, apellidos, dni, fecha_de_nacimiento, telefo e email. Estos datos son introducidos por el personal administrativo.
+Ademas se almacena la informacion de cada paciente, obviamente un paciente puede tener uno o mas antecedentes clinicos. Al momento de dar de alta se confirmara con el medico que lo esta atendiendo que esta completamente sano.
+Elaborar un DIAGRAMA DE CASO DE USO
+
+En el funcionamiento del hotel LAS TAPAS un huesped puede por medio de su pagina web SOLICITAR: ver los planes, reservar una habitacion, registrar una habitacion, ver que servicios puede contratar (como tele con cable, wifi, entre otros )  y facturar su costo, el hotelero puede modificar los planes, ver las reservas del hotel, ver habitaciones disponibles, ver los consumos como en su restaurante , bar, lavanderia, cabalgada y ziplinning
+ELABORAR UN DIAGRAMA DE CASO DE USO
+
+
+En el PPs cuando un cliente va a comer primero llega y selecciona la mesa, luego el mesero le indica cual es la carta, el usuario escoge el plato de su preferencia el mesero le entrega el pedido al chef y este le devuelve el plato por lo que el mesero le entrega el pedido al cliente y posteriormente este cancela lo consumido.
+ELABORAR UN DIAGRAMA DE CASO DE USO
+
+
+
+
+
+
+
+
+
+
+
+
+
