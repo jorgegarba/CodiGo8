@@ -46,3 +46,7 @@ btnTema.onclick = () => {
   }
 };
 
+
+
+
+console.log(document.querySelectorAll("table input"));
