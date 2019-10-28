@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./01-localstorage.js"></script>
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background-color: coral;
+        }
+    </style>
+</head>
+
+<body id="miBody">
+
+    <button id="miBoton">
+        Click
+    </button>
+
+    <form autocomplete="off">
+        <fieldset>
+            <legend>Guardar Datos en el Storage</legend>
+            <div>
+                <label for="inputNombre">Nombre:</label>
+                <input type="text" placeholder="Ingrese su nombre"
+                    id="inputNombre">
+            </div>
+            <div>
+                <label for="inputApellido">Apellido:</label>
+                <input type="text" placeholder="Ingrese su apellido"
+                    id="inputApellido">
+            </div>
+            <div>
+                <label for="inputColor">Color Favorito:</label>
+                <input type="color" id="inputColor">
+            </div>
+            <div>
+                <button type="submit" id="botonGuardar">
+                    Guardar Datos
+                </button>
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

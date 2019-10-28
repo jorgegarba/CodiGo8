@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./03-eventos-tema1.css" id="estilos">
+    <title>Document</title>
+    <style>
+        /* funciones de reset */
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        /* posicionamiento */
+        header {
+            height: 10%;
+        }
+
+        main {
+            display: flex;
+            height: 90%;
+        }
+
+        aside {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        section {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        header
+    </header>
+    <main>
+        <aside>
+            <button id="btnAgregarElemento">
+                AGREGAR ELEMENTO
+            </button>
+        </aside>
+        <section>
+            <button id="btnTema">Cambiar de Tema</button>
+            <hr>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Cantidad</th>
+                        <th>Descripcion</th>
+                        <th>P. Unitario</th>
+                        <th>P. Total</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTabla">
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <input type="number" id="inputCantidad">
+                        </td>
+                        <td>
+                            <input type="text" id="inputDescripcion">
+                        </td>
+                        <td>
+                            <input type="number" id="inputPUnitario">
+                        </td>
+                        <td>
+                            <input type="number" disabled id="inputTotal">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="./03-eventos.js"></script>
+</body>
+
+</html>
