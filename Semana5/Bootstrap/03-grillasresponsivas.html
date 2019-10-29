@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        .fondo-claro {
+            background-color: tomato;
+        }
+
+        .fondo-oscuro {
+            background-color: sienna;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="container-fluid">
+        <h3><code>col-xl-</code></h3>
+        <h5>
+            Las columnas no colapsan mientras que el ancho de la pantalla
+            sea >= a 1200px
+        </h5>
+        <div class="row">
+            <div class="col-xl-6 fondo-claro">
+                Columna 1
+            </div>
+            <div class="col-xl-6 fondo-oscuro">
+                Columna 2
+            </div>
+        </div>
+        <hr>
+
+        <h3><code>col-lg-</code></h3>
+        <h5>
+            Las columnas no colapsan mientras que el ancho de la pantalla
+            sea >= a 992px
+        </h5>
+        <div class="row">
+            <div class="col-lg-4 fondo-oscuro">
+                COLUMNA 1
+            </div>
+            <div class="col-lg-4 fondo-claro">
+                COLUMNA 2
+            </div>
+            <div class="col-lg-4 fondo-oscuro">
+                COLUMNA 3
+            </div>
+        </div>
+
+        <hr>
+
+        <h3><code>col-md-</code></h3>
+        <h5>
+            Las columnas no colapsan mientras que el ancho de la pantalla
+            sea >= a 768px
+        </h5>
+        <div class="row">
+            <div class="col-md-3 fondo-claro">Columna 1</div>
+            <div class="col-md-3 fondo-oscuro">Columna 2</div>
+            <div class="col-md-3 fondo-claro">Columna 3</div>
+            <div class="col-md-3 fondo-oscuro">Columna 4</div>
+        </div>
+
+        <hr>
+
+        <h3><code>col-sm-</code></h3>
+        <h5>
+            Las columnas no colapsan mientras que el ancho de la pantalla
+            sea >= a 576px
+        </h5>
+        <div class="row">
+            <div class="col-sm fondo-oscuro">Columna 1</div>
+            <div class="col-sm fondo-claro">Columna 2</div>
+            <div class="col-sm fondo-oscuro">Columna 3</div>
+            <div class="col-sm fondo-claro">Columna 4</div>
+            <div class="col-sm fondo-oscuro">Columna 5</div>
+        </div>
+
+        <hr>
+        <h3><code>Columnas combinadas-</code></h3>
+        <h5>
+            De mayor a menor, podemos establecer los pesos de cada 
+            columna para cada punto de ruptura antes de que colapsen
+        </h5>
+        <div class="row">
+            <div class="col-xl-4 col-lg-6 col-md-8 fondo-oscuro">Columna 1</div>
+            <div class="col-xl-4 col-lg-3 col-md-2 fondo-claro">Columna 2</div>
+            <div class="col-xl-4 col-lg-3 col-md-2 fondo-oscuro">Columna 3</div>
+        </div>
+
+    </div>
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

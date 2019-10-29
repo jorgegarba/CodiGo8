@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        .altura-300 {
+            height: 300px;
+        }
+
+        .altura-100 {
+            height: 100px;
+        }
+
+        .fondo-claro {
+            background-color: orangered;
+        }
+
+        .fondo-oscuro {
+            background-color: peru;
+        }
+
+        .fondo-fila {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row align-items-start altura-300 fondo-fila">
+            <div class="col-md-4 altura-100 fondo-claro">Columna 1</div>
+            <div class="col-md-4 altura-100 fondo-oscuro">Columna 2</div>
+            <div class="col-md-4 altura-100 fondo-claro">Columna 4</div>
+        </div>
+        <hr>
+        <div class="row align-items-center altura-300 fondo-fila">
+            <div class="col-md-4 altura-100 fondo-claro">Columna 1</div>
+            <div class="col-md-4 altura-100 fondo-oscuro">Columna 2</div>
+            <div class="col-md-4 altura-100 fondo-claro">Columna 4</div>
+        </div>
+        <hr>
+        <div class="row align-items-end altura-300 fondo-fila">
+            <div class="col-md-4 altura-100 fondo-claro">Columna 1</div>
+            <div class="col-md-4 altura-100 fondo-oscuro">Columna 2</div>
+            <div class="col-md-4 altura-100 fondo-claro">Columna 4</div>
+        </div>
+        <hr>
+        <div class="row altura-300 fondo-fila">
+            <div class="col-md-4 altura-100 fondo-claro align-self-start">Columna 1</div>
+            <div class="col-md-4 altura-100 fondo-oscuro align-self-center">Columna 2</div>
+            <div class="col-md-4 altura-100 fondo-claro align-self-end">Columna 4</div>
+        </div>
+    </div>
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>
