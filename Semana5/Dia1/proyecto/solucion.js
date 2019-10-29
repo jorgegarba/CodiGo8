@@ -3,8 +3,37 @@ window.onload = () => {
   let btnAgregarElemento = document.getElementById("btnAgregarElemento");
   let cuerpoTabla = document.getElementById("cuerpoTabla");
 
+  let inputCantidad = document.getElementById("inputCantidad");
+  let inputPUnitario = document.getElementById("inputPUnitario");
+  let inputTotal = document.getElementById("inputTotal");
+
+  let btnGuardar = document.getElementById("btnGuardar");
+
+  let productos = [];
+
+  btnGuardar.onclick = () => {
+    // limipiar o vaciar el arreglo de productos
+    // por seguridad
+    productos = [];
+
+    let inputs = document.querySelectorAll("#cuerpoTabla input");
+    for (let i = 0; i < inputs.length; i = i + 4) {
+
+      let objProducto = {
+        cant: inputs[i].value,
+        desc: inputs[i + 1].value,
+        punit: inputs[i + 2].value,
+        total: inputs[i + 3].value,
+      };
+
+      productos.push(objProducto);
+
+    }
+
+    console.log(productos);
 
 
+  }
 
   let escucharCambios = (inputCant, inputPUnit, inputTotal) => {
     inputCant.onkeyup = () => {
@@ -17,7 +46,16 @@ window.onload = () => {
       let punitario = +inputPUnit.value;
       inputTotal.value = +(cantidad * punitario);
     }
+    inputPUnit.onkeydown = (event) => {
+      if (event.key == "Tab") {
+        agregarFila();
+      }
+    }
+
   }
+
+  escucharCambios(inputCantidad, inputPUnitario, inputTotal);
+
 
 
   /**
@@ -67,15 +105,9 @@ window.onload = () => {
 
   }
 
-
-
-
   btnAgregarElemento.onclick = () => {
     agregarFila();
   }
-
-
-
 
 
 
