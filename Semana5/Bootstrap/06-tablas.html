@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <title>Document</title>
+    <script src="./06-tablas.js"></script>
     <style>
         header {
             height: 60px;
@@ -29,14 +30,15 @@
         <section class="row">
             <h2>Tabla simple con clase <code>table</code></h2>
 
-            <div class="col-12">
-                <table class="table">
+            <div class="col-8">
+                <table class="table" id="tablaObjetivo">
                     <thead>
                         <tr>
                             <th>Columna 1</th>
                             <th>Columna 2</th>
                             <th>Columna 3</th>
                             <th>Columna 4</th>
+                            <th>Columna 5</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -94,6 +96,14 @@
                     </tfoot>
                 </table>
             </div>
+            <div class="col-4">
+                <button id="btnStriped">STRIPED</button> <br>
+                <button id="btnHover">HOVER</button><br>
+                <button id="btnSm">SM</button><br>
+                <button id="btnDark">DARK</button><br>
+                <button id="btnBordered">BORDERED</button>
+            </div>
+
         </section>
         <section class="row mt-4">
             <h2>Tabla simple con clase <code> "table table-striped"</code></h2>
@@ -106,6 +116,7 @@
                             <th>Columna 2</th>
                             <th>Columna 3</th>
                             <th>Columna 4</th>
+                            <th>Columna 5</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -175,6 +186,7 @@
                             <th>Columna 2</th>
                             <th>Columna 3</th>
                             <th>Columna 4</th>
+                            <th>Columna 5</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -233,6 +245,296 @@
                 </table>
             </div>
         </section>
+
+        <section class="row mt-4">
+            <h2>Tabla simple con clase <code> "table table-hover"</code></h2>
+
+            <div class="col-12">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Columna 1</th>
+                            <th>Columna 2</th>
+                            <th>Columna 3</th>
+                            <th>Columna 4</th>
+                            <th>Columna 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Resumen 1</td>
+                            <td>Resumen 2</td>
+                            <td>Resumen 3</td>
+                            <td>Resumen 4</td>
+                            <td>Resumen 5</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section class="row mt-4">
+            <h2>Tabla simple con clase <code> "table table-sm"</code></h2>
+
+            <div class="col-12">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>Columna 1</th>
+                            <th>Columna 2</th>
+                            <th>Columna 3</th>
+                            <th>Columna 4</th>
+                            <th>Columna 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Resumen 1</td>
+                            <td>Resumen 2</td>
+                            <td>Resumen 3</td>
+                            <td>Resumen 4</td>
+                            <td>Resumen 5</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section class="row mt-4">
+            <h2>Tabla simple con clases combinadas
+                <code> "table table-bordered table-striped table-hover"</code>
+            </h2>
+
+            <div class="col-12">
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Columna 1</th>
+                            <th>Columna 2</th>
+                            <th>Columna 3</th>
+                            <th>Columna 4</th>
+                            <th>Columna 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Resumen 1</td>
+                            <td>Resumen 2</td>
+                            <td>Resumen 3</td>
+                            <td>Resumen 4</td>
+                            <td>Resumen 5</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section class="row mt-4">
+            <h2>Tabla simple con clases combinadas
+                <code> "table table-bordered table-striped table-dark"</code>
+            </h2>
+
+            <div class="col-12">
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th>Columna 1</th>
+                            <th>Columna 2</th>
+                            <th>Columna 3</th>
+                            <th>Columna 4</th>
+                            <th>Columna 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                        <tr>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                            <td>Contenido 1</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Resumen 1</td>
+                            <td>Resumen 2</td>
+                            <td>Resumen 3</td>
+                            <td>Resumen 4</td>
+                            <td>Resumen 5</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+
     </main>
 
 

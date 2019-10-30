@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+        integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <main class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-primary" id="btnGuardar">
+                    <i class="fas fa-save mr-2" id="icoGuardar"></i>
+                    Boton primario
+                </button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-secondary">
+                    Boton secundario
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-danger btn-block">
+                    <i class="fas fa-save mr-2"></i>
+                    Boton danger block
+                </button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-success btn-block">
+                    Boton success block
+                </button>
+            </div>
+        </div>
+
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <button class="btn btn-warning btn-block btn-sm">
+                    <i class="fas fa-save mr-2"></i>
+                    Boton warning block small
+                </button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-dark btn-block btn-sm">
+                    Boton dark block small
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-warning btn-block btn-lg">
+                    <i class="fas fa-save mr-2"></i>
+                    Boton warning block large
+                </button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-dark btn-block btn-lg">
+                    Boton dark block large
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-outline-warning btn-block">
+                    <i class="fas fa-save mr-2"></i>
+                    Boton con color outline
+                </button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-outline-dark btn-block">
+                    Boton con color outline
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+
+        let btnGuardar = document.getElementById("btnGuardar");
+        let icoGuardar = document.getElementById("icoGuardar");
+
+        btnGuardar.onclick = () => {
+            btnGuardar.setAttribute("disabled", "disabled");
+            icoGuardar.classList.add("fa-spin");
+
+            setTimeout(() => {
+                btnGuardar.removeAttribute("disabled");
+                icoGuardar.classList.remove("fa-spin");
+            }, 1500);
+        }
+
+
+    </script>
+</body>
+
+</html>
