@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" id="miHtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+        integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <title>Document</title>
+    <style>
+        main {
+            height: 3000px;
+        }
+
+        section:nth-child(1) {
+            height: 1000px;
+            background-color: coral;
+        }
+
+        section:nth-child(2) {
+            height: 1000px;
+            background-color: cornflowerblue;
+        }
+
+        section:nth-child(3) {
+            height: 1000px;
+            background-color: crimson;
+        }
+
+        body {
+            transition: 0.3s;
+        }
+
+        .menu {
+            position: fixed;
+            top: 50%;
+            /* width: 50px; */
+            background-color: rgba(200, 200, 200, 0.5);
+            border-radius: 20px;
+        }
+
+        .menu>ul {
+            list-style: none;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+
+<body id="miBody">
+
+    <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark" id="barra">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="#">Action 1</a>
+                        <a class="dropdown-item" href="#">Action 2</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            Section 1
+        </section>
+        <section>
+            Section 2
+        </section>
+        <section>
+            Section 3
+        </section>
+        <div class="menu">
+            <ul>
+                <li id="menu1">
+                    <i class="fas fa-dot-circle"></i>
+                </li>
+                <li id="menu2">
+                    <i class="fas fa-dot-circle text-white"></i>
+                </li>
+                <li id="menu3">
+                    <i class="fas fa-dot-circle text-light"></i>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+        console.log(window.innerHeight);
+
+        let miHtml = document.getElementById("miHtml");
+        let miBody = document.getElementById("miBody");
+        let barra = document.getElementById("barra");
+        let scrollAntiguo = -1;
+
+        miBody.onscroll = () => {
+            let scrollActual = miHtml.scrollTop;
+            if (scrollActual > scrollAntiguo) {
+                // estamos bajando
+                if (miHtml.scrollTop > 0 && miHtml.scrollTop < 1000) {
+                    miHtml.scrollTop = 1000;
+                }
+                if (miHtml.scrollTop > 1000 && miHtml.scrollTop < 2000) {
+                    miHtml.scrollTop = 2000;
+                }
+            } else {
+                // estamos subiendo
+                if (miHtml.scrollTop > 0 && miHtml.scrollTop < 1000) {
+                    miHtml.scrollTop = 0;
+                }
+                if (miHtml.scrollTop > 1000 && miHtml.scrollTop < 2000) {
+                    miHtml.scrollTop = 1000;
+                }
+            }
+            scrollAntiguo = scrollActual;
+        }
+    </script>
+</body>
+
+</html>
