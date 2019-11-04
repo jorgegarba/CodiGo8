@@ -1,4 +1,8 @@
 let btnTraerDatos = document.getElementById("btnTraerDatos");
+let tbody = document.getElementById("tbody");
+
+let tabla = document.getElementById("tabla");
+let loading = document.getElementById("loading");
 
 
 /**
@@ -8,20 +12,45 @@ let btnTraerDatos = document.getElementById("btnTraerDatos");
  * que llega del servidor 
  */
 let dibujarTabla = (usuarios) => {
+
+  // limpiando el cuerpo de la tabla, por si ya habían
+  // filas previamente
+  tbody.innerHTML = "";
+
   // recorrer el arreglo
   // dibujar la tabla para cada usuario con un ciclo for
   // etc etc etc
   // SOLO LOS CAMPOS
-      // email: 
-      // id: 
-      // name: 
-      // phone:
-      // username: 
-      // website:
-      
+  // email: 
+  // id: 
+  // name: 
+  // phone:
+  // username: 
+  // website:
+  usuarios.forEach((usu) => {
+
+
+
+    let tr = document.createElement("tr");
+
+    tr.innerHTML = `<td>${usu.id}</td>
+                    <td>${usu.name}</td>
+                    <td>${usu.email}</td>
+                    <td>${usu.phone}</td>
+                    <td>${usu.username}</td>
+                    <td>${usu.website}</td>`;
+    tbody.appendChild(tr);
+  })
+
 }
 
 btnTraerDatos.onclick = () => {
+
+  // a penas hago click al boton, me aseguro de que 
+  // la carga aparezca, y se oculte la tabla
+  loading.removeAttribute("hidden");
+  tabla.setAttribute("hidden", "hidden");
+
   // Creando un objeto ajax
   let postman = new XMLHttpRequest();
 
@@ -57,6 +86,11 @@ btnTraerDatos.onclick = () => {
         let jsonRpta = JSON.parse(postman.responseText);
         console.log(jsonRpta);
         dibujarTabla(jsonRpta);
+        // luego de dibujar la tabla
+        // me aseguro de ocultar la carga, y 
+        // mostrar la tabla
+        tabla.removeAttribute("hidden");
+        loading.setAttribute("hidden", "hidden");
         break;
     }
   }

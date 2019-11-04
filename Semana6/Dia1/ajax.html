@@ -7,7 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+        integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <title>Document</title>
 </head>
 
@@ -51,8 +54,7 @@
                         Opciones
                     </div>
                     <div class="card-body">
-                        <button class="btn btn-dark btn-block"
-                                id="btnTraerDatos">
+                        <button class="btn btn-dark btn-block" id="btnTraerDatos">
                             !Traer Datos!
                         </button>
                     </div>
@@ -62,6 +64,36 @@
                 <div class="card">
                     <div class="card-header">
                         Resultados
+                    </div>
+                    <div class="card-body">
+                        <!-- TABLA -->
+                        <table class="table table-responsive" id="tabla" hidden="hidden">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Nombre</th>
+                                    <th>Email</th>
+                                    <th>Teléfono</th>
+                                    <th>Nombre de usuario</th>
+                                    <th>Website</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+
+                            </tbody>
+                        </table>
+
+                        <!-- AVISO DE CARGA-->
+                        <div class="alert alert-success text-center" id="loading" role="alert" 
+                        hidden="hidden">
+                            <h4 class="alert-heading">Cargando</h4>
+                            <p>
+                                <i class="fa fa-refresh fa-spin fa-2x"></i>
+                            </p>
+                            <p class="mb-0">
+                                Estamos conectándonos al servidor
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
