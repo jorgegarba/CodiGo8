@@ -1,0 +1,5 @@
+Un minimarket desea un sistema de facturacion, para lo cual se necesita una tabla de sus productos que contenga el id de producto (autogenerado), la descripcion y precio_unitario. El minimarket tiene dos almacenes asi que desea saber la cantidad de un producto en cada almacen. Cuando un cliente va a comprar algun producto este se registra en una tabla de ventas en el cual se agarra la cabecera de la boleta (informacion del cliente extraido de su tabla cliente, fecha y direccion del minimarket y numero de boleta), en su cuerpo tenemos la cantidad del producto, la descripcion del producto y su total de la boleta. Haga el DER y la base de datos llamada minimarket. Al final llene datos y que me muestre la boleta
+nomb_cli       dir_cli         nro_boleta
+01     producto_nom         pre_unit    total
+mandar backup a: ederiveroman@gmail.com
+y la consulta en el cuerpo del correo
