@@ -1,6 +1,26 @@
 let btnTraerDatos = document.getElementById("btnTraerDatos");
 
 
+/**
+ * Función que dibuja una tabla en la seción de RESULTADOS
+ * en HTML
+ * @param {Array:string} usuarios la lista de objetos de tipo usuario
+ * que llega del servidor 
+ */
+let dibujarTabla = (usuarios) => {
+  // recorrer el arreglo
+  // dibujar la tabla para cada usuario con un ciclo for
+  // etc etc etc
+  // SOLO LOS CAMPOS
+      // email: 
+      // id: 
+      // name: 
+      // phone:
+      // username: 
+      // website:
+      
+}
+
 btnTraerDatos.onclick = () => {
   // Creando un objeto ajax
   let postman = new XMLHttpRequest();
@@ -23,7 +43,6 @@ btnTraerDatos.onclick = () => {
         break;
       case 2:
         console.log("se llamó a SEND");
-
         break;
       case 3:
         console.log("Esperando respuesta del servidor");
@@ -37,6 +56,7 @@ btnTraerDatos.onclick = () => {
         // pero en formato JSON (en un objeto JSON)
         let jsonRpta = JSON.parse(postman.responseText);
         console.log(jsonRpta);
+        dibujarTabla(jsonRpta);
         break;
     }
   }
