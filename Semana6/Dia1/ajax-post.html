@@ -54,46 +54,46 @@
                         Opciones
                     </div>
                     <div class="card-body">
-                        <button class="btn btn-dark btn-block" id="btnTraerDatos">
-                            !Traer Datos!
-                        </button>
+
                     </div>
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">
-                        Resultados
+                    <div class="card-header bg-dark text-white">
+                        Formulario para crear un posteo con POST
                     </div>
                     <div class="card-body">
-                        <!-- TABLA -->
-                        <table class="table table-responsive" id="tabla" hidden="hidden">
-                            <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Nombre</th>
-                                    <th>Email</th>
-                                    <th>Teléfono</th>
-                                    <th>Nombre de usuario</th>
-                                    <th>Website</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tbody">
-
-                            </tbody>
-                        </table>
-
-                        <!-- AVISO DE CARGA-->
-                        <div class="alert alert-success text-center" id="loading" role="alert" 
-                        hidden="hidden">
-                            <h4 class="alert-heading">Cargando</h4>
-                            <p>
-                                <i class="fa fa-refresh fa-spin fa-2x"></i>
-                            </p>
-                            <p class="mb-0">
-                                Estamos conectándonos al servidor
-                            </p>
-                        </div>
+                        <form>
+                            <div class="form-group">
+                                <label for="inputPostTitulo">Titulo del Post</label>
+                                <input type="text"
+                                        class="form-control"
+                                        id="inputPostTitulo">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPostBody">Contenido del Post</label>
+                                <textarea id="inputPostBody" 
+                                        cols="30"
+                                        rows="10"
+                                        class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="selectUserId">Seleccionar User - Id</label>
+                                <select class="form-control" id="selectUserId">
+                                    <option value="1">Usuario 1</option>
+                                    <option value="2">Usuario 2</option>
+                                    <option value="3">Usuario 3</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-block btn-dark" type="submit"
+                                        id="btnSubmit">
+                                    <i class="fas fa-plus-circle mr-2"></i>
+                                    Crear Post
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
