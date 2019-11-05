@@ -3,10 +3,49 @@ let ruta = document.location.href;
 if (ruta.indexOf("post") >= 0) {
   console.log("Estoy en POST");
 
-  let inputPostTitulo = documento.getElementById("inputPostTitulo");
-  let inputPostBody = documento.getElementById("inputPostBody");
-  let selectUserId = documento.getElementById("selectUserId");
-  let btnSubmit = documento.getElementById("btnSubmit");
+  let inputPostTitulo = document.getElementById("inputPostTitulo");
+  let inputPostBody = document.getElementById("inputPostBody");
+  let selectUserId = document.getElementById("selectUserId");
+  let btnSubmit = document.getElementById("btnSubmit");
+
+  btnSubmit.onclick = (event) => {
+
+    event.preventDefault();
+
+    // PASO 1 > Armar el JSON para enviar al servidor
+    let objPublicacion = {
+      title: inputPostTitulo.value,
+      body: inputPostBody.value,
+      userId: selectUserId.value
+    };
+
+    let ajax = new XMLHttpRequest();
+    // Establecer el tiempo de espera al servidor
+    ajax.timeout = 4000;
+    // ontimeout => Función que se ejecuta cuando el servidor
+    // no responde en el tiempo establecido
+    ajax.ontimeout = () => {
+      console.log("El servidor no responde");
+    }
+
+    // configurando el evento para cuando llegue la 
+    // respuesta
+    ajax.onreadystatechange = () => {
+      if (ajax.readyState == 4) {
+        // llegó la data
+        console.log(ajax.responseText);
+        // imprimiendo el codigo de estado
+        console.log(ajax.status);
+      }
+    }
+    // configurar el método y la URL
+    ajax.open("POST", "https://jsonplaceholder.typicode.com/posts");
+    // establecer los headers o el tipo de contenido 
+    // que se enviará al servidor
+    ajax.setRequestHeader("Content-type", "application/json");
+    // configurar los datos a enviar al servidor
+    ajax.send(JSON.stringify(objPublicacion));
+  }
 
 
 }
@@ -43,11 +82,7 @@ if (ruta.indexOf("get") >= 0) {
     // username: 
     // website:
     usuarios.forEach((usu) => {
-
-
-
       let tr = document.createElement("tr");
-
       tr.innerHTML = `<td>${usu.id}</td>
                     <td>${usu.name}</td>
                     <td>${usu.email}</td>
