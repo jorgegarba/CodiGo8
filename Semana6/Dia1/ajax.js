@@ -21,11 +21,15 @@ if (ruta.indexOf("post") >= 0) {
 
     let ajax = new XMLHttpRequest();
     // Establecer el tiempo de espera al servidor
-    ajax.timeout = 4000;
+    ajax.timeout = 2000;
     // ontimeout => Función que se ejecuta cuando el servidor
     // no responde en el tiempo establecido
     ajax.ontimeout = () => {
-      console.log("El servidor no responde");
+      Swal.fire({
+        icon: 'error',
+        title: 'Ups!',
+        text: 'El servidor no responde'
+      })
     }
 
     // configurando el evento para cuando llegue la 
@@ -36,6 +40,12 @@ if (ruta.indexOf("post") >= 0) {
         console.log(ajax.responseText);
         // imprimiendo el codigo de estado
         console.log(ajax.status);
+        // LANZAR ALERTA
+        Swal.fire({
+          icon: 'success',
+          title: 'Usuario Creado',
+          text: 'Usuario creado correctamente'
+        })
       }
     }
     // configurar el método y la URL
@@ -149,7 +159,6 @@ if (ruta.indexOf("get") >= 0) {
     // como bytes tenga la data de respuesta del servidor
     postman.onprogress = (evento) => {
       console.log(evento);
-
       // preguntando si el evento o la data del evento
       // es medible
       if (evento.lengthComputable) {
