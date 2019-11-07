@@ -56,6 +56,17 @@ class CRUDProductos {
       })
     }
   }
+
+  /**
+   * Función que crea un recurso
+   * @param {*} objProducto => un objeto con todos los campos de un 
+   * recurso para enviarlo al servidor
+   * @param {*} callback => Función que será ejecutada en la función
+   * success de AJAX cuando termine de crearse un recurso
+   */
+  postRecurso(objProducto, callback) {
+
+  }
 }
 
 class Utils {
@@ -121,6 +132,12 @@ $("#btnTraerDatos").click(() => {
   objCRUD.getRecursos((productos) => {
     objUtils.dibujarTabla(productos);
   });
+})
+
+$("#btnCrearRecurso").click(() => {
+  // Hacer aparecer el formulario de creación de un recurso
+  // y ocutlar todos los demás ARTICLES
+  
 })
 
 
