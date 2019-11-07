@@ -41,9 +41,14 @@
                         </div>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <form class="form-inline my-2 my-lg-0"
+                    id="formBuscar">
+                    <input class="form-control mr-sm-2" 
+                            type="text" 
+                            placeholder="Buscar por Id"
+                            id="inputBuscar">
+                    <button class="btn btn-outline-success my-2 my-sm-0"
+                            type="submit">Search</button>
                 </form>
             </div>
         </nav>
@@ -84,6 +89,16 @@
                             </div>
                         </article>
                         <!-- FIN ARTICLE LOADING -->
+                        <!-- ARTICLE SAD -->
+                        <article id="articleSad" hidden="hidden">
+                            <div class="alert alert-info text-center" role="alert">
+                                <h4 class="alert-heading">No se encontró el Id</h4>
+                                <p>
+                                    <i class="fas fa-sad-cry fa-3x"></i>
+                                </p>
+                            </div>
+                        </article>
+                        <!-- FIN ARTICLE SAD -->
                         <!-- ARTICLE TABLA DE PRODUCTOS -->
                         <article id="articleTabla" hidden="hidden">
                             <table class="table table-bordered table-hover">

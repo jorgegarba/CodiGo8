@@ -19,12 +19,11 @@ class CRUDProductos {
       },
       beforeSend: function () {
         // Aquí podriamos configurar un GIF de carga
+        $("#seccionResultados article").attr("hidden", "hidden");
         $("#articleLoading").removeAttr("hidden");
-        $("#articleTabla").attr("hidden", "hidden");
       },
     })
   }
-
   /**
    * Función que eliminar un recurso de la BD
    * @param {*} idProducto 
@@ -56,7 +55,6 @@ class CRUDProductos {
       })
     }
   }
-
   /**
    * Función que crea un recurso
    * @param {*} objProducto => un objeto con todos los campos de un 
@@ -67,6 +65,33 @@ class CRUDProductos {
   postRecurso(objProducto, callback) {
 
   }
+  getRecursoById(idProducto) {
+    $.ajax({
+      type: 'GET',
+      url: this.endpoint + "/producto/" + idProducto,
+      timeout: 2000,
+      data: null,
+      success: function (respuesta) {
+        // equivale a un readyState 4
+        // la data ya llegó en el objeto respuesta
+        // console.log(respuesta);
+        console.log(respuesta);
+        // $("#articleLoading").attr("hidden", "hidden");
+        // $("#articleTabla").removeAttr("hidden");
+      },
+      error: function (error) {
+        if (error.status == 404) {
+          // ingresaron un id que no existe en BD
+          $("#articleLoading").attr("hidden", "hidden");
+          $("#articleSad").removeAttr("hidden");
+        }
+      },
+      beforeSend: function () {
+        // Aquí podriamos configurar un GIF de carga
+      },
+    })
+  }
+
 }
 
 class Utils {
@@ -137,40 +162,18 @@ $("#btnTraerDatos").click(() => {
 $("#btnCrearRecurso").click(() => {
   // Hacer aparecer el formulario de creación de un recurso
   // y ocutlar todos los demás ARTICLES
-  
+
 })
 
+$("#formBuscar").submit((event) => {
+  event.preventDefault();
+  // ocultar todos los articles
+  if ($("#inputBuscar").val().trim() == "") {
+    return;
+  }
 
+  $("#seccionResultados article").attr("hidden", "hidden");
+  $("#articleLoading").removeAttr("hidden");
+  objCRUD.getRecursoById($("#inputBuscar").val());
 
-
-
-
-
-
-// let postRecurso = () => {
-
-//   // Cómo obtener el value de un input
-//   // $("#inputEmail").val();
-//   // Cómo se settea el value de un input
-//   // $("#inputEmail").val('el valor del input');
-
-//   $.ajax({
-//     type: 'POST',
-//     url: 'SU URL EN MOCKAPI',
-//     timeout: 4000,
-//     data: /*AQUI SE MANDA UN JSON en string ( stringify) */,
-//     contentType: 'application/json',
-//     success: function (respuesta) {
-//       // equivale a un readyState 4
-//       // la data ya llegó en el objeto respuesta
-//       console.log(respuesta);
-//     },
-//     error: function (error) {
-//       console.log(error);
-//     },
-//     beforeSend: function () {
-//       // Aquí podriamos configurar un GIF de carga
-//     }
-//   })
-
-// }
+})
