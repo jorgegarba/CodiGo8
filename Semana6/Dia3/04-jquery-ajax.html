@@ -13,12 +13,99 @@
         integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link rel="stylesheet" href="./jquery-ui.min.css">
     <title>Document</title>
-    
+
 </head>
 
 <body>
 
-    
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">Action 1</a>
+                            <a class="dropdown-item" href="#">Action 2</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid mt-5">
+        <div class="row">
+            <section class="col-md-4" id="seccionBotones">
+                <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        Botones de Acción
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-block btn-dark" id="btnTraerDatos">
+                            <i class="fa fa-download mr-3"></i>
+                            Traer Productos
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-8" id="seccionResultados">
+                <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        Resultados
+                    </div>
+                    <div class="card-body">
+                        <!-- ARTICLE LOADING -->
+                        <article id="articleLoading" hidden="hidden">
+                            <div class="alert alert-info text-center" role="alert">
+                                <h4 class="alert-heading">Cargando...</h4>
+                                <p>
+                                    <i class="fa fa-refresh fa-spin fa-3x"></i>
+                                </p>
+                            </div>
+                        </article>
+                        <!-- FIN ARTICLE LOADING -->
+                        <!-- ARTICLE TABLA DE PRODUCTOS -->
+                        <article id="articleTabla" hidden="hidden">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Nombre</th>
+                                        <th>Codigo</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio</th>
+                                        <th>Imagen</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cuerpoTabla">
+
+                                </tbody>
+                            </table>
+                        </article>
+                        <!-- FIN ARTICLE TABLA DE PRODUCTOS -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
 
 
 
@@ -31,8 +118,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
-    <script src="./03-jquery-ui.js"></script>
+    <script src="./04-jquery-ajax.js"></script>
 </body>
 
 </html>
