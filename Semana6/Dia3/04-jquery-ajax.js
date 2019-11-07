@@ -24,6 +24,38 @@ class CRUDProductos {
       },
     })
   }
+
+  /**
+   * Función que eliminar un recurso de la BD
+   * @param {*} idProducto 
+   * @param {*} callback => función callback que se ejecuta
+   * cuando un producto se ha eliminado correctamente
+   */
+  deleteRecursoById(idProducto, callback) {
+    let rpta = confirm("¿Está seguro de eliminar el recurso?");
+    if (rpta) {
+      $.ajax({
+        type: 'DELETE',
+        url: this.endpoint + "/producto/" + idProducto,
+        timeout: 2000,
+        data: null,
+        success: function (respuesta) {
+          // equivale a un readyState 4
+          // la data ya llegó en el objeto respuesta
+          // console.log(respuesta);
+          console.log(respuesta);
+          callback();
+
+        },
+        error: function (error) {
+          console.log(error);
+        },
+        beforeSend: function () {
+          // Aquí podriamos configurar un GIF de carga
+        },
+      })
+    }
+  }
 }
 
 class Utils {
@@ -33,6 +65,7 @@ class Utils {
   constructor() {
     this.cuerpoTabla = $("#cuerpoTabla");
   }
+
   dibujarTabla(productos) {
     // borrando el contenido del cuerpo de la tabla
     this.cuerpoTabla.html("");
@@ -54,10 +87,27 @@ class Utils {
                             <i class="fas fa-trash"></i>
                               Eliminar
                           </button>`);
+      // configurar el evento Click del boton
+      this.configurarBotonEliminar(btnAcciones, producto.id);
+
       tdAcciones.append(btnAcciones);
       tr.append(tdAcciones);
       this.cuerpoTabla.append(tr);
+
     })
+  }
+
+  configurarBotonEliminar(boton, idProducto) {
+    boton.click(() => {
+      let objCRUD = new CRUDProductos();
+      objCRUD.deleteRecursoById(idProducto, () => {
+        // si éste callback se ejecuta, significa que 
+        // el producto se ha eliminado
+        objCRUD.getRecursos((productos) => {
+          this.dibujarTabla(productos);
+        })
+      });
+    });
   }
 
 }
