@@ -53,7 +53,7 @@ class Producto(Resource):
     def post(self):
         producto = request.get_json()
         cur= mysql.connection.cursor()
-        cur.execute("INSERT INTO PRODUCTO (prod_desc,prod_precio,prod_disponible) VALUES ({},{},{})".format(producto['descripcion'],producto['precio'],producto['disponibilidad']))
+        cur.execute("INSERT INTO PRODUCTO (prod_desc,prod_precio,prod_disponible) VALUES ('{}',{},{})".format(producto['descripcion'],producto['precio'],producto['disponibilidad']))
         mysql.connection.commit()
         return {
             'message':'Producto creado exitosamente',
