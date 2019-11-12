@@ -14,6 +14,7 @@ app.config['MYSQL_DB'] = 'apiflask'
 mysql = MySQL(app)
 
 
+# http://127.0.0.1:500/supermercados/traer
 @app.route('/supermercados/traer')
 def traer_supermercados():
     cur = mysql.connection.cursor()
@@ -24,7 +25,7 @@ def traer_supermercados():
     return jsonify(data)
 
 
-@app.route('/supermercado/agregar',methods=['POST'])
+@app.route('/supermercado/agregar', methods=['POST'])
 def agregar_super():
     info = request.get_json()
     if(info['nombre'] and info['direccion']):
@@ -36,10 +37,12 @@ def agregar_super():
         cur.close()
         return jsonify(
             {
-                'message': 'se agrego con exito', 'content': info
-            }),201
+                'message': 'se agrego con exito',
+                'content': info
+            }), 201
     else:
         return jsonify({'message': 'Faltan valores'}), 400
+
 
 @app.route('/cliente/agregar', methods=['POST'])
 def agregar_cliente():
@@ -47,16 +50,17 @@ def agregar_cliente():
     if(data.__contains__('nombre') and data.__contains__('apellido') and data.__contains__('categoria')):
         cur = mysql.connection.cursor()
         cur.execute('INSERT INTO CLIENTE (nom_cli, ape_cli, cat_cli) VALUES (%s,%s,%s)',
-                    (data['nombre'], data['apellido'],data['categoria']))
+                    (data['nombre'], data['apellido'], data['categoria']))
         resultado = mysql.connection.commit()
         print(resultado)
         cur.close()
         return jsonify(
             {
                 'message': 'se agrego con exito', 'content': data
-            }),201
+            }), 201
     else:
         return jsonify({'message': 'Faltan valores'}), 400
+
 
 @app.route('/cliente/traer')
 def traer_clientes():
@@ -67,12 +71,13 @@ def traer_clientes():
     print(data)
     return jsonify(data)
 
-#traer un cliente segun su nombre o apellido
+# traer un cliente segun su nombre o apellido
 @app.route('/cliente/buscar/<string:palabra>')
 def buscar_cliente(palabra):
     cur = mysql.connection.cursor()
-    cur.execute(f"SELECT * FROM CLIENTE WHERE nom_cli LIKE '%{palabra}%' OR ape_cli LIKE '%{palabra}%'")
-    data = cur.fetchall() # fetchall => dame todas las coincidencias 
+    cur.execute(
+        f"SELECT * FROM CLIENTE WHERE nom_cli LIKE '%{palabra}%' OR ape_cli LIKE '%{palabra}%'")
+    data = cur.fetchall()  # fetchall => dame todas las coincidencias
     # fetchone => dame la primera coincidencia
     cur.close()
     return jsonify(data)
@@ -81,12 +86,25 @@ def buscar_cliente(palabra):
 # agregar un cliente con un supermercado favorito
 @app.route('/clientesuper/agregar', methods=['POST'])
 def agregar_cliente_super():
-    pass
+    data = request.get_json()
+    if(data.__contains__('id_cliente') and data.__contains__('id_super')):
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO SUPER_CLI (id_cli, id_super) VALUES (%s,%s)",
+                    (data['id_cliente'], data['id_super']))
+        mysql.connection.commit()
+        cur.close()
+        return jsonify({
+            'message': 'Se creo la relacion Cliente con supermercado con exito',
+            'content': data
+        })
+    else:
+        return jsonify({'message': 'Faltan datos'})
 
 # traer todos los clientes con un supermercado favorito
 @app.route('/supermercado/favorito/<string:nombre>')
 def favorito_super():
     pass
+
 
 # el puerto x defaul de flask es 5000
 app.run(debug=True)
