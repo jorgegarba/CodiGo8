@@ -3,6 +3,7 @@ from flask_restful import Resource, Api
 from flask import request
 from app import app
 
+
 class Producto(Resource):
     def get(self):
         cur = mysql.connection.cursor()
@@ -55,23 +56,43 @@ class Producto(Resource):
             'producto': data
         }
 
-    def delete(self,id_prod):
+    def delete(self, id_prod):
         cur = mysql.connection.cursor()
-        cur.execute(f"UPDATE PRODUCTO SET prod_disponible=false where prod_id = {id_prod}")
+        cur.execute(
+            f"UPDATE PRODUCTO SET prod_disponible=false where prod_id = {id_prod}")
         mysql.connection.commit()
         cur.close()
         return {
             'message': 'Producto inhabilitado exitosamente',
         }
 
+
 class Almacen(Resource):
     def get(self):
-        return 'Ok'
+        cur = mysql.connection.cursor()
+        cur.execute("Select * from ALMACEN")
+        data = cur.fetchall()
+        cur.close()
+        return {'almacenes': data}, 200
+
     def post(self):
-        return 'Ok'
-    def put(self):
-        return 'Ok'
+        data = request.get_json()
+        cur = mysql.connection.cursor()
+        cur.execute(
+            f"INSERT INTO ALMACEN (ALMA_DESC) VALUES ({data['nombre']})")
+        mysql.connection.commit()
+        cur.close()
+        return {'message': 'Almacen creado con exito'}, 201
+
+    def put(self, alma_id):
+        data = request.get_json()
+        cur = mysql.connection.cursor()
+        cur.execute(
+            f"UPDATE INTO ALMACEN SET ALMA_DESC={data['nombre']} WHERE ALMA_ID={alma_id}")
+        mysql.connection.commit()
+        cur.close()
+        return {'message':'Almacen actualizado con exito'},201
 
 api = Api(app)
-api.add_resource(Producto,'/producto','/producto/<string:id_prod>')
-api.add_resource(Almacen,'/almacen','/almacen/<string:alma_id>')
+api.add_resource(Producto, '/producto', '/producto/<string:id_prod>')
+api.add_resource(Almacen, '/almacen', '/almacen/<string:alma_id>')
