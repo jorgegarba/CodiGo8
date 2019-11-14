@@ -2,3 +2,5 @@ pip install Flask
 pip install Flask-RESTful
 (Descargar el archivo binario e instalarlo antes de flask-mysql sino no funciona https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient)
 pip install flask-mysqldb
+
+pip install bcrypt => encriptacion python
