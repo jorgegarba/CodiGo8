@@ -18,9 +18,79 @@
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cyborg/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-mtS696VnV9qeIoC8w/PrPoRzJ5gwydRVn0oQ9b+RJOPxE1Z1jXuuJcyeNxvNZhdx" crossorigin="anonymous">
     <title>Document</title>
+    <style>
+        #btnAbrirModal {
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
 </head>
 
 <body>
+
+
+
+    <!-- Modal Crear una Cancha -->
+    <div class="modal fade" id="modalCrearCancha" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Formulario de Creación de Cancha</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="frmCrearCancha">
+                        <div class="form-group">
+                            <label for="inputNombre">Nombre:</label>
+                            <input type="text" placeholder="Nombre de la cancha" class="form-control" id="inputNombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDireccion">Dirección:</label>
+                            <input type="text" placeholder="Dirección de la cancha" class="form-control"
+                                id="inputDireccion">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nro Canchas:</label>
+                            <input type="number" value="1" min="1" class="form-control" id="inputNroCanchas">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputTelefono">Nro Canchas:</label>
+                            <input type="text" placeholder="Teléfono de la cancha" class="form-control"
+                                id="inputTelefono">
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label for="">Latitud:</label>
+                                <input type="number" class="form-control" id="inputLatitud">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Longitud:</label>
+                                <input type="number" class="form-control" id="inputLongitud">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div id="mapa">
+                                AQUI IRA EL MAPA
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" id="btnCrearCancha">
+                                Crear Cancha
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -55,6 +125,9 @@
     <main class="container mt-4">
 
     </main>
+    <button class="btn btn-primary" id="btnAbrirModal">
+        <i class="fas fa-plus-circle fa-2x"></i>
+    </button>
 
 
 
