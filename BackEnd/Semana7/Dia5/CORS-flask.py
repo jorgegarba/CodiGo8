@@ -8,6 +8,7 @@ CORS(app)
 
 # SI NOSOTROS QUEREMOS HABILITAR SOLAMENTE UNA SUBCATEGORIA DE NUESTRA API TENEMOS QUE INDICAR EL RECURSO Y QUE ORIGENES VAN A SER ACCESIBLES A ELLOS
 cors = CORS(app,resource={r"/api/*":{"origins":"*"}})
+# MAYOR DOCUMENTACION: https://flask-cors.readthedocs.io/en/latest/
 @app.route('/')
 def hola_mundo():
     return 'HOla mundito con CORS'
