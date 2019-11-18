@@ -95,6 +95,68 @@
         </div>
     </div>
 
+     <!-- Modal Editar una Cancha -->
+     <div class="modal fade" id="modalEditarCancha" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+     aria-hidden="true">
+     <div class="modal-dialog" role="document">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h5 class="modal-title">Formulario de Edicion de Cancha</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                 </button>
+             </div>
+             <div class="modal-body">
+                 <form id="frmEditarCancha">
+                     <label id="idCancha"></label>
+                     <div class="form-group">
+                         <label for="EditinputNombre">Nombre:</label>
+                         <input type="text" placeholder="Nombre de la cancha" class="form-control" id="EditinputNombre">
+                     </div>
+                     <div class="form-group">
+                         <label for="EditinputDireccion">Dirección:</label>
+                         <input type="text" placeholder="Dirección de la cancha" class="form-control"
+                             id="EditinputDireccion">
+                     </div>
+                     <div class="form-group">
+                         <label for="EditinputNroCanchas">Nro Canchas:</label>
+                         <input type="number" value="1" min="1" class="form-control" id="EditinputNroCanchas">
+                     </div>
+                     <div class="form-group">
+                         <label for="EditinputTelefono">Telefono de la cancha:</label>
+                         <input type="text" placeholder="Teléfono de la cancha" class="form-control"
+                             id="EditinputTelefono">
+                     </div>
+                     <div class="form-group row">
+                         <div class="col-md-6">
+                             <label for="EditinputLatitud">Latitud:</label>
+                             <input type="number" class="form-control" id="EditinputLatitud">
+                         </div>
+                         <div class="col-md-6">
+                             <label for="EditinputLongitud">Longitud:</label>
+                             <input type="number" class="form-control" id="EditinputLongitud">
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <div id="mapa">
+                             AQUI IRA EL MAPA
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                         <button type="button" class="btn btn-danger" id="btnEliminarCancha">
+                             Eliminar Cancha
+                         </button>
+                         <button type="button" class="btn btn-success" id="btnEditarCancha">
+                             Editar Cancha
+                         </button>
+                     </div>
+                 </form>
+             </div>
+         </div>
+     </div>
+ </div>
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Navbar</a>

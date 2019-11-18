@@ -4,7 +4,9 @@ import { firebaseConfig } from './env/config.js';
 firebase.initializeApp(firebaseConfig);
 // Instanciar la base de datos
 let database = firebase.database();
+let updateCancha = (objCancha) => {
 
+}
 let postCancha = (objCancha) => {
 
   // Obtener una llave única para el nodo canchas
@@ -57,9 +59,30 @@ if (document.location.href.indexOf("canchas.html") != -1) {
     postCancha(objCancha);
 
   })
+  // $("#frmEditarCancha").submit(function (event) {
+  //   let objCancha = {
+  //     nombre: $("#EditinputNombre").val(),
+  //     direccion: $("#EditinputDireccion").val(),
+  //     lat: $("#EditinputLatitud").val(),
+  //     lng: $("#EditinputLongitud").val(),
+  //     nrocanchas: $("#EditinputNroCanchas").val(),
+  //     telefono: $("#EditinputTelefono").val()
+  //   }
+  //   event.preventDefault();
+  //   console.log("SE EJECUTO EL FORM SUBMIT");
+  // })
+  $("#btnEditarCancha").click(function (event) {
+    event.preventDefault();
+    console.log("SE EJECUTO EL EDITAR SUBMIT");
+  })
+  $("#btnEliminarCancha").click(function (event) {
+    event.preventDefault();
+    console.log("SE EJECUTO EL ELIMINAR SUBMIT");
+  })
+
 
   let dibujarTabla = (arregloCanchas) => {
-    $("#tablaCanchas").DataTable({
+    var tabla = $("#tablaCanchas").DataTable({
       data: arregloCanchas,
       // destroy, sirve para reinicializar el datatable cada vez
       // que se llame a la función nuevamente
@@ -71,9 +94,25 @@ if (document.location.href.indexOf("canchas.html") != -1) {
         { title: "Nro lozas", data: 'nrocanchas' },
         { title: "Lat", data: 'lat' },
         { title: "Long", data: 'lng' },
-        { title: "Teléfono", data: 'telefono' }
+        { title: "Teléfono", data: 'telefono' },
+        { title: "Acciones", defaultContent: '<button class="btn btn-secondary">Acciones</button>' }
       ]
     });
+    // console.log(tabla.rows().data());
+    // document.getElementById("tablaCanchas").addEventListener("click",()=>{})
+    $("#tablaCanchas").on('click', 'button', function () {
+      var data = tabla.row($(this).parents('tr')).data();
+      console.log(data);
+      $("#idCancha").text(data.id);
+      $("#modalEditarCancha").modal("show");
+      $("#EditinputNombre").val(data.nombre);
+      $("#EditinputDireccion").val(data.direccion);
+      $("#EditinputNroCanchas").val(data.nrocanchas);
+      $("#EditinputTelefono").val(data.telefono);
+      $("#EditinputLatitud").val(data.lat);
+      $("#EditinputLongitud").val(data.lng);
+
+    })
   }
 
   let traerDatos = () => {
