@@ -4,8 +4,29 @@ import { firebaseConfig } from './env/config.js';
 firebase.initializeApp(firebaseConfig);
 // Instanciar la base de datos
 let database = firebase.database();
+let storage = firebase.storage();
 let updateCancha = (objCancha) => {
-
+  let id = $("#idCancha").text()
+  console.log(id);
+  database.ref("canchas/"+id).set({
+    direccion: objCancha.direccion,
+    nombre: objCancha.nombre,
+    lat: objCancha.lat,
+    lng: objCancha.lng,
+    nrocanchas: objCancha.nrocanchas,
+    telefono : objCancha.telefono
+  },function (error){
+    if ( error){
+      console.log(error);
+    }else{
+      Swal.fire({
+        title:'Ok',
+        text:'Se ha actualizado la canchita',
+        icon:'success'
+      })
+      $("#modalEditarCancha").modal("hide");
+    }
+  });
 }
 let postCancha = (objCancha) => {
 
@@ -31,8 +52,34 @@ let postCancha = (objCancha) => {
       })
     })
 }
+let deleteCancha = (idCancha)=>{
+  console.log(idCancha);
+  database.ref("canchas/"+idCancha).remove().then(function () {
+    console.log("Se elimino la cancha");
+  }).catch(function (error) {
+    console.log(error);
+  })
+}
 
-
+let subirArchivo = (objCancha)=>{
+  var storageRef = storage.ref();
+  var archivo = $("#inputFoto").prop('files')[0];
+  var nombreArchivo = archivo.name;
+  var nombreFinal = +(new Date())+'-'+nombreArchivo;
+  let metadata = {
+    contentType: archivo.type
+  }
+  storageRef.child("canchitas/"+nombreFinal).put(archivo,metadata).then((respuesta)=>{
+    // Nos sirve para obtener la url de descarga de la imagen
+    // devuelve otra promesa
+    return respuesta.ref.getDownloadURL();
+  }).then((url)=>{
+    objCancha.url= url;
+    postCancha(objCancha);
+  }).catch((error)=>{
+    console.log(error);
+  })
+}
 // SCRIPT PARA CANCHAS.HTML
 if (document.location.href.indexOf("canchas.html") != -1) {
 
@@ -55,33 +102,37 @@ if (document.location.href.indexOf("canchas.html") != -1) {
       nrocanchas: $("#inputNroCanchas").val(),
       telefono: $("#inputTelefono").val()
     }
+    subirArchivo(objCancha)
 
-    postCancha(objCancha);
+    // postCancha(objCancha);
 
   })
   // $("#frmEditarCancha").submit(function (event) {
-  //   let objCancha = {
-  //     nombre: $("#EditinputNombre").val(),
-  //     direccion: $("#EditinputDireccion").val(),
-  //     lat: $("#EditinputLatitud").val(),
-  //     lng: $("#EditinputLongitud").val(),
-  //     nrocanchas: $("#EditinputNroCanchas").val(),
-  //     telefono: $("#EditinputTelefono").val()
-  //   }
+  //   
   //   event.preventDefault();
   //   console.log("SE EJECUTO EL FORM SUBMIT");
   // })
   $("#btnEditarCancha").click(function (event) {
-    event.preventDefault();
-    console.log("SE EJECUTO EL EDITAR SUBMIT");
+    let objCancha = {
+      nombre: $("#EditinputNombre").val(),
+      direccion: $("#EditinputDireccion").val(),
+      lat: $("#EditinputLatitud").val(),
+      lng: $("#EditinputLongitud").val(),
+      nrocanchas: $("#EditinputNroCanchas").val(),
+      telefono: $("#EditinputTelefono").val()
+    }
+    // event.preventDefault();
+    updateCancha(objCancha);
   })
   $("#btnEliminarCancha").click(function (event) {
     event.preventDefault();
-    console.log("SE EJECUTO EL ELIMINAR SUBMIT");
+    let id = $("#idCancha").text()
+    deleteCancha(id);
   })
 
 
   let dibujarTabla = (arregloCanchas) => {
+    // $("#tablaCanchas").Dataajax.reload();
     var tabla = $("#tablaCanchas").DataTable({
       data: arregloCanchas,
       // destroy, sirve para reinicializar el datatable cada vez
@@ -95,16 +146,18 @@ if (document.location.href.indexOf("canchas.html") != -1) {
         { title: "Lat", data: 'lat' },
         { title: "Long", data: 'lng' },
         { title: "Teléfono", data: 'telefono' },
+        { title: "Image", data: 'url'},
         { title: "Acciones", defaultContent: '<button class="btn btn-secondary">Acciones</button>' }
       ]
     });
-    // console.log(tabla.rows().data());
+    console.log(tabla.rows().data());
     // document.getElementById("tablaCanchas").addEventListener("click",()=>{})
     $("#tablaCanchas").on('click', 'button', function () {
+      console.log(tabla.row($(this).parents('tr')))
       var data = tabla.row($(this).parents('tr')).data();
       console.log(data);
-      $("#idCancha").text(data.id);
       $("#modalEditarCancha").modal("show");
+      $("#idCancha").text(data.id);
       $("#EditinputNombre").val(data.nombre);
       $("#EditinputDireccion").val(data.direccion);
       $("#EditinputNroCanchas").val(data.nrocanchas);
