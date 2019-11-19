@@ -14,7 +14,8 @@ let updateCancha = (objCancha) => {
     lat: objCancha.lat,
     lng: objCancha.lng,
     nrocanchas: objCancha.nrocanchas,
-    telefono : objCancha.telefono
+    telefono : objCancha.telefono,
+    url: objCancha.url
   },function (error){
     if ( error){
       console.log(error);
@@ -119,7 +120,8 @@ if (document.location.href.indexOf("canchas.html") != -1) {
       lat: $("#EditinputLatitud").val(),
       lng: $("#EditinputLongitud").val(),
       nrocanchas: $("#EditinputNroCanchas").val(),
-      telefono: $("#EditinputTelefono").val()
+      telefono: $("#EditinputTelefono").val(),
+      url:$("#imgCancha").attr("src")
     }
     // event.preventDefault();
     updateCancha(objCancha);
@@ -146,26 +148,32 @@ if (document.location.href.indexOf("canchas.html") != -1) {
         { title: "Lat", data: 'lat' },
         { title: "Long", data: 'lng' },
         { title: "Teléfono", data: 'telefono' },
-        { title: "Image", data: 'url'},
-        { title: "Acciones", defaultContent: '<button class="btn btn-secondary">Acciones</button>' }
+        { title: "Imagen", data: 'url', render:function(data){ return "<img src="+data+">"}},
+        { title: "Acciones", defaultContent: '<button class="btn btn-secondary">Acciones</button>',
+        render:function(data,type,row,meta){
+          $("#tablaCanchas").on('click', 'button', function () {
+            // console.log(row);
+            // console.log(meta);
+            
+            // console.log(tabla.row($(this).parents('tr')))
+            var data = tabla.row($(this).parents('tr')).data();
+            // console.log(data);
+            $("#modalEditarCancha").modal("show");
+            $("#idCancha").text(data.id);
+            $("#EditinputNombre").val(data.nombre);
+            $("#EditinputDireccion").val(data.direccion);
+            $("#EditinputNroCanchas").val(data.nrocanchas);
+            $("#EditinputTelefono").val(data.telefono);
+            $("#EditinputLatitud").val(data.lat);
+            $("#EditinputLongitud").val(data.lng);
+            $("#imgCancha").attr("src",data.url)
+      
+          })
+        } }
       ]
     });
-    console.log(tabla.rows().data());
     // document.getElementById("tablaCanchas").addEventListener("click",()=>{})
-    $("#tablaCanchas").on('click', 'button', function () {
-      console.log(tabla.row($(this).parents('tr')))
-      var data = tabla.row($(this).parents('tr')).data();
-      console.log(data);
-      $("#modalEditarCancha").modal("show");
-      $("#idCancha").text(data.id);
-      $("#EditinputNombre").val(data.nombre);
-      $("#EditinputDireccion").val(data.direccion);
-      $("#EditinputNroCanchas").val(data.nrocanchas);
-      $("#EditinputTelefono").val(data.telefono);
-      $("#EditinputLatitud").val(data.lat);
-      $("#EditinputLongitud").val(data.lng);
-
-    })
+    
   }
 
   let traerDatos = () => {
@@ -194,6 +202,12 @@ if (document.location.href.indexOf("canchas.html") != -1) {
           id: cancha.key
         })
       });
+      // arregloCanchas.forEach((cancha)=>{
+      //   cancha.url="<img src='"+cancha.url+"' alt=''>"
+      //   console.log(cancha);
+      // })
+      
+
       dibujarTabla(arregloCanchas);
     })
   }
