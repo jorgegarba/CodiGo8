@@ -11,9 +11,24 @@ class CanchitaModel(bd.Model):
         't_local.loc_id'), nullable=False)
     tipo_id = bd.Column(bd.Integer, bd.ForeignKey(
         't_tipo.tipo_id'), nullable=False)
+    local = bd.relationship('LocalModel',lazy=True)
+    tipos = bd.relationship('TipoModel',lazy=True)
 
     def __init__(self, tamanio, foto, local,tipo):
         self.can_tam = tamanio
         self.can_foto = foto
         self.loc_id = local
         self.tipo_id = tipo
+    
+    def retornar_json(self):
+        return {
+            'id':self.can_id,
+            'tamaño':self.can_tam,
+            'foto':self.can_foto,
+
+            'local':self.local.loc_nombre,
+            'tipo':self.tipo.tipo_desc
+        }
+    def guardar_en_la_bd(self):
+        bd.session.add(self)
+        bd.session.commit()

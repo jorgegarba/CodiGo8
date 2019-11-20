@@ -31,3 +31,9 @@ class UsuarioModel(bd.Model):
         # AQUI ES DONDE SE GUARDA EN LA BD
         bd.session.commit()
 
+    def retornar_json(self):
+        return {
+            'id':self.tipo_id,
+            'descripcion':self.tipo_desc
+        }
+
