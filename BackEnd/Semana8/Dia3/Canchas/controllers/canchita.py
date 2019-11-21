@@ -42,17 +42,18 @@ class CanchitaController(Resource):
         #.all()=> trae todas las coincidencias
         # first nos devuelve solo el objeto y los demas nos devuele unas listas
         print(resultado)
-        return 'Ok'
+        if resultado:
+            return 'Ok'
+        return {
+            'message':'No hay ninguna cancha con el id '+str(id)
+            },404
 
 class CanchitasController(Resource):
     def get(self):
         resultado = CanchitaModel.query.all()
-        print(resultado)
-        # return resultado
         if resultado:
             arregloResultado=[]
             for item in resultado:
                 arregloResultado.append(item.retornar_json())
-            print(arregloResultado)
             return arregloResultado
         return {'message':'No se pudo conseguir'}

@@ -9,11 +9,13 @@ class UsuarioModel(bd.Model):
     usu_salt = bd.Column(bd.Text)
     usu_tipo = bd.Column(bd.String(20))
     usu_dni = bd.Column(bd.String(10))
+    usu_mail = bd.Column(bd.Text)
 
-    def __init__(self,nombre,apellido,password,tipo,dni):
+    def __init__(self,nombre,apellido,password,tipo,dni,correo):
         self.usu_nomb=nombre
         self.usu_ape=apellido
         self.usu_tipo=tipo
+        self.usu_mail = correo
         # ENCRIPTACION DE LA CONTRASEÑA
         password_convertida= bytes(password,'utf-8')
         salt = bcrypt.gensalt()

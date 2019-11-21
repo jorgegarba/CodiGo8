@@ -32,7 +32,7 @@ class CanchitaModel(bd.Model):
             'tamaño':self.can_tam,
             'foto':self.can_foto,
             'local':self.local.loc_nombre,
-            'tipo':self.tipo.tipo_desc
+            'tipo':self.tipos.tipo_desc
         }
     def guardar_en_la_bd(self):
         bd.session.add(self)

@@ -31,6 +31,6 @@ class opcionesLocalTodosController(Resource):
         if resultado:
             resultadoFinal =[]
             for item in resultado:
-                resultadoFinal.append(item.retorna_json())
+                resultadoFinal.append(item.retornar_json())
             return resultadoFinal
         return {'message':'No hay opciones que mostrar'},404

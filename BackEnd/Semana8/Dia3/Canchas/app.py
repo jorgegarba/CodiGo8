@@ -8,7 +8,8 @@ from controllers.canchita import CanchitaController, CanchitasController
 # from models.tipo import TipoModel
 from controllers.tipo import TipoController
 from models.usuario import UsuarioModel
-from models.localOpcionesLocal import localOpcionesLocalModel
+# from models.localOpcionesLocal import localOpcionesLocalModel
+from controllers.localOpciones import localOpcionesController
 # from models.opcionesLocal import opcionesLocalModel
 from controllers.opcionesLocal import opcionesLocalController, opcionesLocalTodosController
 from models.precioCancha import precioCanchaModel
@@ -33,13 +34,26 @@ def iniciar_bd():
     bd.create_all(app=app)
 
 # RUTAS
-api.add_resource(TipoController,'/tipo/<string:nombre>','/tipo')
-api.add_resource(CanchitaController,'/canchita')
-api.add_resource(LocalController,'/local/crear','/local/buscar/<string:nombre>')
-api.add_resource(CanchitasController,'/canchitas')
+api.add_resource(TipoController,
+'/tipo/buscar/<string:nombre>',
+'/tipo/crear')
+
+api.add_resource(CanchitaController,
+'/cancha/buscar/<int:id>',
+'/cancha/crear')
+
+api.add_resource(LocalController,
+'/local/crear',
+'/local/buscar/<string:nombre>')
+
+api.add_resource(CanchitasController,'/cancha/traertodos')
 api.add_resource(opcionesLocalController,
 '/opciones/buscar/<string:nombre>',
 '/opciones/agregar')
+
+api.add_resource(opcionesLocalTodosController,'/opciones/traertodos')
 api.add_resource(LocalesController,'/local/traertodos')
+
+api.add_resource(localOpcionesController,'/localopciones/agregar')
 if __name__=="__main__":
     app.run(debug=True)
