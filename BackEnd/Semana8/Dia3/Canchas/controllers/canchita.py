@@ -35,9 +35,24 @@ class CanchitaController(Resource):
         except:
             return {'message':'Hubo un error al registrar la canchita, intente nuevamente'},500
         return {'message':'Canchita guardada con exito','contenido':canchita.retornar_json()},201
-    def get(self,name):
-        pass
+    def get(self,id):
+        resultado = CanchitaModel.query.filter_by(can_id=id).first()
+        #.first() => trae la primera
+        #.limit(7) => trae las 7 primeras
+        #.all()=> trae todas las coincidencias
+        # first nos devuelve solo el objeto y los demas nos devuele unas listas
+        print(resultado)
+        return 'Ok'
 
 class CanchitasController(Resource):
     def get(self):
-        pass
+        resultado = CanchitaModel.query.all()
+        print(resultado)
+        # return resultado
+        if resultado:
+            arregloResultado=[]
+            for item in resultado:
+                arregloResultado.append(item.retornar_json())
+            print(arregloResultado)
+            return arregloResultado
+        return {'message':'No se pudo conseguir'}

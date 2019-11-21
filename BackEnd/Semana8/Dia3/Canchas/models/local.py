@@ -9,7 +9,6 @@ class LocalModel(bd.Model):
     loc_direccion = bd.Column(bd.String(45))
     loc_fono = bd.Column(bd.String(15))
     canchitas = bd.relationship('CanchitaModel',lazy=True, backref='cancha')
-    opcionesLocal = bd.relationship('opcionesLocalModel',lazy=True, backref='opciones')
     # parametros para el lazy puede ser 
     # 'select'/True => que va a cargar la data de su hijo
     # 'joined'/False => es como usar un inner join cuando vamos a hacer un select

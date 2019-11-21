@@ -35,6 +35,7 @@ class LocalController(Resource):
             help="Falta el telefono"
         )
         data = parser.parse_args()
+        print(data)
         local=LocalModel(data['nombre'],data['latitud'],data['longitud'],data['direccion'],data['telefono'])
         try:
             local.guardar_en_la_bd()
@@ -43,3 +44,23 @@ class LocalController(Resource):
         return {
             'message':'Se registro el local',
             'content':local.retornar_json()},201
+    def get(self, nombre):
+        resultado = LocalModel.query.filter_by(loc_nombre=nombre).all()
+        if resultado:
+            resultadoFinal=[]
+            for item in resultado:
+                resultadoFinal.append(item.retornar_json())
+            print(resultado)
+            return resultadoFinal
+        return {'message':'No hay ningun local con ese nombre'},404
+
+class LocalesController(Resource):
+    def get(self):
+        resultado = LocalModel.query.all()
+        if resultado:
+            resultadoFinal=[]
+            for item in resultado:
+                resultadoFinal.append(item.retornar_json())
+            print(resultado)
+            return resultadoFinal
+        return {'message':'No hay ningun local'},404

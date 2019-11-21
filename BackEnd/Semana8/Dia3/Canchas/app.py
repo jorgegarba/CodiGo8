@@ -2,13 +2,15 @@ from flask import Flask
 from flask_restful import Api
 from base_de_Datos import bd
 # from models.local import LocalModel
-from controllers.local import LocalController
+from controllers.local import LocalController, LocalesController
 # from models.canchita import CanchitaModel
-from controllers.canchita import CanchitaController
+from controllers.canchita import CanchitaController, CanchitasController
 # from models.tipo import TipoModel
 from controllers.tipo import TipoController
 from models.usuario import UsuarioModel
-from models.opcionesLocal import opcionesLocalModel
+from models.localOpcionesLocal import localOpcionesLocalModel
+# from models.opcionesLocal import opcionesLocalModel
+from controllers.opcionesLocal import opcionesLocalController, opcionesLocalTodosController
 from models.precioCancha import precioCanchaModel
 from models.reserva import reservaModel
 from models.valoraciones import valoracionesModel
@@ -30,9 +32,14 @@ def iniciar_bd():
     # PARA CREAR TODAS LAS TABLAS
     bd.create_all(app=app)
 
+# RUTAS
 api.add_resource(TipoController,'/tipo/<string:nombre>','/tipo')
 api.add_resource(CanchitaController,'/canchita')
-api.add_resource(LocalController,'/local')
-
+api.add_resource(LocalController,'/local/crear','/local/buscar/<string:nombre>')
+api.add_resource(CanchitasController,'/canchitas')
+api.add_resource(opcionesLocalController,
+'/opciones/buscar/<string:nombre>',
+'/opciones/agregar')
+api.add_resource(LocalesController,'/local/traertodos')
 if __name__=="__main__":
     app.run(debug=True)
