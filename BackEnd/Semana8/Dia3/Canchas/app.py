@@ -7,7 +7,8 @@ from controllers.local import LocalController, LocalesController
 from controllers.canchita import CanchitaController, CanchitasController
 # from models.tipo import TipoModel
 from controllers.tipo import TipoController
-from models.usuario import UsuarioModel
+# from models.usuario import UsuarioModel
+from controllers.usuario import usuarioController
 # from models.localOpcionesLocal import localOpcionesLocalModel
 from controllers.localOpciones import localOpcionesController
 # from models.opcionesLocal import opcionesLocalModel
@@ -55,5 +56,7 @@ api.add_resource(opcionesLocalTodosController,'/opciones/traertodos')
 api.add_resource(LocalesController,'/local/traertodos')
 
 api.add_resource(localOpcionesController,'/localopciones/agregar')
+
+api.add_resource(usuarioController,'/usuario/crear')
 if __name__=="__main__":
     app.run(debug=True)
