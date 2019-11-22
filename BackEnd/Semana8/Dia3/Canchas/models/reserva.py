@@ -11,10 +11,22 @@ class reservaModel(bd.Model):
     pc_id= bd.Column(bd.Integer,bd.ForeignKey('t_precioCancha.pc_id'))
 
     valoraciones = bd.relationship('valoracionesModel',backref='valoraciones',lazy=True)
+
+    def __init__(self,fecha_inicio,fecha_fin,monto,adelanto,id_usu,id_precio):
+        self.res_fechin=fecha_inicio
+        self.res_fechfin=fecha_fin
+        self.res_monto=monto
+        self.res_adelanto=adelanto
+        self.usu_id=id_usu
+        self.pc_id=id_precio
+
     def retornar_json(self):
         return {
             'id':self.tipo_id,
-            'descripcion':self.tipo_desc
+            'descripcion':{
+                'fecha inicio': self.res_fechin,
+                'fecha fin': self.res_fechfin
+            }
         }
     def guardar_en_la_bd(self):
         bd.session.add(self)

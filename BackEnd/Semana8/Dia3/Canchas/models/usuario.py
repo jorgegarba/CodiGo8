@@ -8,10 +8,10 @@ class UsuarioModel(bd.Model):
     usu_hash = bd.Column(bd.Text)
     usu_salt = bd.Column(bd.Text)
     usu_tipo = bd.Column(bd.String(20))
-    usu_dni = bd.Column(bd.String(10))
+    usu_fono = bd.Column(bd.String(10))
     usu_mail = bd.Column(bd.Text)
 
-    def __init__(self,nombre,apellido,password,tipo,dni,correo):
+    def __init__(self,nombre,apellido,password,tipo,fono,correo):
         self.usu_nomb=nombre
         self.usu_ape=apellido
         self.usu_tipo=tipo
@@ -25,7 +25,7 @@ class UsuarioModel(bd.Model):
         # FIN ENCRIPTACION DE LA CONTRASEÑA
         self.usu_salt=salt
         self.usu_hash=hashed
-        self.usu_dni=dni
+        self.usu_fono=fono
 
     def guardar_en_la_bd(self):
         # ESTO SIRVE PARA CREAR UNA SESION EN NUESTRA BD PERO NO GUARDA

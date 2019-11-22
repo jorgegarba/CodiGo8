@@ -35,16 +35,16 @@ class usuarioController(Resource):
             help="Falta el tipo"
         )
         parser.add_argument(
-            'dni',
+            'fono',
             type=str,
             required=True,
-            help="Falta el dni"
+            help="Falta el fonavi"
         )
         data = parser.parse_args()
         consulta = UsuarioModel.query.filter_by(usu_mail=data['correo']).first()
         if not consulta:
             try:
-                UsuarioModel(data['nombre'],data['apellido'],data['pass'],data['tipo'],data['dni'],data['correo']).guardar_en_la_bd()
+                UsuarioModel(data['nombre'],data['apellido'],data['pass'],data['tipo'],data['fono'],data['correo']).guardar_en_la_bd()
             except:
                 return{
                     'message':'Hubo un error al guardar el usuario en la base de datos'},500

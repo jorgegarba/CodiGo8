@@ -34,9 +34,15 @@ class LocalController(Resource):
             required=True,
             help="Falta el telefono"
         )
+        parser.add_argument(
+            'id_usu',
+            type=int,
+            required=True,
+            help="Falta el id de usuario"
+        )
         data = parser.parse_args()
         print(data)
-        local=LocalModel(data['nombre'],data['latitud'],data['longitud'],data['direccion'],data['telefono'])
+        local=LocalModel(data['nombre'],data['latitud'],data['longitud'],data['direccion'],data['telefono'],data['id_usu'])
         try:
             local.guardar_en_la_bd()
         except:

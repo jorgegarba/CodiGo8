@@ -1,5 +1,6 @@
 from flask_restful import Resource, reqparse
 from models.opcionesLocal import opcionesLocalModel
+from flask_jwt import jwt_required
 
 class opcionesLocalController(Resource):
     def get(self,nombre):
@@ -26,6 +27,7 @@ class opcionesLocalController(Resource):
 
 
 class opcionesLocalTodosController(Resource):
+    @jwt_required()
     def get(self):
         resultado = opcionesLocalModel.query.all()
         if resultado:

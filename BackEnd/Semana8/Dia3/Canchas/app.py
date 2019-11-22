@@ -16,9 +16,20 @@ from controllers.opcionesLocal import opcionesLocalController, opcionesLocalTodo
 from models.precioCancha import precioCanchaModel
 from models.reserva import reservaModel
 from models.valoraciones import valoracionesModel
+# LIBRERIAS PARA EL JWT
+from flask_jwt import JWT
+from seguridad import autenticacion, identificador
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI']="mysql://root:root@localhost/canchas"
+# ASI SE ALMACENA LA CONTRASEÑA PARA NUESTRO JWT
+app.config['SECRET_KEY'] ='clave_secreta'
+app.config['JWT_AUTH_URL_RULE']='/usuario/login'
+from datetime import timedelta
+app.config['JWT_EXPIRATION_DELTA']=timedelta(seconds=30)
+
+jsonwebtoken = JWT(app,autenticacion,identificador)
 api = Api(app)
 
 @app.route('/')

@@ -5,3 +5,4 @@ pip install flask-mysqldb
 
 pip install bcrypt => encriptacion python
 pip install flask-cors => MODIFICAR CORS de nuestra api
+pip install Flask-JWT => instala libreria para usar JSON Web Tokens
