@@ -70,7 +70,8 @@ let subirArchivo = (objCancha)=>{
   let metadata = {
     contentType: archivo.type
   }
-  storageRef.child("canchitas/"+nombreFinal).put(archivo,metadata).then((respuesta)=>{
+  storageRef.child("canchitas/"+nombreFinal).put(archivo,metadata)
+      .then((respuesta)=>{
     // Nos sirve para obtener la url de descarga de la imagen
     // devuelve otra promesa
     return respuesta.ref.getDownloadURL();
