@@ -34,7 +34,7 @@ api = Api(app)
 
 @app.route('/')
 def inicio():
-    return 'La API REST ha escuchado tus suplicas! 😀'
+    return 'La API REST ha escuchado tus suplicas! 😀😱💩'
 
 @app.before_first_request
 def iniciar_bd():
