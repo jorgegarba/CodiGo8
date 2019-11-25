@@ -19,7 +19,7 @@ class precioCanchaModel(bd.Model):
         return {
             'id':self.pc_id,
             'descripcion':self.pc_desc,
-            'monto':self.pc_monto,
+            'monto':str(self.pc_monto),
             'id_cancha':self.can_id
         }
     def guardar_en_la_bd(self):
