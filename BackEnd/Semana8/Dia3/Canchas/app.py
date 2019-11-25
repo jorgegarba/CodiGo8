@@ -13,7 +13,8 @@ from controllers.usuario import usuarioController
 from controllers.localOpciones import localOpcionesController
 # from models.opcionesLocal import opcionesLocalModel
 from controllers.opcionesLocal import opcionesLocalController, opcionesLocalTodosController
-from models.precioCancha import precioCanchaModel
+# from models.precioCancha import precioCanchaModel
+from controllers.precioCancha import precioCanchaController
 from models.reserva import reservaModel
 from models.valoraciones import valoracionesModel
 # LIBRERIAS PARA EL JWT
@@ -59,6 +60,12 @@ api.add_resource(LocalController,
 '/local/buscar/<string:nombre>')
 
 api.add_resource(CanchitasController,'/cancha/traertodos')
+
+api.add_resource(precioCanchaController,
+'/precioCancha/crear',
+'/precioCancha/buscar/<int:id>',
+'/precioCancha/actualizar/<int:id>')
+
 api.add_resource(opcionesLocalController,
 '/opciones/buscar/<string:nombre>',
 '/opciones/agregar')
