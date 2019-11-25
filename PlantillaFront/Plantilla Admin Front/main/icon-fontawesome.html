@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>Admin Pro Admin Template - The Ultimate Bootstrap 4 Admin Template</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- page css -->
+    <link href="css/pages/icon-page.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="css/colors/default-dark.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fix-header card-no-border fix-sidebar">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Admin Pro</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                         <!-- Light Logo text -->    
+                         <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item hidden-sm-down"></li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- Comment -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-message"></i>
+                                <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mailbox animated bounceInDown">
+                                <ul>
+                                    <li>
+                                        <div class="drop-title">Notifications</div>
+                                    </li>
+                                    <li>
+                                        <div class="message-center">
+                                            <!-- Message -->
+                                            <a href="#">
+                                                <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Luanch Admin</h5> <span class="mail-desc">Just see the my new admin!</span> <span class="time">9:30 AM</span> </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="#">
+                                                <div class="btn btn-success btn-circle"><i class="ti-calendar"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Event today</h5> <span class="mail-desc">Just a reminder that you have event</span> <span class="time">9:10 AM</span> </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="#">
+                                                <div class="btn btn-info btn-circle"><i class="ti-settings"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Settings</h5> <span class="mail-desc">You can customize this template as you want</span> <span class="time">9:08 AM</span> </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="#">
+                                                <div class="btn btn-primary btn-circle"><i class="ti-user"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span> </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link text-center" href="javascript:void(0);"> <strong>Check all notifications</strong> <i class="fa fa-angle-right"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End Comment -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- Messages -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-email"></i>
+                                <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                            </a>
+                            <div class="dropdown-menu mailbox dropdown-menu-right animated bounceInDown" aria-labelledby="2">
+                                <ul>
+                                    <li>
+                                        <div class="drop-title">You have 4 new messages</div>
+                                    </li>
+                                    <li>
+                                        <div class="message-center">
+                                            <!-- Message -->
+                                            <a href="#">
+                                                <div class="user-img"> <img src="../assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:30 AM</span> </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="#">
+                                                <div class="user-img"> <img src="../assets/images/users/2.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <h5>Sonu Nigam</h5> <span class="mail-desc">I've sung a song! See you at</span> <span class="time">9:10 AM</span> </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="#">
+                                                <div class="user-img"> <img src="../assets/images/users/3.jpg" alt="user" class="img-circle"> <span class="profile-status away pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <h5>Arijit Sinh</h5> <span class="mail-desc">I am a singer!</span> <span class="time">9:08 AM</span> </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="#">
+                                                <div class="user-img"> <img src="../assets/images/users/4.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span> </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link text-center" href="javascript:void(0);"> <strong>See all e-Mails</strong> <i class="fa fa-angle-right"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End Messages -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- mega menu -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown mega-dropdown"> <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="mdi mdi-view-grid"></i></a>
+                            <div class="dropdown-menu animated bounceInDown">
+                                <ul class="mega-dropdown-menu row">
+                                    <li class="col-lg-3 col-xlg-2 m-b-30">
+                                        <h4 class="m-b-20">CAROUSEL</h4>
+                                        <!-- CAROUSEL -->
+                                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner" role="listbox">
+                                                <div class="carousel-item active">
+                                                    <div class="container"> <img class="d-block img-fluid" src="../assets/images/big/img1.jpg" alt="First slide"></div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="container"><img class="d-block img-fluid" src="../assets/images/big/img2.jpg" alt="Second slide"></div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="container"><img class="d-block img-fluid" src="../assets/images/big/img3.jpg" alt="Third slide"></div>
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
+                                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+                                        </div>
+                                        <!-- End CAROUSEL -->
+                                    </li>
+                                    <li class="col-lg-3 m-b-30">
+                                        <h4 class="m-b-20">ACCORDION</h4>
+                                        <!-- Accordian -->
+                                        <div id="accordion" class="nav-accordion" role="tablist" aria-multiselectable="true">
+                                            <div class="card">
+                                                <div class="card-header" role="tab" id="headingOne">
+                                                    <h5 class="mb-0">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                  Collapsible Group Item #1
+                                                </a>
+                                              </h5> </div>
+                                                <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                                    <div class="card-body"> Anim pariatur cliche reprehenderit, enim eiusmod high. </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" role="tab" id="headingTwo">
+                                                    <h5 class="mb-0">
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                  Collapsible Group Item #2
+                                                </a>
+                                              </h5> </div>
+                                                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                    <div class="card-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" role="tab" id="headingThree">
+                                                    <h5 class="mb-0">
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                  Collapsible Group Item #3
+                                                </a>
+                                              </h5> </div>
+                                                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                    <div class="card-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-lg-3  m-b-30">
+                                        <h4 class="m-b-20">CONTACT US</h4>
+                                        <!-- Contact -->
+                                        <form>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="exampleInputname1" placeholder="Enter Name"> </div>
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" placeholder="Enter email"> </div>
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Message"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-info">Submit</button>
+                                        </form>
+                                    </li>
+                                    <li class="col-lg-3 col-xlg-4 m-b-30">
+                                        <h4 class="m-b-20">List style</h4>
+                                        <!-- List style -->
+                                        <ul class="list-style-none">
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> You can give link</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> Give link</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> Another Give link</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> Forth link</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> Another fifth link</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End mega menu -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- Language -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="flag-icon flag-icon-us"></i></a>
+                            <div class="dropdown-menu dropdown-menu-right animated bounceInDown"> <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-in"></i> India</a> <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-fr"></i> French</a> <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-cn"></i> China</a> <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-de"></i> Dutch</a> </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                                <ul class="dropdown-user">
+                                    <li>
+                                        <div class="dw-user-box">
+                                            <div class="u-img"><img src="../assets/images/users/1.jpg" alt="user"></div>
+                                            <div class="u-text">
+                                                <h4>Steave Jobs</h4>
+                                                <p class="text-muted">varun@gmail.com</p><a href="pages-profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+                                        </div>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                                    <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
+                                    <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="user-profile"> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><img src="../assets/images/users/profile.png" alt="user" /><span class="hide-menu">Steave Jobs </span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="javascript:void()">My Profile </a></li>
+                                <li><a href="javascript:void()">My Balance</a></li>
+                                <li><a href="javascript:void()">Inbox</a></li>
+                                <li><a href="javascript:void()">Account Setting</a></li>
+                                <li><a href="javascript:void()">Logout</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-devider"></li>
+                        <li class="nav-small-cap">PERSONAL</li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard <span class="label label-rouded label-themecolor pull-right">4</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="index.html">Minimal </a></li>
+                                <li><a href="index2.html">Analytical</a></li>
+                                <li><a href="index3.html">Demographical</a></li>
+                                <li><a href="index4.html">Modern</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Apps</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="app-calendar.html">Calendar</a></li>
+                                <li><a href="app-chat.html">Chat app</a></li>
+                                <li><a href="app-ticket.html">Support Ticket</a></li>
+                                <li><a href="app-contact.html">Contact / Employee</a></li>
+                                <li><a href="app-contact2.html">Contact Grid</a></li>
+                                <li><a href="app-contact-detail.html">Contact Detail</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-email"></i><span class="hide-menu">Inbox</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="app-email.html">Mailbox</a></li>
+                                <li><a href="app-email-detail.html">Mailbox Detail</a></li>
+                                <li><a href="app-compose.html">Compose Mail</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu">Ui Elements <span class="label label-rouded label-danger pull-right">25</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="ui-cards.html">Cards</a></li>
+                                <li><a href="ui-user-card.html">User Cards</a></li>
+                                <li><a href="ui-buttons.html">Buttons</a></li>
+                                <li><a href="ui-modals.html">Modals</a></li>
+                                <li><a href="ui-tab.html">Tab</a></li>
+                                <li><a href="ui-tooltip-popover.html">Tooltip &amp; Popover</a></li>
+                                <li><a href="ui-tooltip-stylish.html">Tooltip stylish</a></li>
+                                <li><a href="ui-sweetalert.html">Sweet Alert</a></li>
+                                <li><a href="ui-notification.html">Notification</a></li>
+                                <li><a href="ui-progressbar.html">Progressbar</a></li>
+                                <li><a href="ui-nestable.html">Nestable</a></li>
+                                <li><a href="ui-range-slider.html">Range slider</a></li>
+                                <li><a href="ui-timeline.html">Timeline</a></li>
+                                <li><a href="ui-typography.html">Typography</a></li>
+                                <li><a href="ui-horizontal-timeline.html">Horizontal Timeline</a></li>
+                                <li><a href="ui-session-timeout.html">Session Timeout</a></li>
+                                <li><a href="ui-session-ideal-timeout.html">Session Ideal Timeout</a></li>
+                                <li><a href="ui-bootstrap.html">Bootstrap Ui</a></li>
+                                <li><a href="ui-breadcrumb.html">Breadcrumb</a></li>
+                                <li><a href="ui-bootstrap-switch.html">Bootstrap Switch</a></li>
+                                <li><a href="ui-list-media.html">List Media</a></li>
+                                <li><a href="ui-ribbons.html">Ribbons</a></li>
+                                <li><a href="ui-grid.html">Grid</a></li>
+                                <li><a href="ui-carousel.html">Carousel</a></li>
+                                <li><a href="ui-date-paginator.html">Date-paginator</a></li>
+                                <li><a href="ui-dragable-portlet.html">Dragable Portlet</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-small-cap">FORMS, TABLE &amp; WIDGETS</li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Forms</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="form-basic.html">Basic Forms</a></li>
+                                <li><a href="form-layout.html">Form Layouts</a></li>
+                                <li><a href="form-addons.html">Form Addons</a></li>
+                                <li><a href="form-material.html">Form Material</a></li>
+                                <li><a href="form-float-input.html">Floating Lable</a></li>
+                                <li><a href="form-pickers.html">Form Pickers</a></li>
+                                <li><a href="form-upload.html">File Upload</a></li>
+                                <li><a href="form-mask.html">Form Mask</a></li>
+                                <li><a href="form-validation.html">Form Validation</a></li>
+                                <li><a href="form-dropzone.html">File Dropzone</a></li>
+                                <li><a href="form-icheck.html">Icheck control</a></li>
+                                <li><a href="form-img-cropper.html">Image Cropper</a></li>
+                                <li><a href="form-bootstrapwysihtml5.html">HTML5 Editor</a></li>
+                                <li><a href="form-typehead.html">Form Typehead</a></li>
+                                <li><a href="form-wizard.html">Form Wizard</a></li>
+                                <li><a href="form-xeditable.html">Xeditable Editor</a></li>
+                                <li><a href="form-summernote.html">Summernote Editor</a></li>
+                                <li><a href="form-tinymce.html">Tinymce Editor</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Tables</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="table-basic.html">Basic Tables</a></li>
+                                <li><a href="table-layout.html">Table Layouts</a></li>
+                                <li><a href="table-data-table.html">Data Tables</a></li>
+                                <li><a href="table-footable.html">Footable</a></li>
+                                <li><a href="table-jsgrid.html">Js Grid Table</a></li>
+                                <li><a href="table-responsive.html">Responsive Table</a></li>
+                                <li><a href="table-bootstrap.html">Bootstrap Tables</a></li>
+                                <li><a href="table-editable-table.html">Editable Table</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-widgets"></i><span class="hide-menu">Widgets</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="widget-data.html">Data Widgets</a></li>
+                                <li><a href="widget-apps.html">Apps Widgets</a></li>
+                                <li><a href="widget-charts.html">Charts Widgets</a></li>
+            
+                            </ul>
+                        </li>
+                        <li class="nav-small-cap">EXTRA COMPONENTS</li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-book-multiple"></i><span class="hide-menu">Page Layout</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="layout-single-column.html">1 Column</a></li>
+                                <li><a href="layout-fix-header.html">Fix header</a></li>
+                                <li><a href="layout-fix-sidebar.html">Fix sidebar</a></li>
+                                <li><a href="layout-fix-header-sidebar.html">Fixe header &amp; Sidebar</a></li>
+                                <li><a href="layout-boxed.html">Boxed Layout</a></li>
+                                <li><a href="layout-logo-center.html">Logo in Center</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Sample Pages <span class="label label-rouded label-success pull-right">25</span></span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="starter-kit.html">Starter Kit</a></li>
+                                <li><a href="pages-blank.html">Blank page</a></li>
+                                <li><a href="#" class="has-arrow">Authentication <span class="label label-rounded label-success pull-right">6</span></a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li><a href="pages-login.html">Login 1</a></li>
+                                        <li><a href="pages-login-2.html">Login 2</a></li>
+                                        <li><a href="pages-register.html">Register</a></li>
+                                        <li><a href="pages-register2.html">Register 2</a></li>
+                                        <li><a href="pages-lockscreen.html">Lockscreen</a></li>
+                                        <li><a href="pages-recover-password.html">Recover password</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="pages-profile.html">Profile page</a></li>
+                                <li><a href="pages-animation.html">Animation</a></li>
+                                <li><a href="pages-fix-innersidebar.html">Sticky Left sidebar</a></li>
+                                <li><a href="pages-fix-inner-right-sidebar.html">Sticky Right sidebar</a></li>
+                                <li><a href="pages-invoice.html">Invoice</a></li>
+                                <li><a href="pages-treeview.html">Treeview</a></li>
+                                <li><a href="pages-utility-classes.html">Helper Classes</a></li>
+                                <li><a href="pages-search-result.html">Search result</a></li>
+                                <li><a href="pages-scroll.html">Scrollbar</a></li>
+                                <li><a href="pages-pricing.html">Pricing</a></li>
+                                <li><a href="pages-lightbox-popup.html">Lighbox popup</a></li>
+                                <li><a href="pages-gallery.html">Gallery</a></li>
+                                <li><a href="pages-faq.html">Faqs</a></li>
+                                <li><a href="#" class="has-arrow">Error Pages</a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li><a href="pages-error-400.html">400</a></li>
+                                        <li><a href="pages-error-403.html">403</a></li>
+                                        <li><a href="pages-error-404.html">404</a></li>
+                                        <li><a href="pages-error-500.html">500</a></li>
+                                        <li><a href="pages-error-503.html">503</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-file-chart"></i><span class="hide-menu">Charts</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="chart-morris.html">Morris Chart</a></li>
+                                <li><a href="chart-chartist.html">Chartis Chart</a></li>
+                                <li><a href="chart-echart.html">Echarts</a></li>
+                                <li><a href="chart-flot.html">Flot Chart</a></li>
+                                <li><a href="chart-knob.html">Knob Chart</a></li>
+                                <li><a href="chart-chart-js.html">Chartjs</a></li>
+                                <li><a href="chart-sparkline.html">Sparkline Chart</a></li>
+                                <li><a href="chart-extra-chart.html">Extra chart</a></li>
+                                <li><a href="chart-peity.html">Peity Charts</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-brush"></i><span class="hide-menu">Icons</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="icon-material.html">Material Icons</a></li>
+                                <li><a href="icon-fontawesome.html">Fontawesome Icons</a></li>
+                                <li><a href="icon-themify.html">Themify Icons</a></li>
+                                <li><a href="icon-linea.html">Linea Icons</a></li>
+                                <li><a href="icon-weather.html">Weather Icons</a></li>
+                                <li><a href="icon-simple-lineicon.html">Simple Lineicons</a></li>
+                                <li><a href="icon-flag.html">Flag Icons</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-map-marker"></i><span class="hide-menu">Maps</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="map-google.html">Google Maps</a></li>
+                                <li><a href="map-vector.html">Vector Maps</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Multi level dd</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="#">item 1.1</a></li>
+                                <li><a href="#">item 1.2</a></li>
+                                <li> <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
+                                    <ul aria-expanded="false" class="collapse">
+                                        <li><a href="#">item 1.3.1</a></li>
+                                        <li><a href="#">item 1.3.2</a></li>
+                                        <li><a href="#">item 1.3.3</a></li>
+                                        <li><a href="#">item 1.3.4</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">item 1.4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="row page-titles">
+                <div class="col-md-5 align-self-center">
+                    <h3 class="text-themecolor">Fontawesome icon</h3>
+                </div>
+                <div class="col-md-7 align-self-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item">icons</li>
+                        <li class="breadcrumb-item active">Fontawesome icons</li>
+                    </ol>
+                </div>
+                <div class="">
+                    <button class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">41 New Icons in 4.7</h4>
+                                <h6 class="card-subtitle">use the icon by just put class <code>fa fa-address-book</code> in i tag </h6>
+                                <section>
+                                    <div class="icon-list-demo row">
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-address-book"></i>fa fa-address-book </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-address-book-o"></i>fa fa-address-book-o </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-address-card"></i>fa fa-address-card </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-address-card-o"></i>fa fa-address-card-o </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-bandcamp"></i>fa fa-bandcamp </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-bath"></i>fa fa-bath </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-bathtub"></i>fa fa-bathtub </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-drivers-license"></i>fa fa-drivers-license </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-drivers-license-o"></i>fa fa-drivers-license-o </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-eercast"></i>fa fa-eercast </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-envelope-open"></i>fa fa-envelope-open </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-envelope-open-o"></i>fa fa-envelope-open-o </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-etsy"></i>fa fa-etsy </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-free-code-camp"></i>fa fa-free-code-camp </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-grav"></i>fa fa-grav </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-handshake-o"></i>fa fa-handshake-o </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-id-badge"></i>fa fa-id-badge </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-id-card"></i>fa fa-id-card </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-id-card-o"></i>fa fa-id-card-o </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-imdb"></i>fa fa-imdb </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-linode"></i> fa fa-linode </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-meetup"></i>fa fa-meetup </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-microchip"></i>fa fa-microchip </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-podcast"></i>fa fa-podcast </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-quora"></i>fa fa-quora </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-ravelry"></i>fa fa-ravelry </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-s15"></i>fa fa-s15 </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-shower"></i>fa fa-shower </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-snowflake-o"></i>fa fa-snowflake-o </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-superpowers"></i>fa fa-superpowers </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-telegram"></i>fa fa-telegram </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-thermometer"></i>fa fa-thermometer </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-thermometer-0"></i>fa fa-thermometer-0 </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-thermometer-1"></i>fa fa-thermometer-1 </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-thermometer-2"></i>fa fa-thermometer-2 </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-thermometer-3"></i>fa fa-thermometer-3 </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-thermometer-4"></i>fa fa-thermometer-4 </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-thermometer-empty"></i>fa fa-thermometer-empty </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-thermometer-full"></i>fa fa-thermometer-full </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-thermometer-half"></i>fa fa-thermometer-half </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-thermometer-quarter"></i>fa fa-thermometer-quarter </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-thermometer-three-quarters"></i>fa fa-thermometer-three-quarters </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-times-rectangle"></i>fa fa-times-rectangle </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-times-rectangle-o"></i>fa fa-times-rectangle-o </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-user-circle"></i>fa fa-user-circle </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-user-circle-o"></i>fa fa-user-circle-o </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-user-o"></i>fa fa-user-o </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-vcard"></i>fa fa-vcard </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-vcard-o"></i>fa fa-vcard-o </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-window-close"></i>fa fa-window-close </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-window-close-o"></i>fa fa-window-close-o </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-window-maximize"></i>fa fa-window-maximize </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-window-minimize"></i>fa fa-window-minimize </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-window-restore"></i>fa fa-window-restore </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"> <i class="fa fa-wpexplorer"></i>fa fa-wpexplorer </div>
+                                    </div>
+                                </section>
+                                <section class="m-t-40">
+                                    <h4 class="card-title">20 New Icons in 4.5</h4>
+                                    <div class="icon-list-demo row">
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bluetooth"></i>fa fa-bluetooth</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bluetooth-b"></i>fa fa-bluetooth-b</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-codiepie"></i>fa fa-codiepie</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-credit-card-alt"></i>fa fa-credit-card-alt</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-edge"></i>fa fa-edge</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-fort-awesome"></i>fa fa-fort-awesome</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-hashtag"></i>fa fa-hashtag</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-mixcloud"></i>fa fa-mixcloud</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-modx"></i>fa fa-modx</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-pause-circle"></i>fa fa-pause-circle</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-pause-circle-o"></i>fa fa-pause-circle-o</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-percent"></i>fa fa-percent</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-product-hunt"></i>fa fa-product-hunt</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-reddit-alien"></i>fa fa-reddit-alien</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-scribd"></i>fa fa-scribd</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-shopping-bag"></i>fa fa-shopping-bag</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-shopping-basket"></i>fa fa-shopping-basket</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-stop-circle"></i>fa fa-stop-circle</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-stop-circle-o"></i>fa fa-stop-circle-o</div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-usb"></i>fa fa-usb</div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Web App Icons</h4>
+                                <div class="clearfix icon-list-demo row">
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-adjust"></i> fa-adjust</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-anchor"></i> fa-anchor</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-archive"></i> fa-archive</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrows"></i> fa-arrows</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrows-h"></i> fa-arrows-h</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrows-v"></i> fa-arrows-v</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-asterisk"></i> fa-asterisk</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-automobile"></i> fa-automobile <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-ban"></i> fa-ban</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bank"></i> fa-bank <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bar-chart-o"></i> fa-bar-chart-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-barcode"></i> fa-barcode</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bars"></i> fa-bars</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-beer"></i> fa-beer</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bell"></i> fa-bell</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bell-o"></i> fa-bell-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bolt"></i> fa-bolt</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bomb"></i> fa-bomb</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-book"></i> fa-book</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bookmark"></i> fa-bookmark</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bookmark-o"></i> fa-bookmark-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-briefcase"></i> fa-briefcase</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bug"></i> fa-bug</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-building"></i> fa-building</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-building-o"></i> fa-building-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bullhorn"></i> fa-bullhorn</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bullseye"></i> fa-bullseye</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-cab"></i> fa-cab <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-calendar"></i> fa-calendar</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-calendar-o"></i> fa-calendar-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-camera"></i> fa-camera</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-camera-retro"></i> fa-camera-retro</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-car"></i> fa-car</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-caret-square-o-down"></i> fa-caret-square-o-down</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-caret-square-o-left"></i> fa-caret-square-o-left</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-caret-square-o-right"></i> fa-caret-square-o-right</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-caret-square-o-up"></i> fa-caret-square-o-up</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-certificate"></i> fa-certificate</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-check"></i> fa-check</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-check-circle"></i> fa-check-circle</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-check-circle-o"></i> fa-check-circle-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-check-square"></i> fa-check-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-check-square-o"></i> fa-check-square-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-child"></i> fa-child</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-circle"></i> fa-circle</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-circle-o"></i> fa-circle-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-circle-o-notch"></i> fa-circle-o-notch</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-circle-thin"></i> fa-circle-thin</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-clock-o"></i> fa-clock-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-cloud"></i> fa-cloud</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-cloud-download"></i> fa-cloud-download</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-cloud-upload"></i> fa-cloud-upload</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-code"></i> fa-code</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-code-fork"></i> fa-code-fork</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-coffee"></i> fa-coffee</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-cog"></i> fa-cog</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-cogs"></i> fa-cogs</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-comment"></i> fa-comment</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-comment-o"></i> fa-comment-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-comments"></i> fa-comments</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-comments-o"></i> fa-comments-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-compass"></i> fa-compass</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-credit-card"></i> fa-credit-card</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-crop"></i> fa-crop</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-crosshairs"></i> fa-crosshairs</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-cube"></i> fa-cube</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-cubes"></i> fa-cubes</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-cutlery"></i> fa-cutlery</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-dashboard"></i> fa-dashboard <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-database"></i> fa-database</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-desktop"></i> fa-desktop</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-dot-circle-o"></i> fa-dot-circle-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-download"></i> fa-download</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-edit"></i> fa-edit <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-ellipsis-h"></i> fa-ellipsis-h</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-ellipsis-v"></i> fa-ellipsis-v</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-envelope"></i> fa-envelope</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-envelope-o"></i> fa-envelope-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-envelope-square"></i> fa-envelope-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-eraser"></i> fa-eraser</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-exchange"></i> fa-exchange</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-exclamation"></i> fa-exclamation</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-exclamation-circle"></i> fa-exclamation-circle</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-exclamation-triangle"></i> fa-exclamation-triangle</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-external-link"></i> fa-external-link</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-external-link-square"></i> fa-external-link-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-eye"></i> fa-eye</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-eye-slash"></i> fa-eye-slash</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-fax"></i> fa-fax</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-female"></i> fa-female</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-fighter-jet"></i> fa-fighter-jet</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-archive-o"></i> fa-file-archive-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-audio-o"></i> fa-file-audio-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-code-o"></i> fa-file-code-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-excel-o"></i> fa-file-excel-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-image-o"></i> fa-file-image-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-movie-o"></i> fa-file-movie-o <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-pdf-o"></i> fa-file-pdf-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-photo-o"></i> fa-file-photo-o <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-picture-o"></i> fa-file-picture-o <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-powerpoint-o"></i> fa-file-powerpoint-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-sound-o"></i> fa-file-sound-o <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-video-o"></i> fa-file-video-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-word-o"></i> fa-file-word-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-zip-o"></i> fa-file-zip-o <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-film"></i> fa-film</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-filter"></i> fa-filter</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-fire"></i> fa-fire</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-fire-extinguisher"></i> fa-fire-extinguisher</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-flag"></i> fa-flag</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-flag-checkered"></i> fa-flag-checkered</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-flag-o"></i> fa-flag-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-flash"></i> fa-flash <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-flask"></i> fa-flask</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-folder"></i> fa-folder</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-folder-o"></i> fa-folder-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-folder-open"></i> fa-folder-open</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-folder-open-o"></i> fa-folder-open-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-frown-o"></i> fa-frown-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-gamepad"></i> fa-gamepad</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-gavel"></i> fa-gavel</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-gear"></i> fa-gear <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-gears"></i> fa-gears <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-gift"></i> fa-gift</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-glass"></i> fa-glass</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-globe"></i> fa-globe</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-graduation-cap"></i> fa-graduation-cap</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-group"></i> fa-group <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-hdd-o"></i> fa-hdd-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-headphones"></i> fa-headphones</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-heart"></i> fa-heart</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-heart-o"></i> fa-heart-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-history"></i> fa-history</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-home"></i> fa-home</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-image"></i> fa-image <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-inbox"></i> fa-inbox</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-info"></i> fa-info</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-info-circle"></i> fa-info-circle</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-institution"></i> fa-institution <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-key"></i> fa-key</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-keyboard-o"></i> fa-keyboard-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-language"></i> fa-language</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-laptop"></i> fa-laptop</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-leaf"></i> fa-leaf</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-legal"></i> fa-legal <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-lemon-o"></i> fa-lemon-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-level-down"></i> fa-level-down</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-level-up"></i> fa-level-up</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-life-bouy"></i> fa-life-bouy <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-life-ring"></i> fa-life-ring</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-life-saver"></i> fa-life-saver <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-lightbulb-o"></i> fa-lightbulb-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-location-arrow"></i> fa-location-arrow</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-lock"></i> fa-lock</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-magic"></i> fa-magic</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-magnet"></i> fa-magnet</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-mail-forward"></i> fa-mail-forward <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-mail-reply"></i> fa-mail-reply <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-mail-reply-all"></i> fa-mail-reply-all <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-male"></i> fa-male</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-map-marker"></i> fa-map-marker</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-meh-o"></i> fa-meh-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-microphone"></i> fa-microphone</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-microphone-slash"></i> fa-microphone-slash</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-minus"></i> fa-minus</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-minus-circle"></i> fa-minus-circle</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-minus-square"></i> fa-minus-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-minus-square-o"></i> fa-minus-square-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-mobile"></i> fa-mobile</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-mobile-phone"></i> fa-mobile-phone <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-money"></i> fa-money</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-moon-o"></i> fa-moon-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-mortar-board"></i> fa-mortar-board <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-music"></i> fa-music</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-navicon"></i> fa-navicon <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-paper-plane"></i> fa-paper-plane</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-paper-plane-o"></i> fa-paper-plane-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-paw"></i> fa-paw</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-pencil"></i> fa-pencil</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-pencil-square"></i> fa-pencil-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-pencil-square-o"></i> fa-pencil-square-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-phone"></i> fa-phone</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-phone-square"></i> fa-phone-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-photo"></i> fa-photo <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-picture-o"></i> fa-picture-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-plane"></i> fa-plane</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-plus"></i> fa-plus</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-plus-circle"></i> fa-plus-circle</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-plus-square"></i> fa-plus-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-plus-square-o"></i> fa-plus-square-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-power-off"></i> fa-power-off</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-print"></i> fa-print</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-puzzle-piece"></i> fa-puzzle-piece</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-qrcode"></i> fa-qrcode</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-question"></i> fa-question</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-question-circle"></i> fa-question-circle</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-quote-left"></i> fa-quote-left</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-quote-right"></i> fa-quote-right</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-random"></i> fa-random</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-recycle"></i> fa-recycle</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-refresh"></i> fa-refresh</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-reorder"></i> fa-reorder <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-reply"></i> fa-reply</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-reply-all"></i> fa-reply-all</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-retweet"></i> fa-retweet</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-road"></i> fa-road</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-rocket"></i> fa-rocket</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-rss"></i> fa-rss</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-rss-square"></i> fa-rss-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-search"></i> fa-search</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-search-minus"></i> fa-search-minus</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-search-plus"></i> fa-search-plus</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-send"></i> fa-send <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-send-o"></i> fa-send-o <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-share"></i> fa-share</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-share-alt"></i> fa-share-alt</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-share-alt-square"></i> fa-share-alt-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-share-square"></i> fa-share-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-share-square-o"></i> fa-share-square-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-shield"></i> fa-shield</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-shopping-cart"></i> fa-shopping-cart</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-sign-in"></i> fa-sign-in</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-sign-out"></i> fa-sign-out</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-signal"></i> fa-signal</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-sitemap"></i> fa-sitemap</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-sliders"></i> fa-sliders</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-smile-o"></i> fa-smile-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-sort"></i> fa-sort</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-sort-alpha-asc"></i> fa-sort-alpha-asc</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-sort-alpha-desc"></i> fa-sort-alpha-desc</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-sort-amount-asc"></i> fa-sort-amount-asc</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-sort-amount-desc"></i> fa-sort-amount-desc</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-sort-asc"></i> fa-sort-asc</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-sort-desc"></i> fa-sort-desc</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-sort-down"></i> fa-sort-down <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-sort-numeric-asc"></i> fa-sort-numeric-asc</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-sort-numeric-desc"></i> fa-sort-numeric-desc</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-sort-up"></i> fa-sort-up <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-space-shuttle"></i> fa-space-shuttle</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-spinner"></i> fa-spinner</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-spoon"></i> fa-spoon</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-square"></i> fa-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-square-o"></i> fa-square-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-star"></i> fa-star</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-star-half"></i> fa-star-half</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-star-half-empty"></i> fa-star-half-empty <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-star-half-full"></i> fa-star-half-full <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-star-half-o"></i> fa-star-half-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-star-o"></i> fa-star-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-suitcase"></i> fa-suitcase</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-sun-o"></i> fa-sun-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-support"></i> fa-support <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-tablet"></i> fa-tablet</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-tachometer"></i> fa-tachometer</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-tag"></i> fa-tag</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-tags"></i> fa-tags</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-tasks"></i> fa-tasks</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-taxi"></i> fa-taxi</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-terminal"></i> fa-terminal</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-thumb-tack"></i> fa-thumb-tack</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-thumbs-down"></i> fa-thumbs-down</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-thumbs-o-down"></i> fa-thumbs-o-down</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-thumbs-o-up"></i> fa-thumbs-o-up</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-thumbs-up"></i> fa-thumbs-up</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-ticket"></i> fa-ticket</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-times"></i> fa-times</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-times-circle"></i> fa-times-circle</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-times-circle-o"></i> fa-times-circle-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-tint"></i> fa-tint</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-toggle-down"></i> fa-toggle-down <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-toggle-left"></i> fa-toggle-left <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-toggle-right"></i> fa-toggle-right <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-toggle-up"></i> fa-toggle-up <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-trash-o"></i> fa-trash-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-tree"></i> fa-tree</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-trophy"></i> fa-trophy</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-truck"></i> fa-truck</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-umbrella"></i> fa-umbrella</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-university"></i> fa-university</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-unlock"></i> fa-unlock</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-unlock-alt"></i> fa-unlock-alt</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-unsorted"></i> fa-unsorted <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-upload"></i> fa-upload</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-user"></i> fa-user</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-users"></i> fa-users</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-video-camera"></i> fa-video-camera</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-volume-down"></i> fa-volume-down</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-volume-off"></i> fa-volume-off</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-volume-up"></i> fa-volume-up</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-warning"></i> fa-warning <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-wheelchair"></i> fa-wheelchair</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-wrench"></i> fa-wrench</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">File Type Icons</h4>
+                                <div class="row icon-list-demo">
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file"></i> fa-file</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-archive-o"></i> fa-file-archive-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-audio-o"></i> fa-file-audio-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-code-o"></i> fa-file-code-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-excel-o"></i> fa-file-excel-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-image-o"></i> fa-file-image-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-movie-o"></i> fa-file-movie-o <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-o"></i> fa-file-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-pdf-o"></i> fa-file-pdf-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-photo-o"></i> fa-file-photo-o <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-picture-o"></i> fa-file-picture-o <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-powerpoint-o"></i> fa-file-powerpoint-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-sound-o"></i> fa-file-sound-o <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-text"></i> fa-file-text</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-text-o"></i> fa-file-text-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-video-o"></i> fa-file-video-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-word-o"></i> fa-file-word-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-zip-o"></i> fa-file-zip-o <span class="text-muted">(alias)</span> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Spinner Icons</h4>
+                                <div class="alert alert-success"> These icons work great with the <code>fa-spin</code> class. Check out the <a href="" class="alert-link">spinning icons example</a>. </div>
+                                <div class="row icon-list-demo">
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-spin fa-circle-o-notch"></i> fa-circle-o-notch</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-spin fa-cog"></i> fa-cog</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-spin fa-gear"></i> fa-gear <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-spin fa-refresh"></i> fa-refresh</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-spin fa-spinner"></i> fa-spinner</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Form Control Icons</h4>
+                                <div class="row icon-list-demo">
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-check-square"></i> fa-check-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-check-square-o"></i> fa-check-square-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-circle"></i> fa-circle</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-circle-o"></i> fa-circle-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-dot-circle-o"></i> fa-dot-circle-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-minus-square"></i> fa-minus-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-minus-square-o"></i> fa-minus-square-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-plus-square"></i> fa-plus-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-plus-square-o"></i> fa-plus-square-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-square"></i> fa-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-square-o"></i> fa-square-o</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Currency Icons</h4>
+                                <div class="row icon-list-demo">
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bitcoin"></i> fa-bitcoin <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-btc"></i> fa-btc</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-cny"></i> fa-cny <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-dollar"></i> fa-dollar <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-eur"></i> fa-eur</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-euro"></i> fa-euro <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-gbp"></i> fa-gbp</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-inr"></i> fa-inr</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-jpy"></i> fa-jpy</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-krw"></i> fa-krw</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-money"></i> fa-money</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-rmb"></i> fa-rmb <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-rouble"></i> fa-rouble <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-rub"></i> fa-rub</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-ruble"></i> fa-ruble <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-rupee"></i> fa-rupee <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-try"></i> fa-try</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-turkish-lira"></i> fa-turkish-lira <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-usd"></i> fa-usd</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-won"></i> fa-won <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-yen"></i> fa-yen <span class="text-muted">(alias)</span> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Text Editor Icons</h4>
+                                <div class="row icon-list-demo">
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-align-center"></i> fa-align-center</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-align-justify"></i> fa-align-justify</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-align-left"></i> fa-align-left</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-align-right"></i> fa-align-right</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bold"></i> fa-bold</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-chain"></i> fa-chain <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-chain-broken"></i> fa-chain-broken</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-clipboard"></i> fa-clipboard</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-columns"></i> fa-columns</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-copy"></i> fa-copy <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-cut"></i> fa-cut <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-dedent"></i> fa-dedent <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-eraser"></i> fa-eraser</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file"></i> fa-file</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-o"></i> fa-file-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-text"></i> fa-file-text</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-file-text-o"></i> fa-file-text-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-files-o"></i> fa-files-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-floppy-o"></i> fa-floppy-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-font"></i> fa-font</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-header"></i> fa-header</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-indent"></i> fa-indent</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-italic"></i> fa-italic</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-link"></i> fa-link</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-list"></i> fa-list</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-list-alt"></i> fa-list-alt</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-list-ol"></i> fa-list-ol</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-list-ul"></i> fa-list-ul</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-outdent"></i> fa-outdent</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-paperclip"></i> fa-paperclip</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-paragraph"></i> fa-paragraph</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-paste"></i> fa-paste <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-repeat"></i> fa-repeat</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-rotate-left"></i> fa-rotate-left <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-rotate-right"></i> fa-rotate-right <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-save"></i> fa-save <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-scissors"></i> fa-scissors</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-strikethrough"></i> fa-strikethrough</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-subscript"></i> fa-subscript</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-superscript"></i> fa-superscript</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-table"></i> fa-table</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-text-height"></i> fa-text-height</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-text-width"></i> fa-text-width</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-th"></i> fa-th</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-th-large"></i> fa-th-large</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-th-list"></i> fa-th-list</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-underline"></i> fa-underline</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-undo"></i> fa-undo</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-unlink"></i> fa-unlink <span class="text-muted">(alias)</span> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Directional Icons</h4>
+                                <div class="row icon-list-demo">
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-angle-double-down"></i> fa-angle-double-down</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-angle-double-left"></i> fa-angle-double-left</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-angle-double-right"></i> fa-angle-double-right</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-angle-double-up"></i> fa-angle-double-up</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-angle-down"></i> fa-angle-down</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-angle-left"></i> fa-angle-left</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-angle-right"></i> fa-angle-right</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-angle-up"></i> fa-angle-up</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrow-circle-down"></i> fa-arrow-circle-down</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrow-circle-left"></i> fa-arrow-circle-left</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrow-circle-o-down"></i> fa-arrow-circle-o-down</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrow-circle-o-left"></i> fa-arrow-circle-o-left</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrow-circle-o-right"></i> fa-arrow-circle-o-right</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrow-circle-o-up"></i> fa-arrow-circle-o-up</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrow-circle-right"></i> fa-arrow-circle-right</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrow-circle-up"></i> fa-arrow-circle-up</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrow-down"></i> fa-arrow-down</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrow-left"></i> fa-arrow-left</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrow-right"></i> fa-arrow-right</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrow-up"></i> fa-arrow-up</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrows"></i> fa-arrows</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrows-alt"></i> fa-arrows-alt</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrows-h"></i> fa-arrows-h</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrows-v"></i> fa-arrows-v</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-caret-down"></i> fa-caret-down</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-caret-left"></i> fa-caret-left</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-caret-right"></i> fa-caret-right</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-caret-up"></i> fa-caret-up</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-caret-square-o-left"></i> fa-caret-square-o-left</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-caret-square-o-right"></i> fa-caret-square-o-right</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-caret-square-o-up"></i> fa-caret-square-o-up</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-caret-square-o-down"></i> fa-caret-square-o-down</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-chevron-circle-down"></i> fa-chevron-circle-down</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-chevron-circle-left"></i> fa-chevron-circle-left</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-chevron-circle-right"></i> fa-chevron-circle-right</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-chevron-circle-up"></i> fa-chevron-circle-up</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-chevron-down"></i> fa-chevron-down</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-chevron-left"></i> fa-chevron-left</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-chevron-right"></i> fa-chevron-right</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-chevron-up"></i> fa-chevron-up</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-hand-o-down"></i> fa-hand-o-down</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-hand-o-left"></i> fa-hand-o-left</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-hand-o-right"></i> fa-hand-o-right</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-hand-o-up"></i> fa-hand-o-up</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-long-arrow-down"></i> fa-long-arrow-down</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-long-arrow-left"></i> fa-long-arrow-left</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-long-arrow-right"></i> fa-long-arrow-right</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-long-arrow-up"></i> fa-long-arrow-up</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-toggle-down"></i> fa-toggle-down <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-toggle-left"></i> fa-toggle-left <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-toggle-right"></i> fa-toggle-right <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-toggle-up"></i> fa-toggle-up <span class="text-muted">(alias)</span> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Video Player Icons</h4>
+                                <div class="row icon-list-demo">
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-arrows-alt"></i> fa-arrows-alt</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-backward"></i> fa-backward</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-compress"></i> fa-compress</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-eject"></i> fa-eject</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-expand"></i> fa-expand</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-fast-backward"></i> fa-fast-backward</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-fast-forward"></i> fa-fast-forward</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-forward"></i> fa-forward</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-pause"></i> fa-pause</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-play"></i> fa-play</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-play-circle"></i> fa-play-circle</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-play-circle-o"></i> fa-play-circle-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-step-backward"></i> fa-step-backward</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-step-forward"></i> fa-step-forward</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-stop"></i> fa-stop</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-youtube-play"></i> fa-youtube-play</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Brand Icons</h4>
+                                <div class="row icon-list-demo">
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-adn"></i> fa-adn</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-android"></i> fa-android</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-apple"></i> fa-apple</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-behance"></i> fa-behance</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-behance-square"></i> fa-behance-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bitbucket"></i> fa-bitbucket</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bitbucket-square"></i> fa-bitbucket-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-bitcoin"></i> fa-bitcoin <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-btc"></i> fa-btc</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-codepen"></i> fa-codepen</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-css3"></i> fa-css3</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-delicious"></i> fa-delicious</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-deviantart"></i> fa-deviantart</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-digg"></i> fa-digg</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-dribbble"></i> fa-dribbble</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-dropbox"></i> fa-dropbox</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-drupal"></i> fa-drupal</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-empire"></i> fa-empire</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-facebook"></i> fa-facebook</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-facebook-square"></i> fa-facebook-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-flickr"></i> fa-flickr</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-foursquare"></i> fa-foursquare</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-ge"></i> fa-ge <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-git"></i> fa-git</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-git-square"></i> fa-git-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-github"></i> fa-github</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-github-alt"></i> fa-github-alt</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-github-square"></i> fa-github-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-gittip"></i> fa-gittip</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-google"></i> fa-google</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-google-plus"></i> fa-google-plus</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-google-plus-square"></i> fa-google-plus-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-hacker-news"></i> fa-hacker-news</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-html5"></i> fa-html5</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-instagram"></i> fa-instagram</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-joomla"></i> fa-joomla</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-jsfiddle"></i> fa-jsfiddle</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-linkedin"></i> fa-linkedin</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-linkedin-square"></i> fa-linkedin-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-linux"></i> fa-linux</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-maxcdn"></i> fa-maxcdn</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-openid"></i> fa-openid</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-pagelines"></i> fa-pagelines</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-pied-piper"></i> fa-pied-piper</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-pied-piper-alt"></i> fa-pied-piper-alt</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-pinterest"></i> fa-pinterest</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-pinterest-square"></i> fa-pinterest-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-qq"></i> fa-qq</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-ra"></i> fa-ra <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-rebel"></i> fa-rebel</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-reddit"></i> fa-reddit</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-reddit-square"></i> fa-reddit-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-renren"></i> fa-renren</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-share-alt"></i> fa-share-alt</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-share-alt-square"></i> fa-share-alt-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-skype"></i> fa-skype</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-slack"></i> fa-slack</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-soundcloud"></i> fa-soundcloud</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-spotify"></i> fa-spotify</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-stack-exchange"></i> fa-stack-exchange</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-stack-overflow"></i> fa-stack-overflow</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-steam"></i> fa-steam</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-steam-square"></i> fa-steam-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-stumbleupon"></i> fa-stumbleupon</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-stumbleupon-circle"></i> fa-stumbleupon-circle</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-tencent-weibo"></i> fa-tencent-weibo</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-trello"></i> fa-trello</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-tumblr"></i> fa-tumblr</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-tumblr-square"></i> fa-tumblr-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-twitter"></i> fa-twitter</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-twitter-square"></i> fa-twitter-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-vimeo-square"></i> fa-vimeo-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-vine"></i> fa-vine</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-vk"></i> fa-vk</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-wechat"></i> fa-wechat <span class="text-muted">(alias)</span> </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-weibo"></i> fa-weibo</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-weixin"></i> fa-weixin</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-windows"></i> fa-windows</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-wordpress"></i> fa-wordpress</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-xing"></i> fa-xing</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-xing-square"></i> fa-xing-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-yahoo"></i> fa-yahoo</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-youtube"></i> fa-youtube</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-youtube-play"></i> fa-youtube-play</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-youtube-square"></i> fa-youtube-square</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Medical Icons</h4>
+                                <div class="row icon-list-demo">
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-ambulance"></i> fa-ambulance</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-h-square"></i> fa-h-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-hospital-o"></i> fa-hospital-o</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-medkit"></i> fa-medkit</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-plus-square"></i> fa-plus-square</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-stethoscope"></i> fa-stethoscope</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-user-md"></i> fa-user-md</div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3"><i class="fa fa-wheelchair"></i> fa-wheelchair</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <div class="right-sidebar">
+                    <div class="slimscrollright">
+                        <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+                        <div class="r-panel-body">
+                            <ul id="themecolors" class="m-t-20">
+                                <li><b>With Light sidebar</b></li>
+                                <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
+                                <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
+                                <li><a href="javascript:void(0)" data-theme="red" class="red-theme">3</a></li>
+                                <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme">4</a></li>
+                                <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
+                                <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
+                                <li class="d-block m-t-30"><b>With Dark sidebar</b></li>
+                                <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme working">7</a></li>
+                                <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
+                                <li><a href="javascript:void(0)" data-theme="red-dark" class="red-dark-theme">9</a></li>
+                                <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
+                                <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>
+                                <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme ">12</a></li>
+                            </ul>
+                            <ul class="m-t-20 chatonline">
+                                <li><b>Chat option</b></li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../assets/images/users/1.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../assets/images/users/2.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../assets/images/users/3.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../assets/images/users/4.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../assets/images/users/5.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../assets/images/users/6.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../assets/images/users/7.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../assets/images/users/8.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer"> © 2017 Admin Pro by wrappixel.com </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="../assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="../assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!--Custom JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- Style switcher -->
+    <!-- ============================================================== -->
+    <script src="../assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+</body>
+
+</html>
