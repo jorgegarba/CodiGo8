@@ -1,6 +1,7 @@
 from flask_restful import Resource, reqparse
 from flask_jwt import jwt_required
 from models.valoraciones import valoracionesModel
+from models.local import LocalModel
 
 class valoracionController(Resource):
     @jwt_required()
@@ -39,4 +40,7 @@ class valoracionController(Resource):
 
 class valoracionesController(Resource):
     def get(self,id_local):
+        sentencia = LocalModel.query.filter_by(loc_id=id_local).first()
+        print(sentencia.canchitas[0].preciocancha)
+        return 'Ok'
         # Hacer que me traiga todas las valoraciones del local
