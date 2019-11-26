@@ -35,14 +35,13 @@ class ReservaController(Resource):
             fechaencontradafin = sentencia.res_fechfin
             if (fechaintroducidainicio >= fechaencontradainicio and fechaintroducidainicio < fechaencontradafin) or (fechaintroducidafin > fechaencontradainicio and fechaintroducidafin <= fechaencontradafin) or (fechaintroducidainicio==fechaencontradainicio and fechaintroducidafin == fechaencontradafin) or (fechaintroducidainicio < fechaencontradainicio and fechaintroducidafin > fechaencontradafin):
                 return {'message':'Ya hay una reserva en ese horario'},403
-        return 'Ok'
-        # insercion = reservaModel(data['fecha_inicio'],data['fecha_fin'],data['monto'],data['adelanto'],data['id_usu'],data['id_precio'])
-        # try:
-        #     insercion.guardar_en_la_bd()
-        # except:
-        #     return {
-        #         'message':'Hubo un error al guardar la reserva, intentelo nuevamente'},500
-        # return {
-        #     'message':'Reservada creada satisfactoriamente',
-        #     'content':insercion.res_id
-        #     },201
+        insercion = reservaModel(data['fecha_inicio'],data['fecha_fin'],data['monto'],data['adelanto'],data['id_usu'],data['id_precio'])
+        try:
+            insercion.guardar_en_la_bd()
+        except:
+            return {
+                'message':'Hubo un error al guardar la reserva, intentelo nuevamente'},500
+        return {
+            'message':'Reservada creada satisfactoriamente',
+            'content':insercion.res_id
+            },201
