@@ -41,6 +41,18 @@ class valoracionController(Resource):
 class valoracionesController(Resource):
     def get(self,id_local):
         sentencia = LocalModel.query.filter_by(loc_id=id_local).first()
-        print(sentencia.canchitas[0].preciocancha)
-        return 'Ok'
-        # Hacer que me traiga todas las valoraciones del local
+        resultado = []
+        promedio = 0
+        for cancha in sentencia.canchitas:
+            for preciocancha in cancha.preciocancha:
+                for reserva in preciocancha.reservas:
+                    for valoracion in reserva.valoraciones:
+                        promedio += valoracion.val_estrellas
+                        resultado.append({
+                            'comentario':valoracion.val_comentario,
+                            'estrellas':valoracion.val_estrellas
+                            })
+        return {
+            'comentarios':resultado,
+            'promedio':promedio/len(resultado)
+        }
