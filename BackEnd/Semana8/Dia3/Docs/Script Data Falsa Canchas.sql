@@ -50,8 +50,8 @@ INSERT INTO T_CANCHITA (can_tam, can_foto, loc_id, tipo_id) VALUES
 ('Pequeño', 'https://lh5.googleusercontent.com/US4dkH_geD1iMaRwC2YCfbeU5i3_18TnaHuwCC26Z5Y3F0TMMqhJdwWYa0Ciis2K7HBbIpLy4KWXnNjfz-q_qG1lUO5LGBHiATQ9FxzG7u97tbczQQeLExnW4nJStt_2xwA', '1', '4'),
 ('Profesional', 'https://recreasport.com/wp-content/uploads/2017/04/DSCN4094.jpg', '1', '2'),
 ('Mediano', 'https://www.guatemala.com/fotos/2019/08/La-cancha-de-futbol-mas-grande-de-Centroamerica-esta-en-Guatemala-885x500.png', '1', '1'),
-('Pequeño', 'https://img.stpu.com.br/?img=https://s3.amazonaws.com/pu-mgr/needish/is-prod-deals/dVuSiwYQcdgRDk8Bgq_Vpw.jpg&w=338&h=220', '1', '1'),
-('Mediano', 'https://www.hoysejuega.com/uploads/Modules/ImagenesComplejos/800_600_jogging-sports.jpg', '1', '3');
+('Pequeño', 'https://img.stpu.com.br/?img=https://s3.amazonaws.com/pu-mgr/needish/is-prod-deals/dVuSiwYQcdgRDk8Bgq_Vpw.jpg&w=338&h=220', '4', '1'),
+('Mediano', 'https://www.hoysejuega.com/uploads/Modules/ImagenesComplejos/800_600_jogging-sports.jpg', '3', '3');
 
 
 INSERT INTO T_PRECIOCANCHA (pc_desc, pc_monto, pc_disponibilidad, can_id) VALUES
