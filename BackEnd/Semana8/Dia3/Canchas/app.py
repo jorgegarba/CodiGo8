@@ -17,7 +17,8 @@ from controllers.opcionesLocal import opcionesLocalController, opcionesLocalTodo
 from controllers.precioCancha import precioCanchaController
 # from models.reserva import reservaModel
 from controllers.reservas import ReservaController
-from models.valoraciones import valoracionesModel
+# from models.valoraciones import valoracionesModel
+from controllers.valoraciones import valoracionesController, valoracionController
 # LIBRERIAS PARA EL JWT
 from flask_jwt import JWT
 from seguridad import autenticacion, identificador
@@ -78,5 +79,7 @@ api.add_resource(localOpcionesController,'/localopciones/agregar')
 api.add_resource(ReservaController,'/reserva/crear')
 
 api.add_resource(usuarioController,'/usuario/crear')
+
+api.add_resource(valoracionesController,'/valoraciones/local/<int:id_local>')
 if __name__=="__main__":
     app.run(debug=True)

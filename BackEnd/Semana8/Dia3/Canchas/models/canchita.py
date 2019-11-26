@@ -11,15 +11,11 @@ class CanchitaModel(bd.Model):
         't_local.loc_id'), nullable=False)
     tipo_id = bd.Column(bd.Integer, bd.ForeignKey(
         't_tipo.tipo_id'), nullable=False)
-
-
-
-
-
     # ESTO NO CREA LA RELACION ( LO QUE CREA LA RELACION ES 
     # EL FOREIGN KEY)
     local = bd.relationship('LocalModel',lazy=True)
     tipos = bd.relationship('TipoModel',lazy=True)
+    preciocancha = bd.relationship('precioCanchaModel',lazy=True)
 
     def __init__(self, tamanio, foto, local,tipo):
         self.can_tam = tamanio
