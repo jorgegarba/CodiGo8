@@ -6,18 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/waves.min.css">
     <title>Document</title>
 </head>
 
 <body>
 
-    
-
-
+    <button class="curvas">
+        Click Aqui
+    </button>
 
     <script src="./js/jquery.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/waves.min.js"></script>
+    <script>
+        Waves.attach(".curvas", ['waves-float','waves-button']);
+        Waves.init();
+
+    </script>
 </body>
 
 </html>
