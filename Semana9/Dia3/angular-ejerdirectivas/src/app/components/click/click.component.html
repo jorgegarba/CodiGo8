@@ -1,0 +1,22 @@
+<main class="container mt-4">
+
+    <div class="alert" [ngClass]="tipoAlerta">
+        Texto del alert
+    </div>
+
+    <button class="btn btn-success" (click)="tipoAlerta = 'alert-success'">
+        Click Success
+    </button>
+    <button class="btn btn-warning" (click)="tipoAlerta = 'alert-warning'">
+        Click Warning
+    </button>
+    <hr>
+    <button class="btn btn-danger" (click)="cambiarDanger()">
+        Click Danger
+    </button>
+    <button class="btn btn-primary" (click)="cambiarPrimary()">
+        Click Primary
+    </button>
+
+
+</main>

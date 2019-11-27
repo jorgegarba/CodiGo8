@@ -1,0 +1,47 @@
+<main class="container mt-5">
+
+    <div class="row">
+        <div class="col-12 table-responsive">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th><strong>#</strong></th>
+                        <th>Id</th>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of productos; let x = index">
+                        <td>{{x}}</td>
+                        <td>{{p.id}}</td>
+                        <td>{{p.codigo}}</td>
+                        <td>{{p.nombre}}</td>
+
+                        <td>
+                            <span *ngIf="p.precio >= 50" class="bg-danger">
+                                {{p.precio}}
+                            </span>
+                            <span >
+                                {{p.precio}}
+                            </span>
+                        </td>
+
+                        <td>{{p.cantidad}}</td>
+                        <td>
+                            <img [src]="p.imagen">
+                            <!-- <img src="{{p.imagen}}"> -->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+</main>
