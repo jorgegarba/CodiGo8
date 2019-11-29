@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CanchasService } from './../../services/canchas.service';
+import { iCancha } from 'src/app/interfaces/iCancha';
 
 @Component({
   selector: 'app-canchas',
@@ -8,7 +9,8 @@ import { CanchasService } from './../../services/canchas.service';
 })
 export class CanchasComponent implements OnInit, OnDestroy {
 
-  listaCanchas: Array<any>;
+  cargado: boolean = false;
+  listaCanchas: Array<iCancha> = [];
 
   // La inyección por dependencia es incluir a un servicio
   // en el constructor de un componente
@@ -28,8 +30,9 @@ export class CanchasComponent implements OnInit, OnDestroy {
     // porque si lo manipulamos en el constructor, se generará un error,
     // ya que en constructor, el DOM, aún no existe
     console.log("Llamando a las canchas");
-    this._sCanchas.getCanchas().then((canchas: any) => {
+    this._sCanchas.getCanchas().then((canchas: Array<iCancha>) => {
       this.listaCanchas = canchas;
+      this.cargado = true;
     })
   }
   ngOnDestroy() {
