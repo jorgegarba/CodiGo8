@@ -1,0 +1,25 @@
+<main class="container mt-4">
+
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Dirección</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let c of listaCanchas">
+                        <td>{{c.id}}</td>
+                        <td>{{c.nombre}}</td>
+                        <td>{{c.direccion}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</main>

@@ -7,6 +7,7 @@ import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgclassComponent } from './components/ngclass/ngclass.component';
 import { ClickComponent } from './components/click/click.component';
+import { NgstyleComponent } from './components/ngstyle/ngstyle.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ClickComponent } from './components/click/click.component';
     MainComponent,
     FooterComponent,
     NgclassComponent,
-    ClickComponent
+    ClickComponent,
+    NgstyleComponent
   ],
   imports: [
     BrowserModule
