@@ -1,11 +1,15 @@
-<ng-container>
-    <div class='card'>
-        <img src="{{objUsuario.avatar}}" class="card-img-top">
-        <div class='card-body'>
-            <p><strong>Id: </strong>{{objUsuario.id}}</p>
-            <p><strong>Nombre: </strong>{{objUsuario.first_name}}</p>
-            <p><strong>Apellido: </strong>{{objUsuario.last_name}}</p>
-            <p><strong>Email: </strong>{{objUsuario.email}}</p>
-        </div>
+<div class='card'>
+    <img src="{{objUsuario.avatar}}" class="card-img-top">
+    <div class='card-body'>
+        <p><strong>Id: </strong>{{objUsuario.id}}</p>
+        <p><strong>Nombre: </strong>{{objUsuario.first_name}}</p>
+        <p><strong>Apellido: </strong>{{objUsuario.last_name}}</p>
+        <p><strong>Email: </strong>{{objUsuario.email}}</p>
     </div>
-</ng-container>
+    <div class="card-footer">
+        <button class="btn btn-block btn-outline-primary"
+            (click)="seleccionarUsuario(objUsuario)">
+            Seleccionar Usuario
+        </button>
+    </div>
+</div>

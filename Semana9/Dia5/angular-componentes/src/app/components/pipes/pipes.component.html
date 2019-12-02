@@ -1,0 +1,144 @@
+<main class="container mt-4">
+
+    <h2>Pipes en Angular</h2>
+    <hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Variable</th>
+                <th>Nombre del Pipe</th>
+                <th>Aplicación</th>
+                <th>Resultado</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{nombre}}</td>
+                <td>
+                    <code>uppercase</code>
+                </td>
+                <td>{{'{variable | uppercase}'}}</td>
+                <td>{{nombre | uppercase}}</td>
+                <td>Transforma un string en mayúsculas</td>
+            </tr>
+            <tr>
+                <td>{{nombre}}</td>
+                <td>
+                    <code>lowercase</code>
+                </td>
+                <td>{{'{variable | lowercase}'}}</td>
+                <td>{{nombre | lowercase}}</td>
+                <td>Transforma un string en minúsculas</td>
+            </tr>
+            <tr>
+                <td>{{nombre}}</td>
+                <td>
+                    <code>slice</code>
+                </td>
+                <td>{{'{variable | slice:3}'}}</td>
+                <td>{{nombre | slice:3}}</td>
+                <td>Devuelve la cadena desde la posición 3</td>
+            </tr>
+            <tr>
+                <td>{{nombre}}</td>
+                <td>
+                    <code>slice</code>
+                </td>
+                <td>{{'{variable | slice:3:7}'}}</td>
+                <td>{{nombre | slice:3:7}}</td>
+                <td>
+                    Devuelve la cadena desde la posición 3
+                    hasta la posición 7 sin contar ésta última
+                </td>
+            </tr>
+            <tr>
+                <td>{{dias}}</td>
+                <td>
+                    <code>slice</code>
+                </td>
+                <td>{{'{variable | slice:2:5}'}}</td>
+                <td>{{dias | slice:2:5}}</td>
+                <td>
+                    Devuelve los valores desde la posición 2
+                    hasta la posición 5 sin contar ésta última
+                </td>
+            </tr>
+            <tr>
+                <td>{{PI}}</td>
+                <td>
+                    <code>number</code>
+                </td>
+                <td>{{'{numero | number:3.0-0}'}}</td>
+                <td>{{PI | number:'3.0-0'}}</td>
+                <td>
+                    Devuelve los 3 primeros números de la parte entera
+                    y cero decimales
+                </td>
+            </tr>
+            <tr>
+                <td>{{PI}}</td>
+                <td>
+                    <code>number</code>
+                </td>
+                <td>{{'{numero | number:3.2-4}'}}</td>
+                <td>{{PI | number:'3.2-4'}}</td>
+                <td>
+                    Devuelve los 3 primeros números de la parte entera
+                    y mínimo 2 decimales, y máximo 4 decimales
+                </td>
+            </tr>
+            <tr>
+                <td>{{igv}}</td>
+                <td>
+                    <code>percent</code>
+                </td>
+                <td>{{'{numero | percent}'}}</td>
+                <td>{{igv | percent}}</td>
+                <td>
+                    Multiplica un número por 100 y le agrega el símbolo
+                    del porcentaje
+                </td>
+            </tr>
+            <tr>
+                <td>{{igv}}</td>
+                <td>
+                    <code>percent</code>
+                </td>
+                <td>{{'{numero | percent:3.2-2}'}}</td>
+                <td>{{igv | percent:'3.2-2'}}</td>
+                <td>
+                    Multiplica un número por 100 y le agrega el símbolo
+                    del porcentaje, además, le agrega dos decimales como mínimo
+                    y dos decimales como máximo
+                </td>
+            </tr>
+            <tr>
+                <td>{{sueldo}}</td>
+                <td>
+                    <code>currency</code>
+                </td>
+                <td>{{'{numero | currency:EUR}'}}</td>
+                <td>{{sueldo | currency:'EUR'}}</td>
+                <td>
+                    Formatea el número y le agrega el símbolo de la moneda
+                </td>
+            </tr>
+            <tr>
+                <td>{{sueldo}}</td>
+                <td>
+                    <code>currency</code>
+                </td>
+                <td>{{'{numero | currency}'}}</td>
+                <td>{{sueldo | currency:'PEN':'S. ':'4.2-2'}}</td>
+                <td>
+                    Devuelve un string con un formato customizado
+                </td>
+            </tr>
+
+
+
+        </tbody>
+    </table>
+
+</main>

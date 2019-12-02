@@ -11,6 +11,7 @@ import { CanchasComponent } from './components/canchas/canchas.component';
 import { CanchaComponent } from './components/canchas/cancha.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { UsuarioComponent } from './components/usuarios/usuario.component';
+import { PipesComponent } from './components/pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UsuarioComponent } from './components/usuarios/usuario.component';
     CanchasComponent,
     CanchaComponent,
     UsuariosComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,

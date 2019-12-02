@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { iUsuario } from './../../interfaces/iUsuario';
 
@@ -10,10 +10,16 @@ import { iUsuario } from './../../interfaces/iUsuario';
 export class UsuarioComponent implements OnInit {
 
   @Input() objUsuario: iUsuario;
-
+  @Output() outUsuario: EventEmitter<any> = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  seleccionarUsuario(usu) {
+    console.log("Seleccionar Usuario Usuario component");
+    console.log(usu);
+    this.outUsuario.emit(usu);
   }
 
 }

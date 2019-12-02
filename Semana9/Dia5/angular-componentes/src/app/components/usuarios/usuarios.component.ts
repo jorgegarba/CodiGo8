@@ -11,6 +11,7 @@ export class UsuariosComponent implements OnInit {
 
   cargado: boolean = false;
   listaUsuarios: Array<iUsuario>;
+  usuarioSeleccionado: any;
 
   constructor(public _sUsuarios: UsuariosService) { }
 
@@ -21,6 +22,9 @@ export class UsuariosComponent implements OnInit {
       console.log(json.data);
       this.listaUsuarios = json.data;
     });
+  }
+  recibirUsuario(usuarioEntrada) {
+    this.usuarioSeleccionado = usuarioEntrada;
   }
 
 }
