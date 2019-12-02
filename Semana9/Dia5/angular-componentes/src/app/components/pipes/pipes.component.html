@@ -135,6 +135,51 @@
                     Devuelve un string con un formato customizado
                 </td>
             </tr>
+            <tr>
+                <td>{{hoy}}</td>
+                <td>
+                    <code>date:'medium'</code>
+                </td>
+                <td>
+                    {{'{hoy | date}'}}
+                </td>
+                <td>{{hoy | date:'medium'}}
+                <td>
+                    Formatea la fecha en formato de mes, fecha año y hora
+                </td>
+            </tr>
+            <tr>
+                <td>{{hoy}}</td>
+                <td>
+                    <code>date:'dd - MM - yyyy'</code>
+                </td>
+                <td>
+                    {{'{hoy | date'}}
+                </td>
+                <td>
+                    {{hoy | date: 'dd - MM - yyyy'}}
+                </td>
+                <td>
+                    Formate la fecha en el formato que nosotros queramos
+                </td>
+            </tr>
+            <tr>
+                <td>{{persona}}</td>
+                <td>
+                    <code>json</code>
+                </td>
+                <td>
+                    <pre>
+                        {{persona | json}}
+                    </pre>
+                </td>
+                <td>
+                    {{'{persona | json}'}}
+                </td>
+                <td>
+                    Formatea un objeto JSON y lo imprime literal. Se recomienda usar la etiqueta pre para que lo formatee y se vea visualmente atractivo.
+                </td>
+            </tr>
 
 
 

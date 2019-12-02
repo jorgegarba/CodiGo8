@@ -12,7 +12,11 @@ export class PipesComponent implements OnInit {
   PI: number = Math.PI;
   igv: number = 0.18;
   sueldo: number = 4500.00;
-  
+  hoy: Date = new Date();
+  persona: any = {
+    nombre:'Eduardo',
+    apellido: 'De Rivero'
+  }
   constructor() { }
 
   ngOnInit() {
