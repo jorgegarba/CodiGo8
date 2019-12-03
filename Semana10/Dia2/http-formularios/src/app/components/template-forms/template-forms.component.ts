@@ -12,4 +12,11 @@ export class TemplateFormsComponent implements OnInit {
   ngOnInit() {
   }
 
+  formulario1(pais, edad, nombre, email) {
+    console.log(pais.value);
+    console.log(edad.value);
+    console.log(nombre.value);
+    console.log(email.value);
+  }
+
 }

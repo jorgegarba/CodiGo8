@@ -14,6 +14,9 @@ import { TemplateFormsComponent } from './components/template-forms/template-for
 import { HttpClientModule } from '@angular/common/http';
 // Modulo para usar formularios en Angular
 import { FormsModule } from '@angular/forms';
+import { TemplateForms2Component } from './components/template-forms2/template-forms2.component';
+import { TemplateForms3Component } from './components/template-forms3/template-forms3.component';
+import { TemplateForms4Component } from './components/template-forms4/template-forms4.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     ProductosComponent,
     ProductoComponent,
-    TemplateFormsComponent
+    TemplateFormsComponent,
+    TemplateForms2Component,
+    TemplateForms3Component,
+    TemplateForms4Component
   ],
   imports: [
     BrowserModule,
