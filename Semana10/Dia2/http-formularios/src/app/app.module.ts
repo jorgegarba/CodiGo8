@@ -8,9 +8,12 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { ProductoComponent } from './components/productos/producto.component';
+import { TemplateFormsComponent } from './components/template-forms/template-forms.component';
 
 // Modulo para consumir datos externos (AJAX)
 import { HttpClientModule } from '@angular/common/http';
+// Modulo para usar formularios en Angular
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,14 @@ import { HttpClientModule } from '@angular/common/http';
     NotFoundComponent,
     NavbarComponent,
     ProductosComponent,
-    ProductoComponent
+    ProductoComponent,
+    TemplateFormsComponent
   ],
   imports: [
     BrowserModule,
     RoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
