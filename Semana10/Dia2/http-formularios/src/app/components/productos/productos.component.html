@@ -1,0 +1,17 @@
+<main class="container mt-4">
+
+    <div class="alert alert-success text-center" role="alert" *ngIf="!cargado">
+        <h4 class="alert-heading">Cargando Productos</h4>
+        <p>
+            <i class="fa fa-refresh fa-spin fa-3x"></i>
+        </p>
+    </div>
+
+    <div class="row" *ngIf="cargado">
+        <div class="col-md-3" *ngFor="let p of productos; let i = index">
+            <app-producto [objProducto]="p"></app-producto>
+            <br *ngIf="i%4===0"/>
+        </div>
+    </div>
+
+</main>

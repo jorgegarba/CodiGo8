@@ -1,0 +1,12 @@
+<div class="card text-left">
+    <!-- <img class="card-img-top" src="{{objProducto.imagen}}" alt=""> -->
+    <img class="card-img-top" src="http://placehold.it/300x300/aa3333/ffffff" alt="">
+    <div class="card-body">
+        <h4 class="card-title">{{objProducto.nombre}}</h4>
+        <p class="card-text">
+            <strong>Codigo:</strong>{{objProducto.codigo}} <br>
+            <strong>Stock:</strong>{{objProducto.cantidad}} <br>
+            <strong>Precio:</strong>{{objProducto.precio | currency:'PEN':'S/. ':'.2-2'}} <br>
+        </p>
+    </div>
+</div>

@@ -14,9 +14,11 @@ export class PipesComponent implements OnInit {
   sueldo: number = 4500.00;
   hoy: Date = new Date();
   persona: any = {
-    nombre:'Eduardo',
+    nombre: 'Eduardo',
     apellido: 'De Rivero'
   }
+  texto: string = "angular y sus componentes";
+
   constructor() { }
 
   ngOnInit() {
