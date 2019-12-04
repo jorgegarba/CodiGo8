@@ -1,0 +1,9 @@
+py .\manage.py shell
+from djpuro.models import CategoriaModel
+CategoriaModel.objects.bulk_create([
+CategoriaModel(descripcion='Leche',activo=False),
+CategoriaModel(descripcion='Abarrotes', activo=True),
+CategoriaModel(descripcion='Menestras', activo=True),
+CategoriaModel(descripcion='Aseo', activo=False),
+CategoriaModel(descripcion='Utencilios de limpieza', activo=True)
+])
