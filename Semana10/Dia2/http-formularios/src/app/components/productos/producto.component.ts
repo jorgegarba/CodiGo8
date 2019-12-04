@@ -1,3 +1,4 @@
+import { ProductosService } from './../../services/productos.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProductoComponent implements OnInit {
   @Input() objProducto;
-  constructor() { }
+  constructor(public _sProducto: ProductosService) { }
 
   ngOnInit() {
+  }
+
+  cambiarServicioAbrir(objProducto) {
+    this._sProducto.abrir = true;
+    this._sProducto.productoEditar = objProducto;
   }
 }
 

@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+.fab-crear {
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+}
+
+.fondo-oscuro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3000;
+}
+
+.oculto {
+    display: none;
+}
