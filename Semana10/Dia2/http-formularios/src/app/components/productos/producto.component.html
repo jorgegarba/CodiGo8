@@ -9,4 +9,11 @@
             <strong>Precio:</strong>{{objProducto.precio | currency:'PEN':'S/. ':'.2-2'}} <br>
         </p>
     </div>
+    <div class="card-footer text-right">
+        <button class="btn btn-outline-warning"
+            (click)="cambiarServicioAbrir(objProducto)">
+            <i class="fas fa-pen mr-2"></i>
+            Editar
+        </button>
+    </div>
 </div>
