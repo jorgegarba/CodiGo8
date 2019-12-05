@@ -14,7 +14,8 @@ export class ProductosService {
     nombre: '',
     precio: 0,
     imagen: '',
-    codigo: ''
+    codigo: '',
+    id: 0
   };
 
   URL_BACKEND = env.URL_BACKEND;
@@ -31,6 +32,13 @@ export class ProductosService {
     let misHeaders = new HttpHeaders();
     misHeaders.append("Content-Type", "application/json");
     return this._sHttp.post(url, objProducto, { headers: misHeaders });
+  }
+
+  putProducto(objProducto, id) {
+    let url = `${this.URL_BACKEND}/producto/${id}`;
+    let misHeaders = new HttpHeaders();
+    misHeaders.append('Content-Type', 'application/json');
+    return this._sHttp.put(url, objProducto, { headers: misHeaders });
   }
 
 }
