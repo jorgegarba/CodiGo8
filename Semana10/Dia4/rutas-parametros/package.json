@@ -1,5 +1,5 @@
 {
-  "name": "http-formularios",
+  "name": "rutas-parametros",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -20,7 +20,6 @@
     "@angular/platform-browser-dynamic": "~8.2.13",
     "@angular/router": "~8.2.13",
     "rxjs": "~6.4.0",
-    "sweetalert2": "^9.4.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },

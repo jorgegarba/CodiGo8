@@ -1,0 +1,22 @@
+<main class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6" *ngIf="objProducto">
+            <p>
+                <strong>Nombre:</strong>
+                {{objProducto.nombre}}
+            </p>
+            <p>
+                <strong>Precio:</strong>
+                {{objProducto.precio | currency :'PEN':'S/. ':'.2-2'}}
+            </p>
+            <p>
+                <strong>Cantidad:</strong>
+                {{objProducto.cantidad}} unidades.
+            </p>
+            <p>
+                <strong>Imagen:</strong>
+                {{objProducto.imagen}}
+            </p>
+        </div>
+    </div>
+</main>
