@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProductoService } from './../../services/producto.service';
 
 @Component({
   selector: 'app-producto-ver',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductoVerComponent implements OnInit {
 
-  constructor() { }
+  objProducto: any;
+
+  constructor(public _sActivatedRoute: ActivatedRoute,
+    public _sProducto: ProductoService) { }
 
   ngOnInit() {
+    this.traerProducto(this._sActivatedRoute.snapshot.params.producto_id);
   }
+
+  traerProducto(id) {
+    this._sProducto.getProductoById(id)
+      .subscribe((rpta: any) => {
+        this.objProducto = rpta;
+      }, (error: any) => {
+        console.log(error);
+      });
+
+  }
+
 
 }

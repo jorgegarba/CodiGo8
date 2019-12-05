@@ -1,3 +1,4 @@
+import { FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,6 +11,10 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  buscar(idbuscado: FormControl) {
+    console.log(idbuscado.value);
   }
 
 }
