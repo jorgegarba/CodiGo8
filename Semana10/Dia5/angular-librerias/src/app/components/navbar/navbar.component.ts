@@ -1,6 +1,4 @@
-import { FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,14 +7,9 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(public _sRouter: Router) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  buscar(idbuscado: FormControl) {
-    this._sRouter.navigate(['/buscador', idbuscado.value]);
-
   }
 
 }

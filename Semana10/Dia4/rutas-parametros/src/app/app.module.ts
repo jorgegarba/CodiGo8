@@ -12,6 +12,8 @@ import { ProductoVerComponent } from './components/producto-ver/producto-ver.com
 import { HttpClientModule } from '@angular/common/http';
 import { ProductosComponent } from './components/productos/productos.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
+import { ProtegidoComponent } from './components/protegido/protegido.component';
+import { ForbidenComponent } from './components/forbiden/forbiden.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
     NotFoundComponent,
     ProductoVerComponent,
     ProductosComponent,
-    BuscadorComponent
+    BuscadorComponent,
+    ProtegidoComponent,
+    ForbidenComponent
   ],
   imports: [
     BrowserModule,
