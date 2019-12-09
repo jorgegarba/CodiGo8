@@ -7,10 +7,10 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'calendario', component: CalendarioComponent },
   { path: '**', redirectTo: '' }
-]
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
   declarations: [],
 })
