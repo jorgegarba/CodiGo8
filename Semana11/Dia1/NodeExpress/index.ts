@@ -7,7 +7,7 @@ import bodyParser from 'body-parser';
 // Creando una instancia de EXPRESS
 // app => es el servidor web
 let app: express.Application = express();
-let puerto: number = 3000;
+let puerto: number = 5500;
 
 // Configurando BODY PARSER
 // OJO=> Obligatorio hacerlo antes de configurar las rutas del
