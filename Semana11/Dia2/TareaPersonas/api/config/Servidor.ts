@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import { persona_router } from '../routes/persona';
+
 export class Servidor {
     public app: express.Application;
     public puerto: number;
@@ -17,7 +18,7 @@ export class Servidor {
         this.configurarRutas();
     }
     configurarRutas() {
-        this.app.use('/api',persona_router);
+        this.app.use('/api', persona_router);
 
     }
     start() {
