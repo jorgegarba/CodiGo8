@@ -17,10 +17,14 @@ export const proyecto_model = (conexion: Sequelize) => {
       pro_fechin: {
         type: DataTypes.DATE,
         allowNull: false
-      },
+      }, 
       pro_fechfin: {
         type: DataTypes.DATE,
         allowNull: false
+      },
+      pro_pres:{
+        type:DataTypes.DECIMAL(10,2),
+        allowNull:false
       },
       pro_est: {
         type: DataTypes.STRING(10),
