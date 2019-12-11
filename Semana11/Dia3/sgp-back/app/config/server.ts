@@ -1,9 +1,11 @@
+import { familia_router } from './../routes/Familia';
 import { conexion } from './sequelize';
 import express, { Response, Request } from 'express';
 import bodyParser from 'body-parser';
 import { proyecto_router } from '../routes/Proyecto';
 import { unidadmedida_router } from '../routes/UnidadMedida';
 import { usuario_router } from '../routes/Usuario';
+import { categoria_router } from '../routes/Categoria';
 
 export class Server {
   public app: express.Application;
@@ -27,6 +29,8 @@ export class Server {
     this.app.use("", proyecto_router);
     this.app.use("", unidadmedida_router);
     this.app.use("", usuario_router);
+    this.app.use("", categoria_router);
+    this.app.use("", familia_router);
 
   }
   start() {

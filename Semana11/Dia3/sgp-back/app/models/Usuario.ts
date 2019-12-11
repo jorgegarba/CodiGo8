@@ -1,4 +1,4 @@
-import { Sequelize, DataTypes } from 'sequelize';
+import { Sequelize, DataTypes, Model } from 'sequelize';
 const crypto = require('crypto');
 
 export const usuario_model = (conexion: Sequelize) => {
@@ -38,15 +38,16 @@ export const usuario_model = (conexion: Sequelize) => {
         tableName: "t_usuario",
         timestamps: true
     });
+
     modelo.prototype.setSaltAndHash = function (password: any) {
         this.usu_salt = crypto.randomBytes(16).toString('hex');
         this.usu_hash = crypto.pbkdf2Sync(password, this.usu_salt, 1000, 64, 'sha512').toString('hex');
     };
-    modelo.prototype.validarPassword = function (password:any) {
-        let hash_temporal = crypto.pbkdf2Sync(password, this.usu_salt,1000,64,'sha512').toString('hex');
-        if(hash_temporal === this.usu_hash){
+    modelo.prototype.validarPassword = function (password: any) {
+        let hash_temporal = crypto.pbkdf2Sync(password, this.usu_salt, 1000, 64, 'sha512').toString('hex');
+        if (hash_temporal === this.usu_hash) {
             return true
-        }else{
+        } else {
             return false
         }
     };
