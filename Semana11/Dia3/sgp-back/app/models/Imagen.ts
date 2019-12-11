@@ -1,21 +1,21 @@
 import {Sequelize, DataTypes} from 'sequelize';
-
-export const categoria_model = (conexion: Sequelize)=>{
-    const modelo = conexion.define("Categoria",{
-        cat_id:{
+export const imagen_model =(conexion: Sequelize)=>{
+    const modelo = conexion.define("Imagen",{
+        ima_id:{
             type:DataTypes.INTEGER,
             primaryKey:true,
             autoIncrement:true,
             allowNull:false,
             unique:true
         },
-        cat_nom:{
-            type:DataTypes.STRING(45),
+        ima_url:{
+            type:DataTypes.TEXT,
             allowNull:false
         }
     },{
-        tableName:"t_categoria",
+        tableName:"t_imagen",
         timestamps:true
     });
     return modelo;
+
 }
