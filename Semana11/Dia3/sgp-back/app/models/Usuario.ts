@@ -6,6 +6,7 @@ export const usuario_model = (conexion: Sequelize)=>{
             type:DataTypes.INTEGER,
             primaryKey:true,
             allowNull:false,
+            autoIncrement:false,
             unique:true
         },
         usu_email:{
