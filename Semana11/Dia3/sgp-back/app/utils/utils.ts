@@ -14,7 +14,7 @@ export const verifcarToken = (token:any)=>{
 // MIDDLEWARE ó WATCHMEN
 export var wachiman = (req:Request, res:Response, next:NextFunction)=>{
     if(req.headers.authorization){
-        let token = req.headers.authorization.split(' ')[1];
+        let token = req.headers.authorization.split(' ')[2];
         let resultado = verifcarToken(token);
         if(resultado){
             next();

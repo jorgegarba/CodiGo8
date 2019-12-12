@@ -1,4 +1,4 @@
-import { Categoria, Familia } from './../config/sequelize';
+import { Categoria, Familia, Recurso } from './../config/sequelize';
 import { Request, Response } from 'express';
 import { Model } from 'sequelize/types';
 // categoria controller
@@ -31,4 +31,18 @@ export const postCategoria = (req: Request, res: Response) => {
   })
 
 
+}
+
+export const getCategorias = (req: Request, res: Response) => {
+  Categoria.findAll({
+    include: [
+      { model: Familia },
+      { model: Recurso }
+    ]
+  }).then((objCategoria: any) => {
+    res.status(200).json({
+      ok: true,
+      content: objCategoria
+    })
+  })
 }
