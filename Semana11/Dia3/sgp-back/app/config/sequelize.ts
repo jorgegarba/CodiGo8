@@ -22,7 +22,7 @@ export const conexion = new Sequelize('proyectos', 'root', 'root', {
   // se imprimirán todas las sentencias SQL cuando se haga una consulta
   logging: console.log,
   dialectOptions: {
-    useUTC: false,
+    // useUTC: false,
     dateStrings: true,
     typeCast: true
   },

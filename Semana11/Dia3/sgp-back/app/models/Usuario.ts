@@ -1,5 +1,6 @@
-import { Sequelize, DataTypes, Model } from 'sequelize';
+import { Sequelize, DataTypes } from 'sequelize';
 const crypto = require('crypto');
+const jwt = require('jsonwebtoken');
 
 export const usuario_model = (conexion: Sequelize) => {
     const modelo = conexion.define("Usuario", {
@@ -51,7 +52,15 @@ export const usuario_model = (conexion: Sequelize) => {
             return false
         }
     };
-
-
+    modelo.prototype.generarJWT = function(){
+        // El payload es una parte del JWT que sirve para guardar informacion adicional para ser utilizada despues (por ejemplo: en el front)
+        let payload={
+            usu_id: this.usu_id,
+            usu_nom: `${this.usu_nom} ${this.usu_ape}`
+        };
+        //jwt.sign(payload,secret key, tiempo de vida, algoritmo)
+        var token = jwt.sign(payload,'sapeee',{expiresIn:30},{algorithm:'RS256'});
+        return token;
+    }
     return modelo;
 }

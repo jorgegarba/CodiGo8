@@ -35,8 +35,10 @@ export const Login = (req: Request, res: Response) => {
             // Tengo que validar si la contraseña es la correcta
             let validacion = objUsuario.validarPassword(password);
             if (validacion) {
+                let token = objUsuario.generarJWT();
                 res.status(200).json({
                     ok: true,
+                    token,
                     content: 'Usuario correctamente logeado'
                 })
             } else {
