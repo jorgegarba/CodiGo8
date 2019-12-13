@@ -9,6 +9,7 @@ import { categoria_router } from '../routes/Categoria';
 import { documento_router } from '../routes/Documento';
 import { gi_router } from '../routes/GastoIngreso';
 import { proveedor_router } from '../routes/Proveedor';
+import { imagen_router } from '../routes/Imagen';
 
 export class Server {
   public app: express.Application;
@@ -20,6 +21,7 @@ export class Server {
   }
   configurarBodyParser() {
     this.app.use(bodyParser.json());
+    this.app.use(bodyParser.urlencoded({extended:true}))
   }
   configurarRutas() {
     this.app.get("/", (req: Request, res: Response) => {
@@ -37,7 +39,7 @@ export class Server {
     this.app.use("", proyecto_router);
     this.app.use("", unidadmedida_router);
     this.app.use("", usuario_router);
-
+    this.app.use("", imagen_router);
 
   }
   start() {

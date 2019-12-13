@@ -4,13 +4,24 @@ import { Proveedor } from '../config/sequelize';
 
 export const crearProveedor = (req: Request, res: Response) => {
     let objProveedor = Proveedor.build(req.body);
-    objProveedor.save().then((proveedor: Model) => {
-        res.status(201).json({
+    Proveedor.findAll({where:{
+        prov_ruc:req.body.prov_ruc
+    }}).then((proveedores:Model)=>{
+        if (proveedores.length != 0){
+            return res.status(500).json({
+                ok:false,
+                content:'Ya hay ese proveedor registrado con ese RUC'
+            })
+        }else{
+            return objProveedor.save()
+        }
+    }).then((proveedor: Model) => {
+        return res.status(201).json({
             ok: true,
             content: proveedor
         })
     }).catch((error: any) => {
-        res.status(500).json({
+        return res.status(500).json({
             ok: false,
             content: error.errors
         })
