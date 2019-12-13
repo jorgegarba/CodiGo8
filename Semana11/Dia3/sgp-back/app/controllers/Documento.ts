@@ -24,7 +24,7 @@ export var createDocumento = (req: Request, res: Response) => {
             content: error.errors
         })
     })
-}
+};
 export var getDocumento = (req: Request, res: Response) => {
     let { id_doc } = req.params;
     Documento.findByPk(id_doc).then((objDocumento: Model) => {
