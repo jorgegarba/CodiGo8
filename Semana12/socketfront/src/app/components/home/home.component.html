@@ -1,0 +1,25 @@
+<main class="container">
+
+   <div class="row mt-5">
+
+      <div class="col-12">
+
+         <form #formulario="ngForm" (ngSubmit)="crearProducto(idProducto, nombreProducto)">
+            <div class="form-group">
+               <label for="">Id Producto</label>
+               <input type="text" class="form-control"
+                  #idProducto>
+            </div>
+            <div class="form-group">
+               <label for="">Nombre Producto</label>
+               <input type="text" class="form-control"
+                  #nombreProducto>
+            </div>
+            <button type="submit" class="btn btn-primary"> Crear Producto</button>
+         </form>
+
+      </div>
+
+   </div>
+
+</main>
