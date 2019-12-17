@@ -2,6 +2,7 @@ import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { CategoriaService } from 'src/app/services/categoria.service';
 import { Select2OptionData } from 'ng-select2';
+import { ProductoService } from 'src/app/services/producto.service';
 
 @Component({
   selector: 'app-crear-producto',
@@ -13,7 +14,8 @@ export class CrearProductoComponent implements OnInit {
   categorias;
   cat_id = 100;
   public exampleData: Array<Select2OptionData>;
-  constructor(public _sCategoria: CategoriaService) { }
+  constructor(public _sCategoria: CategoriaService,
+    public _sProducto: ProductoService) { }
 
   ngOnInit() {
     this.getCategorias();
@@ -48,8 +50,13 @@ export class CrearProductoComponent implements OnInit {
     let objProducto = {
       ...formulario.value,
       cat_id: this.cat_id
-    }
-    console.log(objProducto);
+    };
+
+    this._sProducto.crearProducto(objProducto).subscribe((data) => {
+      console.log("Creado!");
+      console.log(data);
+    })
+
   }
 
 }

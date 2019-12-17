@@ -12,6 +12,8 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { CrearProductoComponent } from './components/crear-producto/crear-producto.component';
 
 import { NgSelect2Module } from 'ng-select2';
+import { ChartsModule } from 'ng2-charts';
+import { PpcategoriaComponent } from './components/ppcategoria/ppcategoria.component';
 
 
 const config: SocketIoConfig = {
@@ -25,7 +27,8 @@ const config: SocketIoConfig = {
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    CrearProductoComponent
+    CrearProductoComponent,
+    PpcategoriaComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ const config: SocketIoConfig = {
     SocketIoModule.forRoot(config),
     FormsModule,
     HttpClientModule,
-    NgSelect2Module
+    NgSelect2Module,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

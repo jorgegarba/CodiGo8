@@ -7,6 +7,7 @@ import http from 'http';
 import socketIO from 'socket.io';
 import { conexion } from './Sequelize';
 import { categoria_router } from '../rutas/Categoria';
+import { ProductoController } from '../controleadores/Producto';
 
 
 
@@ -77,6 +78,9 @@ export class Server {
       console.log("Servidor corriendo perfectamente en el puerto " + this.PUERTO);
       conexion.sync({ force: false }).then(() => {
         console.log("Base de datos ha sido creada correctamente");
+
+        ProductoController.getProductosPorCategoria();
+
       })
     })
   }

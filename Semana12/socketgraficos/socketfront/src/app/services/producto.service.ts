@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,16 @@ import { Injectable } from '@angular/core';
 })
 export class ProductoService {
 
-  constructor() { }
+  constructor(private _sHttp: HttpClient) { }
+
+  crearProducto(objProducto) {
+
+    let misHeaders = new HttpHeaders();
+    misHeaders.append("Content-type", "application/json");
+
+    return this._sHttp.post("http://localhost:3000/producto",
+      objProducto,
+      { headers: misHeaders });
+  }
+
 }

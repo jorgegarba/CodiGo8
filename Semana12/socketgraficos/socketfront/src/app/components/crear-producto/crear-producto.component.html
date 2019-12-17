@@ -7,11 +7,13 @@
       <form #formulario="ngForm" (ngSubmit)="crearProducto(formulario)">
         <div class="form-group">
           <label for="">Nombre del Producto:</label>
-          <input type="text" class="form-control" #prod_nom [ngModel] required name="prod_nom">
+          <input type="text" class="form-control" 
+          #prod_nom [ngModel] required name="prod_nom">
         </div>
         <div class="form-group">
           <label for="">Descripción del Producto</label>
-          <textarea #prod_desc [ngModel] name="prod_desc" cols="30" rows="10" required class="form-control"></textarea>
+          <textarea #prod_desc [ngModel] name="prod_desc" 
+          cols="30" rows="10" required class="form-control"></textarea>
 
         </div>
         <div class="form-group">

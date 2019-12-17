@@ -1,3 +1,4 @@
+import { PpcategoriaComponent } from './components/ppcategoria/ppcategoria.component';
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -7,6 +8,7 @@ import { CrearProductoComponent } from './components/crear-producto/crear-produc
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'producto/crear', component: CrearProductoComponent },
+  { path: 'reportes/ppcategoria', component: PpcategoriaComponent },
   { path: '**', redirectTo: '' }
 ];
 
