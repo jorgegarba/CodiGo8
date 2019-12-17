@@ -4,8 +4,7 @@ import bodyParser from 'body-parser';
 import http from 'http';
 
 import socketIO from 'socket.io';
-import { Productos } from '../modelos/Productos';
-import { Producto } from '../modelos/Producto';
+
 
 
 export class Server {
@@ -33,9 +32,6 @@ export class Server {
   // }
 
   escucharSockets() {
-
-    let objProductos = new Productos();
-
     console.log("Escuchando Sockets");
     // Evento 'connect'
     // Es un evento que se dispara automáticamente cuando un cliente
@@ -45,16 +41,7 @@ export class Server {
 
       cliente.on("disconnect", () => {
         console.log("Se desconectó " + cliente.id);
-      });
-
-      cliente.on("pedir-productos", () => {
-        this.io.emit("lista-productos", objProductos.productos);
-      });
-
-      cliente.on("agregar-producto", (objProducto: Producto) => {
-        objProductos.agregarProducto(objProducto);
-        this.io.emit("lista-productos", objProductos.productos);
-      })
+      }); 
 
     });
 

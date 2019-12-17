@@ -32,10 +32,17 @@ export class WebsocketService {
     // fromEvent => Suscribirse a un evento y estar en 
     // escucha activa
     return this._sSocket.fromEvent("lista-productos");
+
   }
 
   agregarProducto(objProducto) {
     this._sSocket.emit("agregar-producto", objProducto);
   }
 
+  pedirPrueba() {
+    this._sSocket.emit("pedir-prueba");
+  }
+  recibirPrueba() {
+    return this._sSocket.fromEvent("recibir-prueba");
+  }
 }

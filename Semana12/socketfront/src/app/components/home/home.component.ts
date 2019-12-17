@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+
   constructor(public _sWebSocket: WebsocketService) { }
 
   ngOnInit() {
@@ -15,6 +16,11 @@ export class HomeComponent implements OnInit {
       console.log(data);
     });
     this._sWebSocket.pedirProductos();
+
+    this._sWebSocket.recibirPrueba().subscribe((data) => {
+      console.log(data);
+    });
+    this._sWebSocket.pedirPrueba();
   }
 
   crearProducto(idProducto, nombreProducto) {
@@ -22,7 +28,7 @@ export class HomeComponent implements OnInit {
       id: idProducto.value,
       nombre: nombreProducto.value
     }
-    console.log(objProducto);
+    this._sWebSocket.agregarProducto(objProducto);
   }
 
 }
