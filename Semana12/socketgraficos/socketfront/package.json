@@ -19,8 +19,11 @@
     "@angular/platform-browser": "~8.2.13",
     "@angular/platform-browser-dynamic": "~8.2.13",
     "@angular/router": "~8.2.13",
+    "jquery": "^3.4.1",
+    "ng-select2": "^1.2.2",
     "ngx-socket-io": "^3.0.1",
     "rxjs": "~6.4.0",
+    "select2": "^4.0.12",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },

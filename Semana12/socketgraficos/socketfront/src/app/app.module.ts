@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -8,6 +9,10 @@ import { HomeComponent } from './components/home/home.component';
 import { RoutingModule } from './app.routing';
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { CrearProductoComponent } from './components/crear-producto/crear-producto.component';
+
+import { NgSelect2Module } from 'ng-select2';
+
 
 const config: SocketIoConfig = {
   url: 'http://localhost:3000',
@@ -19,13 +24,16 @@ const config: SocketIoConfig = {
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    CrearProductoComponent
   ],
   imports: [
     BrowserModule,
     RoutingModule,
     SocketIoModule.forRoot(config),
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    NgSelect2Module
   ],
   providers: [],
   bootstrap: [AppComponent]
