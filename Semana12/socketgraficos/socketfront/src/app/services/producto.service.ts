@@ -18,4 +18,8 @@ export class ProductoService {
       { headers: misHeaders });
   }
 
+  getPPCategoria() {
+    return this._sHttp.get('http://localhost:3000/reportes/ppcategoria');
+  }
+
 }

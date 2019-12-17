@@ -24,5 +24,9 @@ export class WebsocketService {
     });
   }
 
+  socketProductoCreado() {
+    return this._sSocket.fromEvent('nuevo-producto');
+  }
+
 
 }

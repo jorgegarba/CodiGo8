@@ -15,7 +15,8 @@ export class Server {
   public app: express.Application;
   public httpServer: http.Server;
   public io: socketIO.Server;
-  // public static _instance: Server;
+
+  public static _instance: Server;
 
   public PUERTO = process.env.PORT || 3000;
 
@@ -31,9 +32,14 @@ export class Server {
     this.escucharSockets();
   }
 
-  // public static get instance() {
-  //   return this._instance || (this._instance = new this());
-  // }
+  public static get instance() {
+    if (this._instance) {
+      return this._instance
+    } else {
+      this._instance = new this();
+      return this._instance;
+    }
+  }
 
   escucharSockets() {
     console.log("Escuchando Sockets");
@@ -42,6 +48,7 @@ export class Server {
     // se conecta al servidor SOCKET(io)
     this.io.on("connect", (cliente: socketIO.Socket) => {
       console.log("Se conectó " + cliente.id);
+
       cliente.on("disconnect", () => {
         console.log("Se desconectó " + cliente.id);
       });
@@ -78,9 +85,6 @@ export class Server {
       console.log("Servidor corriendo perfectamente en el puerto " + this.PUERTO);
       conexion.sync({ force: false }).then(() => {
         console.log("Base de datos ha sido creada correctamente");
-
-        ProductoController.getProductosPorCategoria();
-
       })
     })
   }
