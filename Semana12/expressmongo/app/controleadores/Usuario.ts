@@ -3,38 +3,39 @@ import { Request, Response } from 'express';
 
 export const getAll = (req: Request, res: Response) => {
 
-  Usuario.find((error, usuarios) => {
-    if (error) {
-      res.status(500).json({
-        ok: false,
-        content: "Error al traer los recursos"
-      });
-    } else {
-      res.status(200).json({
-        ok: true,
-        content: usuarios
-      })
-    }
+  let { desde } = req.query;
+  desde = +desde;
+
+  if (isNaN(desde)) {
+    // no es un numero o no llegó el parámetro
+    desde = 0;
+  }
+
+  Usuario.count({}, (error, count) => {
+
+    Usuario.find().skip(desde).limit(10).exec((error, usuarios) => {
+      if (error) {
+        res.status(500).json({
+          ok: false,
+          content: "Error al traer los recursos"
+        });
+      } else {
+        res.status(200).json({
+          ok: true,
+          content: {
+            pagina: desde == 0 ? 1 : desde / 10,
+            por_pagina: 10,
+            total: count,
+            total_paginas: Math.ceil(count / 10),
+            data: usuarios
+          }
+        });
+      }
+    })
+
   })
 
-  for (let i = 0; i < 100; i++) {
-    let objUsuario = new Usuario(
-      {
-        "usu_nom": `nombre ${i}`,
-        "usu_ape": `apellido ${i}`,
-        "usu_salt": `jasbdjbdkajskdjnaskdjnaks`,
-        "usu_hash": `asdasdasdfgwrertt`,
-        "usu_fonos": [
-          {
-            "numero": `${(Math.random() * (999999999 - 900000000) + 900000000).toFixed(0).toString()}`,
-            "operador": `operador ${i}`
-          }
-        ]
-      }
-    ).save((error, usuCreado) => {
-      console.log("Creado");
-    });
-  }
+
 
 }
 
