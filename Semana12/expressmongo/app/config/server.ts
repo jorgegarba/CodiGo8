@@ -1,3 +1,4 @@
+import { busqueda_router } from './../rutas/Busqueda';
 import express, { Response, Request } from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
@@ -52,6 +53,7 @@ export class Server {
       });
     });
     this.app.use("", usuario_router);
+    this.app.use("", busqueda_router);
   }
 
   start() {
