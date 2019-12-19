@@ -11,6 +11,9 @@ import { gi_router } from '../routes/GastoIngreso';
 import { proveedor_router } from '../routes/Proveedor';
 import { imagen_router } from '../routes/Imagen';
 
+import swaggerUi from 'swagger-ui-express';
+import json from "./../docs/apidocs.json";
+
 export class Server {
   public app: express.Application;
   public PUERTO = process.env.PORT || 3000;
@@ -21,7 +24,7 @@ export class Server {
   }
   configurarBodyParser() {
     this.app.use(bodyParser.json());
-    this.app.use(bodyParser.urlencoded({extended:true}))
+    this.app.use(bodyParser.urlencoded({ extended: true }))
   }
   configurarRutas() {
     this.app.get("/", (req: Request, res: Response) => {
@@ -40,6 +43,8 @@ export class Server {
     this.app.use("", unidadmedida_router);
     this.app.use("", usuario_router);
     this.app.use("", imagen_router);
+
+    this.app.use('/apidocs', swaggerUi.serve, swaggerUi.setup(json));
 
   }
   start() {

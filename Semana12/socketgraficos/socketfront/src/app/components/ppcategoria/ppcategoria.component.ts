@@ -14,7 +14,14 @@ export class PpcategoriaComponent implements OnInit {
   public barChartOptions: ChartOptions = {
     responsive: true,
     // We use these empty structures as placeholders for dynamic theming.
-    scales: { xAxes: [{}], yAxes: [{}] },
+    scales: {
+      xAxes: [{}],
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    },
     plugins: {
       datalabels: {
         anchor: 'end',
