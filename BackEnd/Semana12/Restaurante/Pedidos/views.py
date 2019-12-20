@@ -116,6 +116,7 @@ class TipoProducto (ViewSet):
                 'message': 'Ok',
                 'content': None
             }, status=200)
+
     def create(self, request):
         serializador = TipoProductoSerializador(data=request.data)
         if serializador.is_valid():
@@ -125,11 +126,40 @@ class TipoProducto (ViewSet):
             return Response(serializador.errors, status=500)
 
     # retrive sirve como un get pero con parametros, en este caso le mandamos el parametro pk para que lo valide y traiga el tipo de producto
-    def retrieve(self,request, pk=None):
+    def retrieve(self, request, pk=None):
         """Maneja los objectos segun su PK"""
         tp = get_object_or_404(Tipo, pk=pk)
         data = TipoProductoSerializador(tp).data
         return Response(data)
 
+    def update(self, request, pk):
+        """Actualiza un objecto segun su PK"""
+        data = TipoProductoSerializador(data=request.data)
+        if data.is_valid():
+            Tipo.objects.filter(tipo_id=pk).update(tipo_desc=data.validated_data.get('tipo_desc'))
+            tipo = get_object_or_404(Tipo, pk=pk)
+            data = TipoProductoSerializador(tipo).data
+            return Response(data)
+        else:
+            return Response(data.errors, status=403)
+    
+    def destroy(self,request,pk):
+        get_object_or_404(Tipo, pk=pk)
+        Tipo.objects.filter(tipo_id=pk).delete()
+        return Response({
+            'message':'Ok',
+            'content':'Se elimino el tipo con exito'
+        }, status=200)
 
 
+class MesasView(ViewSet):
+    def list(self,request):
+        pass
+    def create(self,request):
+        pass
+    def retrieve(self,request,pk):
+        pass
+    def update(self,request,pk):
+        pass
+    def destroy(self,request, pk):
+        pass
