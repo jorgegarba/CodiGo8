@@ -16,6 +16,9 @@ class Usuario(models.Model):
     # Para los timestamps se necesita crear manualmente, y la propiedad auto_now_add significa que se va rellenar automaticamente y auto_now significa que va a agarrar la fecha y hora actual y la va a modificar
     createdAt=models.DateTimeField(auto_now_add=True)
     updatedAt=models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return 'correo: {}'.format(self.usu_email)
 
     def json(self):
         return {
