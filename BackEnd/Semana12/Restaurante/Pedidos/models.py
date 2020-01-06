@@ -42,6 +42,14 @@ class Mesa (models.Model):
     createdAt=models.DateTimeField(auto_now_add=True)
     updatedAt=models.DateTimeField(auto_now=True)
 
+    def retornar_json(self):
+        return {
+            'id':self.mesa_id,
+            'numero': self.mesa_nro,
+            'estado': self.mesa_est,
+            'cantidad' : self.mesa_cant
+        }
+
     class Meta:
         db_table="t_mesa"
         verbose_name_plural="Mesas"

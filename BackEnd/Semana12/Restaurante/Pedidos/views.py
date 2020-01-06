@@ -7,11 +7,11 @@ from rest_framework.response import Response
 # Para la encriptacion de contraseñas
 import bcrypt
 # Serializador para validar los campos ingresados
-from .serializers import Registro, Login, TipoProductoSerializador
+from .serializers import Registro, Login, TipoProductoSerializador, MesaSerializador
 # Para los estados de respuesta
 from rest_framework import status
 # Importamos los modelos para interactuar con nuestra base de datos
-from .models import Usuario, Tipo
+from .models import Usuario, Tipo, Mesa
 
 
 class Registrar(APIView):
@@ -98,6 +98,7 @@ class Logear(APIView):
 
 class TipoProducto (ViewSet):
     def list(self, request, format=None):
+        """En un list generalmente se retorna muchos resultados"""
         tipos = Tipo.objects.all()
         resultado = []
         if tipos:
@@ -154,12 +155,57 @@ class TipoProducto (ViewSet):
 
 class MesasView(ViewSet):
     def list(self,request):
-        pass
+        """ Nos va a retornar todas las mesas """
+        mesas = Mesa.objects.all() # SELECT * FROM t_mesa
+        array_mesas=[]
+        if mesas:
+            for mesa in mesas:
+                objmesatemporal={
+                    'id':mesa.mesa_id,
+                    'nro': mesa.mesa_nro,
+                    'estado': mesa.mesa_est,
+                    'cantidad': mesa.mesa_cant
+                }
+                array_mesas.append(objmesatemporal)
+            return Response(array_mesas, status=200)
+        else:
+            return Response('No hay mesas', status=404)
     def create(self,request):
-        pass
+        serializador = MesaSerializador(data=request.data)
+        if(serializador.is_valid()):
+            # la funcion save() crea un objeto del tipo Model el cual si lo almacenamos en una variable podemos usar todos sus metodos y atributos del modelo
+            mesa = serializador.save()
+            print(mesa.mesa_id)
+            return Response(mesa.retornar_json(), status=201)
+        else:
+            return Response({
+                'message':'La data ingresada no es valida'
+            },status=400)
+
     def retrieve(self,request,pk):
-        pass
+        # si ya estamos usando el metogo get_object_or_404 no es necesario usar el serializador, puesto que si no concuerda el modelo con la pk automaticamente va a devolver un status 404
+        mesa = get_object_or_404(Mesa,pk=pk)
+        serializador = MesaSerializador(mesa).data
+        return Response(serializador,status=200)
+
     def update(self,request,pk):
-        pass
+        data = MesaSerializador(data=request.data)
+        if(data.is_valid()):
+            Mesa.objects.filter(mesa_id=pk).update(
+                mesa_est=data.validated_data.get('mesa_est'),
+                mesa_nro=data.validated_data.get('mesa_nro'),
+                mesa_cant= data.validated_data.get('mesa_cant')
+                )
+            mesa = get_object_or_404(Mesa, pk=pk)
+            return Response(mesa.retornar_json(),status=200)
+        else:
+            return Response(data.errors,status=500)
     def destroy(self,request, pk):
-        pass
+        mesa = get_object_or_404(Mesa,pk=pk)
+        # una vez que yo tengo mi objeto mesa, puedo interactuar con el, en este caso traigo el estado y lo pongo inactivo, luego lo guardo por medio de su metodo save(), el modelo no tiene por default el metodo update
+        # https://tutorial.djangogirls.org/es/django_orm/
+        mesa.mesa_est=False
+        mesa.save()
+        return Response({
+            'message':'Se elimino exitosamente'
+        }, status=200)

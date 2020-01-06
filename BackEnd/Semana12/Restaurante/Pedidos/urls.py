@@ -1,12 +1,12 @@
 # para los viewset necesito importar include
 from django.urls import path, include
-from .views import Registrar, Logear, TipoProducto
+from .views import Registrar, Logear, TipoProducto, MesasView
 
 # para los viewset
 from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
 router.register('tipoProducto',TipoProducto,basename="Tipo Producto")
-
+router.register('mesa',MesasView, basename="Mesa")
 
 urlpatterns = [
     path('registro/', Registrar.as_view(), name="Registro de Usuarios"),
