@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import uuidv1 from 'uuid/v1';
 
 let generarIdRandom = () => {
@@ -36,47 +36,59 @@ export default class Formulario extends Component {
     e.preventDefault();
     let objProducto = { ...this.state.datos };
 
-    // if (objProducto.nombre == "" || objProducto.precio == "0") {
-    //   this.setState({
-    //     error: true
-    //   })
-    //   return;
-    // }
+    if (objProducto.nombre == "" || objProducto.precio == "0") {
+      this.setState({
+        error: true
+      });
+      return;
+    }
 
     this.props.agregarProducto(objProducto);
 
     this.setState({
       datos: {
         ...stateVacio,
-        id: generarIdRandom()
-      }
+        id: generarIdRandom(),
+      },
+      error: false
     })
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="id">Id:</label>
-          <input type="text" id="id" name="id" className="form-control"
-            value={this.state.datos.id} readOnly />
-        </div>
-        <div className="form-group">
-          <label htmlFor="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" className="form-control"
-            onChange={this.handleChange} value={this.state.datos.nombre} />
-        </div>
-        <div className="form-group">
-          <label htmlFor="precio">Precio:</label>
-          <input type="number" id="precio" name="precio" className="form-control"
-            onChange={this.handleChange} value={this.state.datos.precio} />
-        </div>
-        <div className="form-group">
-          <button type="submit" className="btn btn-primary btn-block">
-            Crear Producto
+      <Fragment>
+
+        {
+          this.state.error ? (<div className="alert alert-danger">
+            Todos los campos son obligatorios joven
+                              </div>) : null
+        }
+
+
+        <form onSubmit={this.handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="id">Id:</label>
+            <input type="text" id="id" name="id" className="form-control"
+              value={this.state.datos.id} readOnly />
+          </div>
+          <div className="form-group">
+            <label htmlFor="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"
+              className={`form-control ${this.state.error ? 'is-invalid' : ''}`}
+              onChange={this.handleChange} value={this.state.datos.nombre} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" className="form-control"
+              onChange={this.handleChange} value={this.state.datos.precio} />
+          </div>
+          <div className="form-group">
+            <button type="submit" className="btn btn-primary btn-block">
+              Crear Producto
           </button>
-        </div>
-      </form>
+          </div>
+        </form>
+      </Fragment>
     )
   }
 }
