@@ -11,7 +11,7 @@ from .serializers import Registro, Login, TipoProductoSerializador, MesaSerializ
 # Para los estados de respuesta
 from rest_framework import status
 # Importamos los modelos para interactuar con nuestra base de datos
-from .models import Usuario, Tipo, Mesa
+from .models import Usuario, Tipo, Mesa, Producto, Reserva, Asignacion, Cabecera_documento, Detalle_documento, Precio
 
 
 class Registrar(APIView):
@@ -143,7 +143,7 @@ class TipoProducto (ViewSet):
             return Response(data)
         else:
             return Response(data.errors, status=403)
-    
+
     def destroy(self,request,pk):
         get_object_or_404(Tipo, pk=pk)
         Tipo.objects.filter(tipo_id=pk).delete()
@@ -170,6 +170,7 @@ class MesasView(ViewSet):
             return Response(array_mesas, status=200)
         else:
             return Response('No hay mesas', status=404)
+
     def create(self,request):
         serializador = MesaSerializador(data=request.data)
         if(serializador.is_valid()):
@@ -200,6 +201,7 @@ class MesasView(ViewSet):
             return Response(mesa.retornar_json(),status=200)
         else:
             return Response(data.errors,status=500)
+
     def destroy(self,request, pk):
         mesa = get_object_or_404(Mesa,pk=pk)
         # una vez que yo tengo mi objeto mesa, puedo interactuar con el, en este caso traigo el estado y lo pongo inactivo, luego lo guardo por medio de su metodo save(), el modelo no tiene por default el metodo update
@@ -209,3 +211,24 @@ class MesasView(ViewSet):
         return Response({
             'message':'Se elimino exitosamente'
         }, status=200)
+
+class ProductoView(ViewSet):
+    def list(self, request):
+        """Nos va retornar todos los productos DISPONIBLES"""
+        productos_disponibles = Producto.objects.filter(prod_disp = True)
+        # Producto.objects.all().filter(prod_disp=True)
+        if productos_disponibles:
+            resultado_productos=[]
+            for producto in productos_disponibles:
+                objProductoTemporal = {
+                    'nombre':producto.prod_nom,
+                    'descripcion': producto.prod_desc,
+                    # Para acceder a la tabla de la relacion donde es la fk, se ingresa como si fuera un objeto
+                    'tipo': producto.tipo_id.tipo_desc
+                }
+                resultado_productos.append(objProductoTemporal)
+            return Response(resultado_productos, status=200)
+        return Response({
+            'message':'No se encontraron productos, vuelva a buscar'
+        },status=404)
+    
