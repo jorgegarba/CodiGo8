@@ -88,6 +88,10 @@ class Tipo(models.Model):
     createdAt=models.DateTimeField(auto_now_add=True)
     updatedAt=models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return 'Tipo %s, %s'% (self.tipo_id,self.tipo_desc)
+        # return 'Tipo {}'.format(self.tipo_desc)
+
     class Meta:
         db_table="t_tipo"
         verbose_name_plural="Tipos"
@@ -109,11 +113,20 @@ class Producto(models.Model):
     prod_id=models.AutoField(primary_key=True)
     prod_nom=models.CharField(max_length=50)
     prod_desc=models.TextField()
-    prod_img=models.TextField()
+    prod_img=models.TextField(null=True,blank=True)
     prod_disp=models.BooleanField(default=True)
     tipo_id=models.ForeignKey(Tipo, on_delete=models.CASCADE)
     createdAt=models.DateTimeField(auto_now_add=True)
     updatedAt=models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        # OPERADOR TERNARIO EN PYTHON
+        resultado= '{}, {}, disponible'.format(self.prod_nom, self.prod_desc) if self.prod_disp else '{}, {}, no disponible'.format(self.prod_nom, self.prod_desc)
+        return resultado
+        # if self.prod_disp:
+        #     return '%s, %s, disponible'%(self.prod_nom, self.prod_desc)
+        # return '%s, %s, no disponible'%(self.prod_nom, self.prod_desc)
+
     class Meta:
         db_table="t_producto"
         verbose_name_plural="Productos"

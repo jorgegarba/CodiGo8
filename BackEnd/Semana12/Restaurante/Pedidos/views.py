@@ -7,7 +7,7 @@ from rest_framework.response import Response
 # Para la encriptacion de contraseñas
 import bcrypt
 # Serializador para validar los campos ingresados
-from .serializers import Registro, Login, TipoProductoSerializador, MesaSerializador
+from .serializers import Registro, Login, TipoProductoSerializador, MesaSerializador, ProductoSerializador
 # Para los estados de respuesta
 from rest_framework import status
 # Importamos los modelos para interactuar con nuestra base de datos
@@ -231,4 +231,41 @@ class ProductoView(ViewSet):
         return Response({
             'message':'No se encontraron productos, vuelva a buscar'
         },status=404)
-    
+
+    def create(self,request):
+        serializador = ProductoSerializador(data= request.data)
+        if(serializador.is_valid()):
+            nuevo_producto = serializador.save()
+            return Response({
+                'message':'Se agrego exitosamente el producto',
+                'producto':nuevo_producto.prod_nom
+            },status=201)
+        return Response(serializador.errors,status=500)
+
+    def update(self, request, pk):
+        data = ProductoSerializador(data = request.data)
+        if(data.is_valid()):
+            Producto.objects.filter(prod_id=pk).update(
+                prod_nom=data.validated_data.get('prod_nom'),
+                prod_desc=data.validated_data.get('prod_desc'),
+                prod_img=data.validated_data.get('prod_img'),
+                prod_disp =data.validated_data.get('prod_disp'),
+                tipo_id =data.validated_data.get('tipo_id'),
+            )
+            producto_actualizado = get_object_or_404(Producto,pk=pk)
+            return Response({
+                'message':'Se actualizo exitosamente el producto',
+                'producto':producto_actualizado.prod_nom
+            },status=200)
+        return Response(
+            data.errors,status=500
+        )
+
+    def destroy(self, request, pk):
+        """El metodo delete lo que hara sera poner inhabilitado el producto"""
+        producto = get_object_or_404(Producto,pk=pk)
+        producto.prod_disp = False
+        producto.save()
+        return Response({
+            'message':'Se inabilito el producto '+producto.prod_nom
+        },status=200)

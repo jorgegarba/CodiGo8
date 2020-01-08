@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Tipo, Mesa
+from .models import Tipo, Mesa, Producto
 class Registro(serializers.Serializer):
     email = serializers.EmailField()
     password = serializers.CharField()
@@ -32,3 +32,8 @@ class MesaSerializador (serializers.ModelSerializer):
         fields = '__all__'
     # para cuando nosotros necesitemos utilizar mas de una vez o la tabla contenga muchos atributos, se recomienda el uso de sobreescribir el metodo update para actualizarlo dentro del mismo serializador
     # def update(self,isinstance,validated_data):
+
+class ProductoSerializador (serializers.ModelSerializer):
+    class Meta:
+        model = Producto
+        fields= '__all__'
