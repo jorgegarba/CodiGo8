@@ -18,6 +18,9 @@ export default class App extends Component {
     console.log("Constructor de App");
   }
 
+  componentDidUpdate() {
+    console.log("componentDidUpdate");
+  }
 
   componentDidMount() {
     console.log("componentDidMount de App");
