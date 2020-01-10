@@ -25,18 +25,18 @@ export class WebsocketService {
   }
 
   pedirProductos() {
-    this._sSocket.emit('pedir-productos');
+    this._sSocket.emit('pedir-mensajes');
   }
 
   escucharProductos() {
     // fromEvent => Suscribirse a un evento y estar en 
     // escucha activa
-    return this._sSocket.fromEvent("lista-productos");
+    return this._sSocket.fromEvent('lista-mensajes');
 
   }
 
   agregarProducto(objProducto) {
-    this._sSocket.emit("agregar-producto", objProducto);
+    this._sSocket.emit('agregar-mensaje', objProducto);
   }
 
   pedirPrueba() {

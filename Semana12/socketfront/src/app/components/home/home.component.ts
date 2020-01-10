@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
       id: idProducto.value,
       nombre: nombreProducto.value
     }
+    console.log(objProducto);
     this._sWebSocket.agregarProducto(objProducto);
   }
 
