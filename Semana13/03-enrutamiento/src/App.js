@@ -29,7 +29,7 @@ export default class App extends Component {
           }} />
 
           <Route path={'/nosotros'} exact component={Nosotros} />
-          <Route path={'/notfound'} component={Notfound} />
+          <Route path={'/notfound'} exact component={Notfound} />
           <Route path={'/consulta/:texto'} component={Consulta} />
 
           {/* Ruta de error o notfound */}
