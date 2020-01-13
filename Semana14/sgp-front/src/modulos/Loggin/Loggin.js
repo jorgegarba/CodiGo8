@@ -6,6 +6,11 @@ import Login from './paginas/Login';
 import Footer from '../Footer';
 
 export class Loggin extends Component {
+  constructor(props) {
+    super(props);
+
+  }
+
   render() {
     return (
       <Fragment>
@@ -17,7 +22,7 @@ export class Loggin extends Component {
             return <Recuperar />
           }} />
           <Route render={() => {
-            return <Login />
+            return <Login loggin={this.props.loggin} />
           }} />
         </Switch>
       </Fragment>

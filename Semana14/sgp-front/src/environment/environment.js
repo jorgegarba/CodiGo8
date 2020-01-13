@@ -1,0 +1,1 @@
+export let URL_BACKEND = "http://localhost:3000";
