@@ -20,7 +20,6 @@ export class Loggin extends Component {
             return <Login />
           }} />
         </Switch>
-        <Footer />
       </Fragment>
     );
   }
