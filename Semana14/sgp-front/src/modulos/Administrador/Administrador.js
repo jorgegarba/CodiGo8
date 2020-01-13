@@ -6,20 +6,24 @@ import Header from "./componentes/Header";
 import Footer from "../Footer";
 
 export class Administrador extends Component {
+  constructor(props) {
+    super(props);
+
+  }
+
   render() {
     return (
       <Fragment>
-        <Header />
+        <Header logout={this.props.logout} />
 
         <Switch>
           <Route
             path={"/admin/perfil"}
             render={() => {
-              return <Perfil />;
+              return (<Perfil />);
             }}
           />
           <Route
-            path={"/admin"}
             render={() => {
               return <Dashboard />;
             }}

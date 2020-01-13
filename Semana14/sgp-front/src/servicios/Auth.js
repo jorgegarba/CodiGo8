@@ -38,17 +38,22 @@ export class AuthService {
    */
   isLogged() {
     if (this.token) {
-      // split => devuelve un arreglo de strings separados
-      // por el "."
-      // en el caso del token, me devuelve un arreglo de 
-      // 3 elementos
-      let payload = this.token.split(".")[1];
-      // decodificando el payload en 'string'
-      let payloadDecodificado = window.atob(payload);
-      let payloadJSON = JSON.parse(payloadDecodificado);
-      if (payloadJSON.exp > new Date() / 1000) {
-        return true;
-      } else {
+      try {
+        // split => devuelve un arreglo de strings separados
+        // por el "."
+        // en el caso del token, me devuelve un arreglo de 
+        // 3 elementos
+        let payload = this.token.split(".")[1];
+        // decodificando el payload en 'string'
+        let payloadDecodificado = window.atob(payload);
+        let payloadJSON = JSON.parse(payloadDecodificado);
+        if (payloadJSON.exp > new Date() / 1000) {
+          return true;
+        } else {
+          localStorage.removeItem("token");
+          return false;
+        }
+      } catch (error) {
         localStorage.removeItem("token");
         return false;
       }

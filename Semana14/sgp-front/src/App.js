@@ -20,19 +20,59 @@ export class App extends Component {
     console.log(objeto);
     this._sAuth.iniciarSesion(objeto.correo, objeto.password)
       .then((rpta) => {
-        console.log(rpta);
+        // Cuando la respuesta del servidor tras iniciar sesion es correcta.
+        // guardamos el token en el localstorage
+        if (rpta.ok) {
+          this._sAuth.guardarToken(rpta.token);
+          // Además, guardamos el state para indicar isLogged=true
+          this.setState({
+            isLogged: true
+          });
+        }
       });
   }
+
+  componentDidMount() {
+    // Una vez que el componente termina de cargar,
+    // verificamos que el token se encuentre en el localstorage
+    // y que a su vez, tenga tiempo de vida
+    if (this._sAuth.isLogged()) {
+      this.setState({
+        isLogged: true
+      });
+    }
+  }
+
+  logout = () => {
+    this._sAuth.cerrarSesion();
+    this.setState({
+      isLogged: false
+    })
+  }
+
 
   render() {
     return (
       <Router>
         <Switch>
           <Route path={"/admin"} render={() => {
-            return <Administrador />
+            // colocar logica para autorizar la ruta Adminstrador
+            if (this._sAuth.isLogged()) {
+              return <Administrador logout={this.logout} />
+            } else {
+              return <Redirect to={'/loggin'} />
+            }
           }} />
           <Route path={"/loggin"} render={() => {
-            return <Loggin loggin={this.loggin} />
+            // Si isLogged está en true, significa que el state
+            // acaba de actualizar su valor y que la petición a /loggin
+            // ya es en vano, es decir, si alguien pide /loggin,
+            // deberia automaticamente, redireccionar a /admin
+            if (this.state.isLogged) {
+              return <Redirect to={'/admin'} />
+            } else {
+              return <Loggin loggin={this.loggin} />
+            }
           }} />
           <Route path={"/"} render={() => {
             return <Invitado />
