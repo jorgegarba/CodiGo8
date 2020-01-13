@@ -15,9 +15,12 @@ export const RegistrarUsuario = (req: Request, res: Response) => {
             let objUsuario = Usuario.build(req.body);
             objUsuario.setSaltAndHash(req.body.password);
             objUsuario.save().then((usuarioCreado: any) => {
+                // AGREGAR EL TOKEN LUEGO DEL REGISTRO DE UN USUARIO
+                let token = usuarioCreado.generarJWT();
                 res.status(201).json({
                     ok: true,
-                    content: `Usuario ${usuarioCreado.usu_email} creado con exito`
+                    content: `Usuario ${usuarioCreado.usu_email} creado con exito`,
+                    token: token
                 })
             })
         }

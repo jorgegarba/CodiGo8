@@ -25,3 +25,12 @@ export const postFamilia = (req: Request, res: Response) => {
     })
   })
 }
+
+export const getFamilia = (req: Request, res: Response) => {
+  Familia.findAll().then((familias: any) => {
+    res.status(200).json({
+      ok: true,
+      content: familias
+    })
+  });
+}
