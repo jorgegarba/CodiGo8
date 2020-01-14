@@ -50,14 +50,17 @@ export class AuthService {
         if (payloadJSON.exp > new Date() / 1000) {
           return true;
         } else {
+          console.log("El token ha expirado");
           localStorage.removeItem("token");
           return false;
         }
       } catch (error) {
+        console.log("El token es falso");
         localStorage.removeItem("token");
         return false;
       }
     } else {
+      console.log("No hay token el localstorage");
       return false;
     }
   }

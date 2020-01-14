@@ -4,6 +4,7 @@ import Perfil from "./paginas/Perfil";
 import Dashboard from "./paginas/Dashboard";
 import Header from "./componentes/Header";
 import Footer from "../Footer";
+import Proyectos from "./paginas/Proyectos";
 
 export class Administrador extends Component {
   constructor(props) {
@@ -24,12 +25,17 @@ export class Administrador extends Component {
             }}
           />
           <Route
+            path={"/admin/proyectos"}
+            render={() => {
+              return <Proyectos />;
+            }}
+          />
+          <Route
             render={() => {
               return <Dashboard />;
             }}
           />
         </Switch>
-        <Footer />
       </Fragment>
     );
   }

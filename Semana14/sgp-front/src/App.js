@@ -43,13 +43,16 @@ export class App extends Component {
     }
   }
 
+  componentDidUpdate() {
+    console.log("componentDidUpdate");
+  }
+
   logout = () => {
     this._sAuth.cerrarSesion();
     this.setState({
       isLogged: false
     })
   }
-
 
   render() {
     return (
@@ -60,6 +63,9 @@ export class App extends Component {
             if (this._sAuth.isLogged()) {
               return <Administrador logout={this.logout} />
             } else {
+              this.setState({
+                isLogged: false
+              });
               return <Redirect to={'/loggin'} />
             }
           }} />
@@ -68,7 +74,7 @@ export class App extends Component {
             // acaba de actualizar su valor y que la petición a /loggin
             // ya es en vano, es decir, si alguien pide /loggin,
             // deberia automaticamente, redireccionar a /admin
-            if (this.state.isLogged) {
+            if (this._sAuth.isLogged()) {
               return <Redirect to={'/admin'} />
             } else {
               return <Loggin loggin={this.loggin} />
