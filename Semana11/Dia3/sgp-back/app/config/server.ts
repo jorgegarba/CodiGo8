@@ -1,3 +1,4 @@
+import { recurso_router } from './../routes/Recurso';
 import { familia_router } from './../routes/Familia';
 import { conexion } from './sequelize';
 import express, { Response, Request } from 'express';
@@ -55,6 +56,7 @@ export class Server {
     this.app.use("", unidadmedida_router);
     this.app.use("", usuario_router);
     this.app.use("", imagen_router);
+    this.app.use("", recurso_router)
 
     this.app.use('/apidocs', swaggerUi.serve, swaggerUi.setup(json));
 

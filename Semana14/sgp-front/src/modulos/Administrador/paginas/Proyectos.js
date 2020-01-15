@@ -35,6 +35,10 @@ class Proyectos extends Component {
 
   }
 
+  goVerProyecto = (pro_id) => {
+    this.props.history.push(`/admin/proyecto-ver/${pro_id}`);
+  }
+
   getProyectos() {
     ProyectoService.getProyectos().then((rpta) => {
       if (rpta.ok) {
@@ -50,9 +54,17 @@ class Proyectos extends Component {
           {
             name: "Acciones",
             cell: (proyecto) => {
-              return (<button className="btn btn-danger" onClick={(e) => {
-                this.eliminarProyecto(proyecto.pro_id);
-              }}>Eliminar</button>)
+              return (
+                <Fragment>
+                  <button className="btn btn-danger" onClick={(e) => {
+                    this.eliminarProyecto(proyecto.pro_id);
+                  }}>Eliminar</button>
+
+                  <button className="btn btn-info ml-2" onClick={(e) => {
+                    this.goVerProyecto(proyecto.pro_id);
+                  }}>Ver</button>
+                </Fragment>
+              )
             },
             ignoreRowClick: true,
             allowOverflow: true,

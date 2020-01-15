@@ -6,6 +6,7 @@ import Header from "./componentes/Header";
 import Footer from "../Footer";
 import Proyectos from "./paginas/Proyectos";
 import ProyectoCrear from "./paginas/ProyectoCrear";
+import ProyectoVer from "./paginas/ProyectoVer";
 
 export class Administrador extends Component {
   constructor(props) {
@@ -35,6 +36,12 @@ export class Administrador extends Component {
             path={"/admin/proyecto-crear"}
             render={() => {
               return <ProyectoCrear />
+            }}
+          />
+          <Route
+            path={"/admin/proyecto-ver/:pro_id"}
+            render={() => {
+              return <ProyectoVer />
             }}
           />
           <Route
