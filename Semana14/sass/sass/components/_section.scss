@@ -1,0 +1,17 @@
+.page-section{
+    padding:2rem;
+    
+    .page-section-heading{
+        font-size: 2rem;
+        line-height: 1.85rem;
+        padding:2rem;
+        font-family: $fuente-cabecera;
+    }
+}
+
+.page-section-about{
+    @extend .page-section;
+    .texto{
+        color: opacidad(blue,0.6);
+    }
+}

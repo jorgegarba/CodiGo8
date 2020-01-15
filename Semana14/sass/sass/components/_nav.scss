@@ -1,0 +1,21 @@
+#mainNav{
+    padding-top:1rem;
+    padding-bottom:1rem;
+    font-family: $fuente-cabecera;
+    font-weight: $weight-cabecera;
+    background-color:$primary;
+    .navbar-brand{
+        color: $white;
+        text-transform: uppercase;
+    }
+    .navbar-nav{
+        li.nav-item{
+            a.nav-link{
+                color:$white;
+                &:hover{
+                    color:$secondary;
+                }
+            }
+        }
+    }
+}

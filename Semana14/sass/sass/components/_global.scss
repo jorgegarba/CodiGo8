@@ -1,0 +1,22 @@
+//variables
+$fuente-general:'Lato',sans-serif;
+$fuente-cabecera:'Alata', sans-serif;
+$weight-cabecera:700;
+$primary: #26da86;
+$secondary: #1792da;
+$white: #ffffff;
+
+//funciones
+@function opacidad($color:red, $transparencia: 0.5){
+    @return rgba($color,$transparencia)
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family: $fuente-general;
+}

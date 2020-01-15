@@ -16,10 +16,12 @@ export default class App extends Component {
     }
 
     console.log("Constructor de App");
+    
   }
 
   componentDidUpdate() {
     console.log("componentDidUpdate");
+    console.table(this.state.productos);
   }
 
   componentDidMount() {
@@ -60,7 +62,7 @@ export default class App extends Component {
     return (
       <Fragment>
         <Header marca={marca} />
-        <main className="container mt-4">
+        <main className="container fluid mt-4">
           <h1 className="display-4">{titulo}</h1>
           <hr />
           <button className="btn btn-outline-primary"

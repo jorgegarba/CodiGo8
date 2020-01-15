@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+#mainNav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: "Alata", sans-serif;
+  font-weight: 700;
+  background-color: #26da86;
+}
+#mainNav .navbar-brand {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link {
+  color: #ffffff;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+  color: #1792da;
+}
+
+.head {
+  padding-top: calc(5rem + 60px);
+  padding-bottom: 5rem;
+  background-color: #1792da;
+  color: #ffffff;
+}
+.head .head-titulo {
+  font-size: 4rem;
+  line-height: 4rem;
+  font-family: "Alata", sans-serif;
+}
+.head .head-subtitulo {
+  padding: 10px;
+  font-size: 1.25rem;
+}
+.head .head-avatar {
+  width: 15rem;
+  border-radius: 50%;
+  border: 7px solid #26da86;
+}
+
+.page-section, .page-section-about {
+  padding: 2rem;
+}
+.page-section .page-section-heading, .page-section-about .page-section-heading {
+  font-size: 2rem;
+  line-height: 1.85rem;
+  padding: 2rem;
+  font-family: "Alata", sans-serif;
+}
+
+.page-section-about .texto {
+  color: rgba(0, 0, 255, 0.6);
+}
+
+.portafolio .portafolio-item {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  max-width: 25rem;
+  margin-bottom: 30px;
+}
+.portafolio .portafolio-item .item-border {
+  background-color: lightgray;
+  padding: 2rem;
+  border-radius: 20px;
+  border: 2rem solid #ffffff;
+}
+
+.footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #1792da;
+  color: #ffffff;
+}
+
+.columnas-5 {
+  width: 5%;
+}
+
+.columnas-10 {
+  width: 10%;
+}
+
+.columnas-15 {
+  width: 15%;
+}
+
+.columnas-20 {
+  width: 20%;
+}
+
+.columnas-25 {
+  width: 25%;
+}
+
+.columnas-30 {
+  width: 30%;
+}
+
+.columnas-35 {
+  width: 35%;
+}
+
+.columnas-40 {
+  width: 40%;
+}
+
+.columnas-45 {
+  width: 45%;
+}
+
+.columnas-50 {
+  width: 50%;
+}
+
+.columnas-55 {
+  width: 55%;
+}
+
+.columnas-60 {
+  width: 60%;
+}
+
+.columnas-65 {
+  width: 65%;
+}
+
+.columnas-70 {
+  width: 70%;
+}
+
+.columnas-75 {
+  width: 75%;
+}
+
+.columnas-80 {
+  width: 80%;
+}
+
+.columnas-85 {
+  width: 85%;
+}
+
+.columnas-90 {
+  width: 90%;
+}
+
+.columnas-95 {
+  width: 95%;
+}
+
+.columnas-100 {
+  width: 100%;
+}

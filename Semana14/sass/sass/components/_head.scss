@@ -1,0 +1,20 @@
+.head{
+    padding-top:calc(5rem + 60px);
+    padding-bottom: 5rem;
+    background-color:$secondary;
+    color:$white;
+    .head-titulo{
+        font-size:4rem;
+        line-height: 4rem;
+        font-family: $fuente-cabecera;
+    }
+    .head-subtitulo{
+        padding:10px;
+        font-size:1.25rem;
+    }
+    .head-avatar{
+        width:15rem;
+        border-radius: 50%;
+        border: 7px solid $primary;
+    }
+}

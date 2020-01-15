@@ -1,0 +1,17 @@
+
+//cuando se modulariza se tiene que poner _nombre para que no lo compile prepos
+//no tienen que poner el _ ni tampoco la extension
+@import "components/global";
+@import "components/nav";
+@import "components/head";
+@import "components/section";
+@import "components/portafolio";
+@import "components/footer";
+
+
+@for $i from 1 through 20 {
+    .columnas-#{$i * 5}{
+        width: $i * 5%;
+    }
+    
+}
