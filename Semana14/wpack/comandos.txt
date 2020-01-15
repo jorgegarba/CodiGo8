@@ -1,0 +1,10 @@
+-D sirve para indicar que va a ser una dependencia de desarrollo
+-E es para que las dependencias que yo instale sean exactas
+npm install webpack -D -E
+
+npm install webpack-cli -D -E
+
+//para ejecutar webpack la 1era vez
+npx webpack --entry ./index.js --output ./output.js --mode=development
+
+npx webpack     -> es leer mi archivo webpack.config.js segun las reglas que haya ahi me genera los output
