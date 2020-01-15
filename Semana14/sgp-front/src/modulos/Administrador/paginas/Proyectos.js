@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import Cargando from '../componentes/Cargando';
 import { ProyectoService } from '../../../servicios/ProyectoService';
 // import { MDBDataTable } from 'mdbreact';
+import { withRouter } from 'react-router-dom';
 import DataTable from 'react-data-table-component';
 import Swal from 'sweetalert2';
 
-export default class Proyectos extends Component {
+class Proyectos extends Component {
 
   constructor(props) {
     super(props);
@@ -73,7 +74,9 @@ export default class Proyectos extends Component {
     this.getProyectos();
   }
 
-
+  goCrearProyecto = () => {
+    this.props.history.push('/admin/proyecto-crear');
+  }
   render() {
     let carga;
     if (this.state.cargando) {
@@ -81,10 +84,20 @@ export default class Proyectos extends Component {
     }
 
     return (
-      <main className="container mt-5">
-        <div className="row">
-          <div className="col-12">
-            {/* {
+      <Fragment>
+        <button className="btn btn-dark shadow"
+          style={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            borderRadius: '50%'
+          }} onClick={this.goCrearProyecto}>
+          <i className="fas fa-plus fa-2x"></i>
+        </button>
+        <main className="container mt-5">
+          <div className="row">
+            <div className="col-12">
+              {/* {
               carga ? carga : <MDBDataTable
                 striped
                 bordered
@@ -92,16 +105,19 @@ export default class Proyectos extends Component {
                 data={this.state.data} />
             } */}
 
-            {
-              carga ? carga : <DataTable
-                title="Arnold Movies"
-                columns={this.state.data.columns}
-                data={this.state.data.rows}
-              />
-            }
+              {
+                carga ? carga : <DataTable
+                  title="Arnold Movies"
+                  columns={this.state.data.columns}
+                  data={this.state.data.rows}
+                />
+              }
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </Fragment>
     )
   }
 }
+
+export default withRouter(Proyectos)

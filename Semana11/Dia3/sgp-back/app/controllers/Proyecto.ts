@@ -14,16 +14,9 @@ export const getProyectos = (req: Request, res: Response) => {
 }
 
 export const postProyecto = (req: Request, res: Response) => {
-  let { nombre, fecha_inicio, fecha_fin, presupuesto, estado } = req.body;
-  let objProyecto = {
-    pro_nom: nombre,
-    pro_fechin: fecha_inicio,
-    pro_fechfin: fecha_fin,
-    pro_pres: presupuesto,
-    pro_est: estado
-  };
+
   // objProyecto => pro_nom,pro_fechin,pro_fechfin...
-  Proyecto.build(objProyecto).save().then((proyectoCreado: any) => {
+  Proyecto.build(req.body).save().then((proyectoCreado: any) => {
     res.status(201).json({
       ok: true,
       content: proyectoCreado

@@ -5,6 +5,7 @@ import Dashboard from "./paginas/Dashboard";
 import Header from "./componentes/Header";
 import Footer from "../Footer";
 import Proyectos from "./paginas/Proyectos";
+import ProyectoCrear from "./paginas/ProyectoCrear";
 
 export class Administrador extends Component {
   constructor(props) {
@@ -28,6 +29,12 @@ export class Administrador extends Component {
             path={"/admin/proyectos"}
             render={() => {
               return <Proyectos />;
+            }}
+          />
+          <Route
+            path={"/admin/proyecto-crear"}
+            render={() => {
+              return <ProyectoCrear />
             }}
           />
           <Route
