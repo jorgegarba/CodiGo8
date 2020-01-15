@@ -18,4 +18,20 @@ export class ProyectoService {
     let rpta = response.json();
     return rpta;
   }
+  static async deletProyectoById(pro_id) {
+
+    let _sAuth = new AuthService();
+
+    let misHeaders = new Headers();
+    misHeaders.append("Authorization", `Bearer ${_sAuth.token}`);
+
+    let config = {
+      headers: misHeaders,
+      method: 'DELETE'
+    }
+
+    let response = await fetch(`${URL_BACKEND}/proyecto/${pro_id}`, config);
+    let rpta = response.json();
+    return rpta;
+  }
 }

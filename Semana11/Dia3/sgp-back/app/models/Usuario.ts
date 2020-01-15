@@ -59,7 +59,7 @@ export const usuario_model = (conexion: Sequelize) => {
             usu_nom: `${this.usu_nom} ${this.usu_ape}`
         };
         //jwt.sign(payload,secret key, tiempo de vida, algoritmo)
-        var token = jwt.sign(payload, 'sapeee', { expiresIn: 30 }, { algorithm: 'RS256' });
+        var token = jwt.sign(payload, 'sapeee', { expiresIn: '1h' }, { algorithm: 'RS256' });
         return token;
     }
     return modelo;
