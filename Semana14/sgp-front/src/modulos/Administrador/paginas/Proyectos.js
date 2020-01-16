@@ -109,25 +109,84 @@ class Proyectos extends Component {
         <main className="container mt-5">
           <div className="row">
             <div className="col-12">
-              {/* {
-              carga ? carga : <MDBDataTable
-                striped
-                bordered
-                hover
-                data={this.state.data} />
-            } */}
-
-              {
-                carga ? carga : <DataTable
-                  title="Arnold Movies"
-                  columns={this.state.data.columns}
-                  data={this.state.data.rows}
-                />
-              }
+              <table className="table table-sm table-hover">
+                <thead>
+                  <tr>
+                    <th>
+                      <i className="fas fa-hashtag mr-2"></i>
+                      <span>Id</span>
+                    </th>
+                    <th>
+                      <i class="fas fa-folder mr-2"></i>
+                      <span>Nombre</span>
+                    </th>
+                    <th>
+                      <i class="fas fa-money-bill mr-2 "></i>
+                      <span>Presupuesto</span>
+                    </th>
+                    <th>
+                      <i class="fas fa-calendar mr-2"></i>
+                      <span>Fecha de Inicio</span>
+                    </th>
+                    <th>
+                      <i class="fas fa-calendar   mr-2 "></i>
+                      <span>Fecha de Fin</span>
+                    </th>
+                    <th>
+                      <i class="fas fa-toggle-on   mr-2 "></i>
+                      <span>Estado</span>
+                    </th>
+                    <th>
+                      <i class="fas fa-cog mr-2"></i>
+                      <span>Acciones</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {
+                    this.state.proyectos.map(p => {
+                      return (
+                        <tr>
+                          <td>{p.pro_id}</td>
+                          <td>{p.pro_nom}</td>
+                          <td>{p.pro_pres}</td>
+                          <td>{p.pro_fechin}</td>
+                          <td>{p.pro_fechfin}</td>
+                          <td>
+                            {p.pro_est === "1" ? (
+                              <span className="badge badge-success">
+                                Activo
+                              </span>
+                            ): (
+                              <span className="badge badge-danger">
+                                Inactivo
+                              </span>
+                            )}
+                          </td>
+                          <td>
+                            <button className="btn btn-danger mr-2"
+                              onClick={() => {
+                                this.eliminarProyecto(p.pro_id)
+                              }}>
+                              <i class="fas fa-trash"></i>
+                            </button>
+                            <button className="btn btn-dark"
+                              onClick={() => {
+                                this.goVerProyecto(p.pro_id);
+                              }}>
+                              <i class="fas fa-eye    "></i>
+                            </button>
+                          </td>
+                        </tr>
+                      );
+                    })
+                  }
+                </tbody>
+              </table>
             </div>
           </div>
         </main>
-      </Fragment>
+      </Fragment >
     )
   }
 }
