@@ -76,3 +76,7 @@ GastoIngreso.belongsTo(Documento, { foreignKey: "doc_id" });
 
 Documento.hasMany(Imagen, { foreignKey: "doc_id" });
 Imagen.belongsTo(Documento, { foreignKey: "doc_id" });
+
+
+GastoIngreso.belongsTo(Proyecto, { foreignKey: 'pro_id' });
+Proyecto.hasMany(GastoIngreso, { foreignKey: 'pro_id' })

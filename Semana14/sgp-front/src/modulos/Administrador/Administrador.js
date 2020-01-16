@@ -7,6 +7,7 @@ import Footer from "../Footer";
 import Proyectos from "./paginas/Proyectos";
 import ProyectoCrear from "./paginas/ProyectoCrear";
 import ProyectoVer from "./paginas/ProyectoVer";
+import PresupuestoCrear from "./paginas/presupuesto/PresupuestoCrear";
 
 export class Administrador extends Component {
   constructor(props) {
@@ -42,6 +43,12 @@ export class Administrador extends Component {
             path={"/admin/proyecto-ver/:pro_id"}
             render={() => {
               return <ProyectoVer />
+            }}
+          />
+          <Route
+            path={"/admin/presupuesto-crear/:pro_id"}
+            render={() => {
+              return <PresupuestoCrear />
             }}
           />
           <Route

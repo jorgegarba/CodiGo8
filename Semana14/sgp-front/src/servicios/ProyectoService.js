@@ -48,4 +48,17 @@ export class ProyectoService {
     let rpta = response.json();
     return rpta;
   }
+  static async getProyectoById(pro_id) {
+    let _sAuth = new AuthService();
+    let misHeaders = new Headers();
+    misHeaders.append("Authorization", `Bearer ${_sAuth.token}`);
+    misHeaders.append("Content-type", "application/json");
+    let config = {
+      headers: misHeaders,
+      method: 'GET'
+    }
+    let response = await fetch(`${URL_BACKEND}/proyecto/${pro_id}`, config);
+    let rpta = response.json();
+    return rpta;
+  }
 }
