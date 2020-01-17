@@ -3,6 +3,7 @@ import Select from 'react-select';
 import { withRouter } from 'react-router-dom';
 import { RecursoService } from '../../../../servicios/RecursoService';
 import { UnidadMedidaService } from '../../../../servicios/UnidadMedidaService';
+import { PresupuestoProyectoService } from '../../../../servicios/PresupuestoProyectoService';
 
 class PresupuestoCrear extends Component {
 
@@ -67,6 +68,15 @@ class PresupuestoCrear extends Component {
     this.setState({
       presupuestos: [...this.state.presupuestos, objPresupuesto]
     })
+  }
+
+
+  crearPresupuestos = () => {
+    PresupuestoProyectoService
+      .postPresupuestos(this.state.presupuestos)
+      .then(rpta => {
+        console.log(rpta);
+      })
   }
 
   render() {
@@ -170,7 +180,7 @@ class PresupuestoCrear extends Component {
           <div className="col-12">
             <div className="card shadow">
               <div className="card-body">
-                <table className="table table-bordered">
+                <table className="table table-bordered table-sm">
                   <thead className="thead thead-dark">
                     <tr className="text-center">
                       <th>Cantidad</th>
@@ -180,11 +190,11 @@ class PresupuestoCrear extends Component {
                       <th>Un. Medida</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody className="text-center">
                     {
                       this.state.presupuestos.map(pre => {
                         return (
-                          <tr>
+                          <tr key={`${pre.um_id}${pre.rec_id}`}>
                             <td>{pre.pp_cant}</td>
                             <td>{pre.pp_puni}</td>
                             <td>{pre.pp_tot}</td>
@@ -196,6 +206,11 @@ class PresupuestoCrear extends Component {
                     }
                   </tbody>
                 </table>
+                <button className="btn btn-block btn-dark"
+                  onClick={this.crearPresupuestos}>
+                  <i class="fas fa-save mr-2"></i>
+                  Crear y guardar presupuestos
+                </button>
               </div>
             </div>
           </div>
