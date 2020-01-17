@@ -1,0 +1,11 @@
+npm install -D style-loader css-loader
+
+//esto despues de configurar package.json
+npm run build
+
+npm install -D html-webpack-plugin
+
+npm install -D webpack-dev-server
+
+npm install -D @babel/core babel-loader @babel/preset-env
+

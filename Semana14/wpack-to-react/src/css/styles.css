@@ -1,0 +1,8 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    background-color: black;
+    color:white;
+    text-shadow: 1px 1px 1px gray;
+}
