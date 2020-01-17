@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom';
 import { ProyectoService } from '../../../servicios/ProyectoService';
+import { PresupuestoProyectoService } from '../../../servicios/PresupuestoProyectoService';
+import PresupuestoVer from './presupuesto/PresupuestoVer';
+import Cargando from '../componentes/Cargando';
 class ProyectoVer extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
       cargando: true,
-      proyecto: {}
+      proyecto: {},
+      presupuestos: [],
     }
   }
 
@@ -25,11 +29,21 @@ class ProyectoVer extends Component {
   getPreupuestosByProId = (pro_id) => {
     // Aquí llamarán al servicio de PresupuestoProyectoService
     // para traer la lista de presupuestos
+    PresupuestoProyectoService
+      .getPresupuestosByProId(pro_id)
+      .then((rpta) => {
+        if (rpta.ok) {
+          this.setState({
+            presupuestos: rpta.content
+          })
+        }
+      });
   }
 
   componentDidMount() {
     let { pro_id } = this.props.match.params;
     this.traerProyectoById(pro_id);
+    this.getPreupuestosByProId(pro_id);
     // Aqui llamaran a la funcion getPreupuestosByProId()
   }
 
@@ -102,6 +116,11 @@ class ProyectoVer extends Component {
                     <div className="row mt-2">
                       <div className="col-12">
                         {/* AQUI LLAMARAN AL COMPONENTE PresupuestoVer */}
+                        {
+                          this.state.presupuestos.length === 0 ?
+                            <Cargando texto={"Cargando el presupuesto del proyecto"} /> :
+                            <PresupuestoVer presupuestos={this.state.presupuestos} />
+                        }
                       </div>
                     </div>
                   </div>

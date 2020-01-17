@@ -1,6 +1,6 @@
 import { Sequelize, DataTypes, Model } from 'sequelize';
 export const recurso_model = (conexion: Sequelize) => {
-    const modelo = conexion.define("Recurso", {
+    const modelo = conexion.define("recurso", {
         rec_id: {
             type: DataTypes.INTEGER,
             primaryKey: true,

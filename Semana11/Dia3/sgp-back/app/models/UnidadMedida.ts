@@ -1,7 +1,7 @@
 import { Sequelize, DataTypes } from 'sequelize';
 
 export const unidadmedida_model = (conexion: Sequelize) => {
-    const modelo = conexion.define("unidadMedida",
+    const modelo = conexion.define("unidadmedida",
         {
             um_id: {
                 type: DataTypes.INTEGER,

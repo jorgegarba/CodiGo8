@@ -109,8 +109,8 @@ class Proyectos extends Component {
         <main className="container mt-5">
           <div className="row">
             <div className="col-12">
-              <table className="table table-sm table-hover">
-                <thead>
+              <table className="table table-bordered table-striped table-hover">
+                <thead className="thead thead-dark">
                   <tr>
                     <th>
                       <i className="fas fa-hashtag mr-2"></i>

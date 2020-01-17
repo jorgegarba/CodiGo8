@@ -24,5 +24,15 @@ export class PresupuestoProyectoService {
 
   static async getPresupuestosByProId(pro_id) {
     // Aqui se consumirá la API del backend
+    let _sAuth = new AuthService();
+    let misHeaders = new Headers();
+    misHeaders.append("Authorization", `Bearer ${_sAuth.token}`);
+    let config = {
+      headers: misHeaders,
+      method: 'GET',
+    }
+    let response = await fetch(`${URL_BACKEND}/presupuestoproyecto/proyecto/${pro_id}`, config);
+    let rpta = response.json();
+    return rpta;
   }
 }

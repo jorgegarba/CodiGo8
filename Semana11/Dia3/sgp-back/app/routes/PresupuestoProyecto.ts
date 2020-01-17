@@ -6,5 +6,5 @@ export var presupuestoproyecto_router = Router();
 presupuestoproyecto_router.post('/presupuestoproyecto/varios',
   wachiman, postPresupuestos);
 
-presupuestoproyecto_router.post('/presupuestoproyecto/proyecto/:pro_id',
+presupuestoproyecto_router.get('/presupuestoproyecto/proyecto/:pro_id',
   wachiman, getPresupuestoByProId);
