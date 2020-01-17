@@ -22,10 +22,15 @@ class ProyectoVer extends Component {
         }
       })
   }
+  getPreupuestosByProId = (pro_id) => {
+    // Aquí llamarán al servicio de PresupuestoProyectoService
+    // para traer la lista de presupuestos
+  }
 
   componentDidMount() {
     let { pro_id } = this.props.match.params;
     this.traerProyectoById(pro_id);
+    // Aqui llamaran a la funcion getPreupuestosByProId()
   }
 
 
@@ -82,7 +87,24 @@ class ProyectoVer extends Component {
                 <div class="tab-content" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">Iran los ingresos</div>
                   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Iran los gastos</div>
-                  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">Iran los presupuestos</div>
+                  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="row mt-2">
+                      <div className="col-12 text-right">
+                        <button className="btn btn-dark shadow"
+                          onClick={() => {
+                            let { pro_id } = this.props.match.params;
+                            this.props.history.push(`/admin/presupuesto-crear/${pro_id}`);
+                          }}>
+                          Crear o agregar presupuesto
+                        </button>
+                      </div>
+                    </div>
+                    <div className="row mt-2">
+                      <div className="col-12">
+                        {/* AQUI LLAMARAN AL COMPONENTE PresupuestoVer */}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
