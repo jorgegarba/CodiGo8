@@ -3,6 +3,31 @@ import { Response } from 'express';
 import { Request } from 'express';
 
 
+// let registrarGasto = async (objDocumento, objGastoIngreso, arrDocumentoDetalle) => {
+
+  /**
+   * 0. Crear el objeto transacshon
+   * 0> ejemplo
+   *    const t = await conexion.transaction();
+   * 1. Crear el objDocumento
+   * 1.ejemplo> 
+   *  let documentoCreado = await Documento.create(objDocumento,{ transaction: t })
+   * 2. Coger el id del objDocumento creado con un await
+   * let doc_id = documentoCreado.doc_id
+   *  3. al objGastoIngreso, agregarle el doc_id
+   * 3 ejemplo>
+   *  objGastoIngreso.doc_id = doc_id;
+   * 4. Crear el GastoIngreso
+   * 5. Con un for hacer algo parecido a lo siguiente
+   * for (let i = 0; i < arrDocumentoDetalle.length; i++) {
+   *  arrDocmentoDetalle[i].doc_id = doc_id;
+      await DocumentoDetalle.create(arrDocumentoDetalle[i],
+        { transaction: t });
+    }
+   */
+
+// }
+
 let crearPrespuestos = async (arrPrespuestos: Array<any>) => {
   // Creando el objeto para la 'transaction'
   const t = await conexion.transaction();
