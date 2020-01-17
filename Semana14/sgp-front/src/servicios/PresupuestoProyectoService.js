@@ -21,4 +21,8 @@ export class PresupuestoProyectoService {
     let rpta = response.json();
     return rpta;
   }
+
+  static async getPresupuestosByProId(pro_id) {
+    // Aqui se consumirá la API del backend
+  }
 }

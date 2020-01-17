@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { RecursoService } from '../../../../servicios/RecursoService';
 import { UnidadMedidaService } from '../../../../servicios/UnidadMedidaService';
 import { PresupuestoProyectoService } from '../../../../servicios/PresupuestoProyectoService';
+import Swal from 'sweetalert2';
 
 class PresupuestoCrear extends Component {
 
@@ -75,7 +76,18 @@ class PresupuestoCrear extends Component {
     PresupuestoProyectoService
       .postPresupuestos(this.state.presupuestos)
       .then(rpta => {
-        console.log(rpta);
+        if (rpta.ok) {
+          Swal.fire({
+            title: "Creado!",
+            text: 'Los presupuestos han sido registrados con éxito',
+            icon: 'success'
+          }).then((rpta) => {
+            if (rpta.value) {
+              let { pro_id } = this.props.match.params;
+              this.props.history.push(`/admin/proyecto-ver/${pro_id}`);
+            }
+          })
+        }
       })
   }
 
