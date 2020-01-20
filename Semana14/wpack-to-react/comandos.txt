@@ -9,3 +9,7 @@ npm install -D webpack-dev-server
 
 npm install -D @babel/core babel-loader @babel/preset-env
 
+npm install -D @babel/plugin-transform-runtime
+
+npm install @babel/runtime
+
