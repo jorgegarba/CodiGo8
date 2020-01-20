@@ -5,6 +5,7 @@ import { Button } from 'react-native-elements';
 import Dimensiones from '../../services/dimensiones';
 
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import PokeBoton from '../../componentes/PokeBoton';
 
 const misEstilos = StyleSheet.create({
   contenedor: {
@@ -35,6 +36,7 @@ export default class Home extends Component {
                 color={"white"}
                 style={{ marginRight: 8 }} />
             } />
+          <PokeBoton />
         </View>
       </ImageBackground>
     )
