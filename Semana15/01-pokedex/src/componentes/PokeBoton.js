@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, ImageBackground, Image, TouchableOpacity } from 'react-native'
+import { View, Text, Image, TouchableOpacity } from 'react-native'
 import pokebola from './../../assets/pokemon.png';
 import Dimensiones from '../services/dimensiones';
 
