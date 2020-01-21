@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import PokeHome from './src/screens/PokeHome'
+import PokedexStackNavigator from './src/navigations/PokedexStackNavigator';
 
 const misEstilos = StyleSheet.create({
   contenedor: {
@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <View style={misEstilos.contenedor}>
-      <PokeHome />
+      <PokedexStackNavigator />
     </View>
   )
 }

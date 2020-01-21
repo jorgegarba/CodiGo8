@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { View, Text, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, Button } from 'react-native'
 import axios from 'axios';
 import PokeCard from '../components/PokeCard';
 
@@ -10,6 +10,15 @@ const misEstilos = StyleSheet.create({
   },
   titulo: {
     flex: 0.15,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  textoTitulo: {
+    flex: 1,
+    marginLeft: 20,
+    fontSize: 35,
+    fontWeight: 'bold',
+    color: '#3A3F44'
   },
   cardsContainer: {
     flexDirection: 'row',
@@ -19,7 +28,7 @@ const misEstilos = StyleSheet.create({
     flex: 1
   }
 })
-const PokeHome = () => {
+const PokeHome = (props) => {
   const [pokemones, setPokemones] = useState([]);
   const [cargando, setCargando] = useState(true);
 
@@ -37,7 +46,11 @@ const PokeHome = () => {
   return (
     <View style={misEstilos.contenedor}>
       <View style={misEstilos.titulo}>
-        <Text>ALSLKA</Text>
+        <Text style={misEstilos.textoTitulo}>POKEDEX</Text>
+        <Button title={'Ir a Info'}
+          onPress={() => {
+            props.navigation.navigate('PokeInfoScreen')
+          }} />
       </View>
       {
         cargando === false ?
