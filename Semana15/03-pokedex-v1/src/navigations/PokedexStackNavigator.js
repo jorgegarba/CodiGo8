@@ -9,11 +9,12 @@ const PokedexStackNavigator = createStackNavigator(
       screen: PokeHome
     },
     PokeInfoScreen: {
-      screen: PokeInfo
+      screen: PokeInfo,
     }
   },
   {
-    initialRouteName: 'PokeHomeScreen'
+    initialRouteName: 'PokeHomeScreen',
+    headerMode: 'none'
   }
 );
 
