@@ -35,9 +35,9 @@ const PokeHome = (props) => {
 
   useEffect(() => {
     const getPokemones = async () => {
-      let endpoint = "https://pokeapi.co/api/v2/pokemon";
-      let pokemones = await axios(endpoint);
-      setPokemones(pokemones.data.results);
+      let endpoint = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=20";
+      let listaPokemones = await axios(endpoint);
+      setPokemones(listaPokemones.data.results);
       setCargando(false);
     }
     getPokemones();
@@ -47,10 +47,6 @@ const PokeHome = (props) => {
     <View style={misEstilos.contenedor}>
       <View style={misEstilos.titulo}>
         <Text style={misEstilos.textoTitulo}>POKEDEX</Text>
-        <Button title={'Ir a Info'}
-          onPress={() => {
-            props.navigation.navigate('PokeInfoScreen')
-          }} />
       </View>
       {
         cargando === false ?

@@ -1,10 +1,14 @@
 import React from 'react'
-import { View, Text, StyleSheet, Dimensions } from 'react-native'
+import {
+  View, Text, StyleSheet,
+  Dimensions, TouchableOpacity, ActivityIndicator
+} from 'react-native'
 import { Image } from 'react-native-elements';
 import * as Font from 'expo-font';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+import { withNavigation } from 'react-navigation';
 
 const misEstilos = StyleSheet.create({
   card: {
@@ -56,7 +60,9 @@ const misEstilos = StyleSheet.create({
   }
 })
 
-const PokeCard = ({ pokemon: { name, url } }) => {
+const PokeCard = (props) => {
+
+  let { name, url } = props.pokemon;
 
   const [fuenteCargada, setFuenteCargada] = useState(false);
   const [info, setInfo] = useState({});
@@ -68,38 +74,50 @@ const PokeCard = ({ pokemon: { name, url } }) => {
     }
     const getInfo = async () => {
       let infoTmp = await axios(url);
-      setInfo(infoTmp.data.sprites);
+      setInfo(infoTmp.data);
     }
     cargarFuentes();
     getInfo();
   }, []);
 
+  const goInfo = () => {
+    props.navigation.navigate('PokeInfoScreen', { pokemon: { ...info } })
+  }
 
   return (
-    <View style={misEstilos.card}>
-      <View style={misEstilos.viewNombre}>
-        {
-          fuenteCargada ?
-            <Text style={misEstilos.textoNombre}>
-              {name}
-            </Text> :
-            null
-        }
-      </View>
-      <View style={misEstilos.viewInfo}>
-        <View style={misEstilos.infoIzquierda}>
+    <TouchableOpacity onPress={goInfo}>
+      <View style={misEstilos.card}>
+        <View style={misEstilos.viewNombre}>
+          {
+            fuenteCargada ?
+              <Text style={misEstilos.textoNombre}>
+                {name}
+              </Text> :
+              null
+          }
+        </View>
+        <View style={misEstilos.viewInfo}>
+          <View style={misEstilos.infoIzquierda}>
 
-        </View>
-        <View style={misEstilos.infoDerecha}>
-          <Image
-            style={misEstilos.imagen}
-            source={{
-              uri: info.front_default
-            }} />
+          </View>
+          <View style={misEstilos.infoDerecha}>
+            {
+              info.sprites ?
+                <Image
+                  style={misEstilos.imagen}
+                  source={{
+                    uri: info.sprites.front_default
+                  }}
+                  PlaceholderContent={<ActivityIndicator size={'large'}
+                    color={'#FB6D6C'} />} />
+                :
+                null
+            }
+          </View>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }
 
-export default PokeCard
+export default withNavigation(PokeCard)
