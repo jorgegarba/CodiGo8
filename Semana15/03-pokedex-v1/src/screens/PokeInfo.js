@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { View, Image, Text, StyleSheet, StatusBar, Dimensions } from 'react-native'
 import { Icon } from 'react-native-elements';
+import PokeTabNavigator from '../navigations/PokeTabNavigator';
+import { Global } from '../servicios/Global';
 // import {  } from 'react-native-elements';
 
 const misEstilos = StyleSheet.create({
@@ -18,15 +20,17 @@ const misEstilos = StyleSheet.create({
     backgroundColor: 'white',
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
-    zIndex: -1
+    zIndex: -1,
+    paddingTop: 52,
+    paddingHorizontal: 15
   },
   headerContainer: {
     flex: 16.6,
-    flexDirection:'row',
-    justifyContent:'space-between',
-    alignItems:'center',
-    paddingLeft:25,
-    paddingRight:25
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingLeft: 25,
+    paddingRight: 25
   },
   nombreContainer: {
     flex: 16.6,
@@ -51,24 +55,14 @@ const misEstilos = StyleSheet.create({
   }
 })
 
-
-
-
-
-
-
-
-
-
-
-
 const PokeInfo = (props) => {
-
 
   // info => objeto que nos llega por parametros
   // en la navegación, desde PokeHome
   let info = props.navigation.getParam('pokemon');
-  console.log(info);
+
+  let global = Global.getInstance();
+  global.pokemonId = info.id;
 
   return (
     <View style={misEstilos.contenedor}>
@@ -98,8 +92,9 @@ const PokeInfo = (props) => {
           }} style={misEstilos.imagen} />
         </View>
       </View>
-      <View style={misEstilos.contenidoAbajo}>
 
+      <View style={misEstilos.contenidoAbajo}>
+        <PokeTabNavigator />
       </View>
     </View>
   )
