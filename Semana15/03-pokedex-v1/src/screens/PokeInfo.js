@@ -1,5 +1,34 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
+
+
+const misEstilos = StyleSheet.create({
+  contenedor: {
+    flex: 1,
+    backgroundColor: '#49D0B2'
+  },
+  contenidoArriba: {
+    flex: 1,
+    backgroundColor: '#49D0B2'
+  },
+  contenidoAbajo: {
+    flex: 1.5,
+    backgroundColor: 'white',
+    borderTopLeftRadius: 50,
+    borderTopRightRadius: 50
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
 
 const PokeInfo = (props) => {
 
@@ -9,10 +38,13 @@ const PokeInfo = (props) => {
   console.log(info);
 
   return (
-    <View>
-      <Text>
-        ESTA ES LA PANTALLA DE INFORMACION DE {info.name}
-      </Text>
+    <View style={misEstilos.contenedor}>
+      <View style={misEstilos.contenidoArriba}>
+
+      </View>
+      <View style={misEstilos.contenidoAbajo}>
+
+      </View>
     </View>
   )
 }
