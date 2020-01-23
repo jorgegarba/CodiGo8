@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import PokedexStackNavigator from './src/navigations/PokedexStackNavigator';
+import PokeDrawerNavigator from './src/navigations/PokeDrawerNavigator';
 
 const misEstilos = StyleSheet.create({
   contenedor: {
@@ -12,7 +13,7 @@ const App = () => {
 
   return (
     <View style={misEstilos.contenedor}>
-      <PokedexStackNavigator />
+      <PokeDrawerNavigator />
     </View>
   )
 }
