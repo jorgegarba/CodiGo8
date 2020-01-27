@@ -13,3 +13,4 @@ export default function AppRoute({component: Component, layout:Layout, ...rest})
         />
     )
 }
+
