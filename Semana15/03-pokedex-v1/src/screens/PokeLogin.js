@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Input, Button } from 'react-native-elements';
+import { AuthService } from '../servicios/Auth';
+
 
 const misEstilos = StyleSheet.create(
   {
@@ -14,12 +16,22 @@ const misEstilos = StyleSheet.create(
 )
 
 export default class PokeLogin extends Component {
+
+  _sAuthService = new AuthService();
+
   constructor(props) {
     super(props);
     this.state = {
       email: '',
       password: ''
     }
+  }
+
+  loggin = () => {
+    let { email, password } = this.state;
+
+    this.props.loggin(email, password);
+
   }
 
   render() {
@@ -51,9 +63,7 @@ export default class PokeLogin extends Component {
           }
         />
         <Button title={"Iniciar Sesion"}
-          onPress={() => {
-            console.log(this.state);
-          }} />
+          onPress={this.loggin} />
       </View>
     )
   }

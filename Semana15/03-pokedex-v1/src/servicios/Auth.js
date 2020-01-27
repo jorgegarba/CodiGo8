@@ -11,11 +11,9 @@ export class AuthService {
   }
 
   async iniciarSesion(correo, password) {
-
     let misHeaders = {
       "content-type": "application/json"
     }
-
     var config = {
       method: 'POST',
       headers: misHeaders,

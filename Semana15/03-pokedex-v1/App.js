@@ -4,6 +4,7 @@ import PokedexStackNavigator from './src/navigations/PokedexStackNavigator';
 import PokeDrawerNavigator from './src/navigations/PokeDrawerNavigator';
 import { AuthService } from './src/servicios/Auth';
 import PokeLogin from './src/screens/PokeLogin';
+import Login from './src/screens/loggin2/Login';
 
 
 const misEstilos = StyleSheet.create({
@@ -18,23 +19,45 @@ const App = () => {
 
   const [isLogged, setIsLogged] = useState(false);
 
-
   useEffect(() => {
     if (_sAuth.isLogged()) {
       setIsLogged(true);
     }
   }, []);
 
-  return (
+  const loggin = (email, password) => {
+    _sAuth.iniciarSesion(email, password)
+      .then(rpta => {
+        console.log(rpta);
+        if (rpta.ok) {
+          setIsLogged(true);
+        } else {
+          // error
+        }
+      })
 
-    isLogged ?
-      <View style={misEstilos.contenedor} >
-        <PokeDrawerNavigator />
-      </View > :
-      <View style={misEstilos.contenedor}>
-        <PokeLogin />
-      </View>
-  )
+  }
+
+  const logout = () => {
+    console.log("Cerrando sesion");
+    _sAuth.cerrarSesion();
+    setIsLogged(false);
+  }
+
+  // return (
+
+  //   isLogged ?
+  //     <View style={misEstilos.contenedor} >
+  //       <PokeDrawerNavigator screenProps={{
+  //         logout: logout
+  //       }} />
+  //     </View > :
+  //     <View style={misEstilos.contenedor}>
+  //       <PokeLogin loggin={loggin} />
+  //     </View>
+  // )
+
+  return (<Login></Login>)
 }
 
 export default App
