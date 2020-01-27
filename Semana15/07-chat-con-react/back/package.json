@@ -1,0 +1,22 @@
+{
+  "name": "back-sockets",
+  "version": "1.0.0",
+  "description": "Back del Chat",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Sockets",
+    "Node",
+    "Chat"
+  ],
+  "author": "Jorge Montesinos",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
