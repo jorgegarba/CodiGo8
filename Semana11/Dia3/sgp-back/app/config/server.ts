@@ -73,7 +73,7 @@ export class Server {
       // {force:false} => Éste comando no borra las tablas PERO TAMPOCO 
       // agrega campos adicionales si ya han sido previamente creados
       // en un modelo.
-      conexion.sync({ force: false }).then(() => {
+      conexion.sync({ force: false, alter: true }).then(() => {
         console.log("== BD creada con Exito ==");
       }).catch((error: any) => {
         console.log("== ERROR al crear la BD");
