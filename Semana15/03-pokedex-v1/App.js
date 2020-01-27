@@ -44,20 +44,20 @@ const App = () => {
     setIsLogged(false);
   }
 
-  // return (
+  return (
 
-  //   isLogged ?
-  //     <View style={misEstilos.contenedor} >
-  //       <PokeDrawerNavigator screenProps={{
-  //         logout: logout
-  //       }} />
-  //     </View > :
-  //     <View style={misEstilos.contenedor}>
-  //       <PokeLogin loggin={loggin} />
-  //     </View>
-  // )
+    isLogged ?
+      <View style={misEstilos.contenedor} >
+        <PokeDrawerNavigator screenProps={{
+          logout: logout
+        }} />
+      </View > :
+      <View style={misEstilos.contenedor}>
+        <PokeLogin loggin={loggin} />
+      </View>
+  )
 
-  return (<Login></Login>)
+  // return (<Login></Login>)
 }
 
 export default App

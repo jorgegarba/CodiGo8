@@ -31,8 +31,16 @@ const PokeDrawerNavigator = createDrawerNavigator(
         })
       }
     },
-    PokeLogoutScreen:{
-      screen: PokeLogout
+    PokeLogoutScreen: {
+      screen: PokeLogout,
+      navigationOptions: () => {
+        return ({
+          drawerLabel: 'Cerrar Sesión',
+          drawerIcon: () => {
+            return (<Icon name={'sign-out-alt'} />)
+          }
+        })
+      }
     }
   },
   {
