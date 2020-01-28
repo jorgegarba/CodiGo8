@@ -7,7 +7,8 @@ export default class NextArrowButton extends Component {
   render() {
     return (
       <View style={styles.buttonWrapper}>
-        <TouchableHighlight style={[{ opacity: 0.6 }, styles.button]}>
+        <TouchableHighlight style={[{ opacity: 0.6 }, styles.button]}
+          onPress={this.props.handleSubmit}>
           <Icon
             name="angle-right"
             color={"#FB6D6C"}

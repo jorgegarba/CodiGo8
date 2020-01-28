@@ -12,6 +12,11 @@ class InputField extends Component {
     this.setState({ secureInput: !this.state.secureInput });
   }
 
+  handleChange = e => {
+    let { campo } = this.props;
+    this.props.handleChange(campo, e.nativeEvent.text);
+  }
+
   render() {
 
     let { secureInput } = this.state
@@ -51,6 +56,7 @@ class InputField extends Component {
             styles.inputFiled
           ]}
           secureTextEntry={secureInput}
+          onChange={this.handleChange}
         />
       </View>
     );

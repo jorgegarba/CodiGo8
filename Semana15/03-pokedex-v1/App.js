@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, StyleSheet } from 'react-native'
-import PokedexStackNavigator from './src/navigations/PokedexStackNavigator';
+import { View, StyleSheet } from 'react-native'
 import PokeDrawerNavigator from './src/navigations/PokeDrawerNavigator';
 import { AuthService } from './src/servicios/Auth';
-import PokeLogin from './src/screens/PokeLogin';
 import Login from './src/screens/loggin2/Login';
 
 
@@ -53,7 +51,7 @@ const App = () => {
         }} />
       </View > :
       <View style={misEstilos.contenedor}>
-        <PokeLogin loggin={loggin} />
+        <Login loggin={loggin} />
       </View>
   )
 

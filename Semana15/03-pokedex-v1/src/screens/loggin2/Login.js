@@ -8,12 +8,33 @@ import NextArrowButton from "./NextArrowButton";
 
 
 export default class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: ''
+    }
+  }
+
+  handleChange = (campo, valor) => {
+    this.setState({
+      [campo]: valor
+    })
+  }
+
+  handleSubmit = () => {
+    console.log("submit");
+    
+    this.props.loggin(this.state.email, this.state.password);
+  }
+
+
   render() {
     return (
       <KeyboardAvoidingView style={styles.wrapper} behavior="padding">
         <View style={styles.scrollViewWrapper}>
           <ScrollView style={styles.scrollView}>
-            <Text style={styles.loginHeader}>Login</Text>
+            <Text style={styles.loginHeader}>Pokedex - Login</Text>
             <InputField
               labelText="EMAIL ADDRESS"
               labelTextSize={14}
@@ -22,7 +43,8 @@ export default class Login extends Component {
               borderBottomColor={"white"}
               inputType="email"
               customStyle={{ marginBottom: 30 }}
-
+              handleChange={this.handleChange}
+              campo={"email"}
             />
             <InputField
               labelText="PASSWORD"
@@ -32,10 +54,12 @@ export default class Login extends Component {
               borderBottomColor={"white"}
               inputType="password"
               customStyle={{ marginBottom: 30 }}
+              handleChange={this.handleChange}
+              campo={"password"}
 
             />
           </ScrollView>
-          <NextArrowButton />
+          <NextArrowButton handleSubmit={this.handleSubmit} />
         </View>
       </KeyboardAvoidingView>
     );
