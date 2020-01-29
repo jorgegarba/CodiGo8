@@ -1,0 +1,7 @@
+
+https://myaccount.google.com/lesssecureapps?pli=1
+
+npm install express
+npm install body-parser
+npm install morgan
+npm install nodemailer
