@@ -1,0 +1,24 @@
+{
+  "name": "nodemail",
+  "version": "1.0.0",
+  "description": "Envio de Correo a parti de gmail, con nodemail",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon index.js"
+  },
+  "keywords": [
+    "node",
+    "mail",
+    "gmail",
+    "correo"
+  ],
+  "author": "@OsmarMontesinos",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "nodemailer": "^6.4.2"
+  }
+}
