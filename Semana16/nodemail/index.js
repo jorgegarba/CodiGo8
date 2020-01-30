@@ -11,7 +11,7 @@ let configuracion = nodemailer.createTransport({
         //osmarmontes50@gmail.com
         user:'osmarmontes50@gmail.com',
         //contraseña
-        pass:'Coldpl@y60'
+        pass:'-----'
     }
 });
 
