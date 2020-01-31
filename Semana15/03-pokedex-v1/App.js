@@ -16,6 +16,7 @@ const App = () => {
   let _sAuth = new AuthService();
 
   const [isLogged, setIsLogged] = useState(false);
+  const [cargando, setCargando] = useState(false);
 
   useEffect(() => {
     if (_sAuth.isLogged()) {
@@ -24,6 +25,8 @@ const App = () => {
   }, []);
 
   const loggin = (email, password) => {
+    setCargando(true)
+
     _sAuth.iniciarSesion(email, password)
       .then(rpta => {
         console.log(rpta);
@@ -31,6 +34,7 @@ const App = () => {
           setIsLogged(true);
         } else {
           // error
+          setCargando(false)
         }
       })
 
@@ -51,7 +55,7 @@ const App = () => {
         }} />
       </View > :
       <View style={misEstilos.contenedor}>
-        <Login loggin={loggin} />
+        <Login loggin={loggin} cargando={cargando} />
       </View>
   )
 

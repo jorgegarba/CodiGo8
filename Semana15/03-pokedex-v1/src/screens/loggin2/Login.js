@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import {
   View, Text, StyleSheet, KeyboardAvoidingView,
-  ScrollView,
+  ScrollView, Dimensions
 } from "react-native";
 import InputField from "./InputField";
 import NextArrowButton from "./NextArrowButton";
+import Loader from "../../components/Loader";
 
 
 export default class Login extends Component {
@@ -12,7 +13,7 @@ export default class Login extends Component {
     super(props);
     this.state = {
       email: '',
-      password: ''
+      password: '',
     }
   }
 
@@ -24,7 +25,6 @@ export default class Login extends Component {
 
   handleSubmit = () => {
     console.log("submit");
-    
     this.props.loggin(this.state.email, this.state.password);
   }
 
@@ -32,6 +32,8 @@ export default class Login extends Component {
   render() {
     return (
       <KeyboardAvoidingView style={styles.wrapper} behavior="padding">
+        <Loader
+          cargando={this.props.cargando} />
         <View style={styles.scrollViewWrapper}>
           <ScrollView style={styles.scrollView}>
             <Text style={styles.loginHeader}>Pokedex - Login</Text>

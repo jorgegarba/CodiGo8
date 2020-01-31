@@ -4,6 +4,7 @@ import Administrador from './modulos/Administrador/Administrador';
 import Loggin from "./modulos/Loggin/Loggin";
 import Invitado from './modulos/invitado/Invitado';
 import { AuthService } from './servicios/Auth';
+import Firebase from './componentes/Firebase';
 
 export class App extends Component {
 
@@ -79,6 +80,9 @@ export class App extends Component {
             } else {
               return <Loggin loggin={this.loggin} />
             }
+          }} />
+          <Route path={"/firebase"} render={() => {
+            return <Firebase />
           }} />
           <Route path={"/"} render={() => {
             return <Invitado />
