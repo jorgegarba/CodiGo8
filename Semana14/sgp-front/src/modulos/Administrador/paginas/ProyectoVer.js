@@ -4,6 +4,7 @@ import { ProyectoService } from '../../../servicios/ProyectoService';
 import { PresupuestoProyectoService } from '../../../servicios/PresupuestoProyectoService';
 import PresupuestoVer from './presupuesto/PresupuestoVer';
 import Cargando from '../componentes/Cargando';
+import Currency from 'react-currency-formatter';
 class ProyectoVer extends Component {
 
   constructor(props) {
@@ -53,7 +54,7 @@ class ProyectoVer extends Component {
 
     return (
       <main className="container-fluid mt-4">
-        <div class="row">
+        <div className="row">
           <div className="col-md-4">
             <div className="card shadow">
               <div className="card-body">
@@ -65,7 +66,11 @@ class ProyectoVer extends Component {
                   <tbody>
                     <tr>
                       <th>Presupuesto</th>
-                      <td>{this.state.proyecto.pro_pres}</td>
+                      <td>
+                        <Currency
+                          symbol={'S./ '}
+                          quantity={this.state.proyecto.pro_pres} />
+                      </td>
                     </tr>
                     <tr>
                       <th>Fecha de Inicio</th>
@@ -77,7 +82,12 @@ class ProyectoVer extends Component {
                     </tr>
                     <tr>
                       <th>Estado</th>
-                      <td>{this.state.proyecto.pro_est}</td>
+                      <td>
+                        {this.state.proyecto.pro_est == '1' ?
+                          (<span className="badge badge-success">Activo</span>) :
+                          (<span className="badge badge-danger">Inactivo</span>)
+                        }
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -92,15 +102,29 @@ class ProyectoVer extends Component {
             <div className="card shadow">
               <div className="card-body">
                 <nav>
-                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Ingresos Y Gastos</a>
-                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Presupuesto</a>
+                  <div className="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a className="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Ingresos Y Gastos</a>
+                    <a className="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Presupuesto</a>
                   </div>
                 </nav>
-                <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">Iran los ingresos</div>
-                  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                    <div class="row mt-2">
+                <div className="tab-content" id="nav-tabContent">
+                  {/* Tab de Gastos e Ingresos */}
+                  <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div className="row mt-2">
+                      <div className="col-12 text-right">
+                        <button className="btn btn-dark shadow"
+                          onClick={() => {
+                            let { pro_id } = this.props.match.params;
+                            this.props.history.push(`/admin/ie-crear/${pro_id}`);
+                          }}>
+                          Nuevo Ingreso/Egreso
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Tab de Presupuesto */}
+                  <div className="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div className="row mt-2">
                       <div className="col-12 text-right">
                         <button className="btn btn-dark shadow"
                           onClick={() => {

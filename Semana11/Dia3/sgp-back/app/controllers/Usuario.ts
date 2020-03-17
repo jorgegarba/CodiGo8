@@ -1,6 +1,26 @@
 import { Request, Response } from 'express';
 import { Usuario } from '../config/sequelize';
 
+
+
+
+export const getUsuarios = (req: Request, res: Response) => {
+    Usuario.findAll({
+        attributes: [
+            'usu_id',
+            'usu_email', 'usu_nom', 'usu_ape', 'usu_tipo'
+        ]
+    }).then((usuarios: any) => {
+        if (usuarios) {
+            res.status(201).json({
+                ok: true,
+                content: usuarios
+            })
+        }
+    })
+
+}
+
 export const RegistrarUsuario = (req: Request, res: Response) => {
     Usuario.findAll({
         where: { usu_email: req.body.usu_email }

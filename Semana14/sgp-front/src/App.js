@@ -84,9 +84,17 @@ export class App extends Component {
           <Route path={"/firebase"} render={() => {
             return <Firebase />
           }} />
-          <Route path={"/"} render={() => {
+          {/* <Route path={"/"} render={() => {
             return <Invitado />
+          }} /> */}
+          <Route path={"/"} render={() => {
+            if (this._sAuth.isLogged()) {
+              return <Redirect to={'/admin'} />
+            } else {
+              return <Loggin loggin={this.loggin} />
+            }
           }} />
+
           <Route render={() => {
             return <Redirect to={"/"} />
           }} />

@@ -16,8 +16,10 @@ import { recurso_model } from '../models/Recurso';
 // a la base de datos
 // además, se configuran parámetros de host, tipo de bd, etc, de diccha
 // conexión
-export const conexion = new Sequelize('4uDN1ZCLas', '4uDN1ZCLas', 'RYT4PYiSZQ', {
-  host: 'remotemysql.com',
+// export const conexion = new Sequelize('4uDN1ZCLas', '4uDN1ZCLas', 'RYT4PYiSZQ', {
+// host: 'remotemysql.com',
+export const conexion = new Sequelize('proyectos', 'root', 'root', {
+  host: 'localhost',
   dialect: 'mysql',
   // se imprimirán todas las sentencias SQL cuando se haga una consulta
   // logging: console.log,

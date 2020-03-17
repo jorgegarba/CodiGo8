@@ -1,13 +1,96 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.centrar-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn-guardar {
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+.btn-guardar:hover {
+  transform: scale(1.3);
+}
+
+.contenedor-imagenes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imagen-prev {
+  border: #7386D5 solid 2px;
+  position: relative;
+  padding: 2px;
+  border-radius: 5px;
+  margin: 10px 10px;
+  width: 200px;
+}
+
+.imagen-prev img {
+  max-width: 100%;
+  /* cursor: pointer; */
+}
+
+.imagen-prev:hover .botones {
+  display: flex;
+}
+
+.imagen-prev:hover img {
+  filter: blur(2px);
+  z-index: -1;
+}
+
+.botones {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.boton-x {
+  z-index: 1000;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 7px;
+  background-color: #444;
+  cursor: pointer;
+  color: #ddd;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4px;
+}
+
+.boton-lupa {
+  z-index: 1000;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 7px;
+  background-color: #444;
+  cursor: pointer;
+  color: #ddd;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-open {
+  overflow: visible !important;
+}
+
+.imagen-modal {
+  max-width: 100%;
+  width: 450px;
+}
+
+.cuerpo-modal {
+  display: 'flex';
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
