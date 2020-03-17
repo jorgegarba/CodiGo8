@@ -1,0 +1,32 @@
+$ancho : 1071px; 
+$alto : 720px;
+.contenedor-1{
+    width: $ancho;
+    height: 100px;
+    p{
+        width: $ancho/2;
+    }
+}
+.contenedor-2{
+    height: $alto;
+}
+ul{
+    font-size: 10px;
+    color:red;
+    li{
+        color:blue;
+    }
+}
+@for $p from 2 through 20{
+    .col-#{$p}{
+        width: $ancho;
+    }
+}
+@function dividir($total, $partes){
+    @return ($total/$partes)
+}
+
+.columna{
+    width: dividir($ancho,10);
+}
+/* https://sass-lang.com/documentation */
