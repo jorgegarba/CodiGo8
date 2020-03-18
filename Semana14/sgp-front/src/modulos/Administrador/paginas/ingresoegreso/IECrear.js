@@ -15,6 +15,8 @@ const baseStyle = {
   flex: 1,
   display: 'flex',
   flexDirection: 'column',
+  justifyContent: 'center',
+  alignContent: 'center',
   alignItems: 'center',
   padding: '20px',
   borderWidth: 2,
@@ -72,7 +74,15 @@ class IECrear extends Component {
       },
       modal: false
     }
+  }
 
+  borrarArchivo = nombreArchivo => {
+    let archivosState = [...this.state.archivos];
+    archivosState = archivosState.filter(file => (file.name !== nombreArchivo));
+    this.setState({
+      ...this.state,
+      archivos: archivosState
+    })
   }
 
 
@@ -286,203 +296,8 @@ class IECrear extends Component {
           </div>
         </div>
 
-        <div className="row mt-3">
-          <div className="col-12">
-            <div className="card shadow">
-              <div className="card-body ">
-                <div className="row">
-                  <div className="col-md-3">
-                    <div className="form-group">
-                      <label htmlFor="doc_tipo">Tipo de Documento</label>
-                      <select id="doc_tipo" name="doc_tipo"
-                        className="form-control" value={this.state.formularioDoc.doc_tipo}
-                        onChange={this.handChFormularioDoc}>
-                        <option value="deposito">Deposito</option>
-                        <option value="efectivo">Efectivo</option>
-                        <option value="boleta">Boleta</option>
-                        <option value="factura">Factura</option>
-                        <option value="notapedido">Nota de Pedido</option>
-                        <option value="otro">Otro</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="col-md-3">
-                    <div className="form-group">
-                      <label htmlFor="doc_total">Monto Total</label>
-                      <div className="input-group mb-3">
-                        <div className="input-group-prepend">
-                          <span className="input-group-text" id="basic-addon1">S.</span>
-                        </div>
-                        <input type="number" id="doc_total"
-                          name="doc_total" className="form-control" placeholder="Ingrese un monto"
-                          onChange={this.handChFormularioDoc} value={this.state.formularioDoc.doc_total}
-                          disabled={this.state.formularioIE.gasin_crit === 'gasto'} />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-3">
-                    <div className="form-group">
-                      <label htmlFor="doc_fech">Fecha de Documento</label>
-                      <input type="date" id="doc_fech"
-                        name="doc_fech" className="form-control"
-                        onChange={this.handChFormularioDoc} value={this.state.formularioDoc.doc_fech} />
-                    </div>
-                  </div>
-                  <div className="col-md-3">
-                    <div className="form-group">
-                      <label htmlFor="prov_id">Proveedor (Beta)</label>
-                      <input type="text" id="prov_id"
-                        name="prov_id" className="form-control" disabled defaultValue={1} />
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-12">
-                    <div className="form-group">
-                      <label htmlFor="doc_obs">Observaciones del Documento</label>
-                      <textarea name="doc_obs" id="doc_obs" cols="30" rows="5"
-                        className="form-control" placeholder="Ingrese información adicional"
-                        onChange={this.handChFormularioDoc} value={this.state.formularioDoc.doc_obs}></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row mt-3">
-          <div className="col-12">
-            <div className="card shadow">
-              <div className="card-body ">
-                <div className="row">
-                  <div className="col-md-3">
-                    <div className="form-group">
-                      <label htmlFor="doc_tipo">Tipo de Documento</label>
-                      <select id="doc_tipo" name="doc_tipo"
-                        className="form-control" value={this.state.formularioDoc.doc_tipo}
-                        onChange={this.handChFormularioDoc}>
-                        <option value="deposito">Deposito</option>
-                        <option value="efectivo">Efectivo</option>
-                        <option value="boleta">Boleta</option>
-                        <option value="factura">Factura</option>
-                        <option value="notapedido">Nota de Pedido</option>
-                        <option value="otro">Otro</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="col-md-3">
-                    <div className="form-group">
-                      <label htmlFor="doc_total">Monto Total</label>
-                      <div className="input-group mb-3">
-                        <div className="input-group-prepend">
-                          <span className="input-group-text" id="basic-addon1">S.</span>
-                        </div>
-                        <input type="number" id="doc_total"
-                          name="doc_total" className="form-control" placeholder="Ingrese un monto"
-                          onChange={this.handChFormularioDoc} value={this.state.formularioDoc.doc_total}
-                          disabled={this.state.formularioIE.gasin_crit === 'gasto'} />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-3">
-                    <div className="form-group">
-                      <label htmlFor="doc_fech">Fecha de Documento</label>
-                      <input type="date" id="doc_fech"
-                        name="doc_fech" className="form-control"
-                        onChange={this.handChFormularioDoc} value={this.state.formularioDoc.doc_fech} />
-                    </div>
-                  </div>
-                  <div className="col-md-3">
-                    <div className="form-group">
-                      <label htmlFor="prov_id">Proveedor (Beta)</label>
-                      <input type="text" id="prov_id"
-                        name="prov_id" className="form-control" disabled defaultValue={1} />
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-12">
-                    <div className="form-group">
-                      <label htmlFor="doc_obs">Observaciones del Documento</label>
-                      <textarea name="doc_obs" id="doc_obs" cols="30" rows="5"
-                        className="form-control" placeholder="Ingrese información adicional"
-                        onChange={this.handChFormularioDoc} value={this.state.formularioDoc.doc_obs}></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row mt-3">
-          <div className="col-12">
-            <div className="card shadow">
-              <div className="card-body ">
-                <div className="row">
-                  <div className="col-md-3">
-                    <div className="form-group">
-                      <label htmlFor="doc_tipo">Tipo de Documento</label>
-                      <select id="doc_tipo" name="doc_tipo"
-                        className="form-control" value={this.state.formularioDoc.doc_tipo}
-                        onChange={this.handChFormularioDoc}>
-                        <option value="deposito">Deposito</option>
-                        <option value="efectivo">Efectivo</option>
-                        <option value="boleta">Boleta</option>
-                        <option value="factura">Factura</option>
-                        <option value="notapedido">Nota de Pedido</option>
-                        <option value="otro">Otro</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="col-md-3">
-                    <div className="form-group">
-                      <label htmlFor="doc_total">Monto Total</label>
-                      <div className="input-group mb-3">
-                        <div className="input-group-prepend">
-                          <span className="input-group-text" id="basic-addon1">S.</span>
-                        </div>
-                        <input type="number" id="doc_total"
-                          name="doc_total" className="form-control" placeholder="Ingrese un monto"
-                          onChange={this.handChFormularioDoc} value={this.state.formularioDoc.doc_total}
-                          disabled={this.state.formularioIE.gasin_crit === 'gasto'} />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-3">
-                    <div className="form-group">
-                      <label htmlFor="doc_fech">Fecha de Documento</label>
-                      <input type="date" id="doc_fech"
-                        name="doc_fech" className="form-control"
-                        onChange={this.handChFormularioDoc} value={this.state.formularioDoc.doc_fech} />
-                    </div>
-                  </div>
-                  <div className="col-md-3">
-                    <div className="form-group">
-                      <label htmlFor="prov_id">Proveedor (Beta)</label>
-                      <input type="text" id="prov_id"
-                        name="prov_id" className="form-control" disabled defaultValue={1} />
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-12">
-                    <div className="form-group">
-                      <label htmlFor="doc_obs">Observaciones del Documento</label>
-                      <textarea name="doc_obs" id="doc_obs" cols="30" rows="5"
-                        className="form-control" placeholder="Ingrese información adicional"
-                        onChange={this.handChFormularioDoc} value={this.state.formularioDoc.doc_obs}></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* PREVISUALIZACIONES DE IMAGENES QUE SE SELECCIONAN */}
-        <PrevisualizarImagenes archivos={this.state.archivos} />
+        <PrevisualizarImagenes archivos={this.state.archivos} borrarArchivo={this.borrarArchivo} />
 
         {/* ROW DROPZONE, ARRASTRE DE ARCHIVOS */}
         <div className="row mt-3">
@@ -496,6 +311,9 @@ class IECrear extends Component {
                         <div {...getRootProps()}>
                           <input {...getInputProps()} />
                           <p>Arrastra Elementos en ésta zona o click para seleccionar el archivo</p>
+                          <p style={{ textAlign: 'center' }}>
+                            <i class="fas fa-images fa-3x fa-shake"></i>
+                          </p>
                         </div>
                       </section>
                     )

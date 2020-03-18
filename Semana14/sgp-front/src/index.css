@@ -16,6 +16,7 @@
 .contenedor-imagenes {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .imagen-prev {
@@ -85,7 +86,7 @@
 
 .imagen-modal {
   max-width: 100%;
-  width: 450px;
+  width: 100%;
 }
 
 .cuerpo-modal {
